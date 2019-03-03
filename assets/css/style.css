@@ -7,16 +7,31 @@
 */
 
 .headbar{
-    background-color: #81767C;
+    background-color: rgba(129, 118, 124, 0.75);
     width: 100%;
-    height: 180px;
+    height: 144px;
     border: 1px white;
-    opacity: 50%;
+    /*opacity: 0.75;*/
 }
 
 .headlinks{
     font-size: 5;
     color: #24282F;
-    padding-top: 90px;
-    text-align: center
+    padding-top: 72px;
+    /*text-align: center*/
 }
+
+/*Desktop scheme*/
+.hero{
+    position: fixed;
+    right: 0;
+    left: 0;
+    top: 0;
+    z-index: -1;
+    background-image: url('http://rndimg.com/ImageStore/OilPaintingOrangeReal/992x600_OilPaintingOrangeReal_79ed9af9f73a4569b7ae528e3cdc6dea.jpg');
+    width: 100%;
+    min-height: 500px;
+    background-size: cover;
+    background-position: center center;
+}    
+
