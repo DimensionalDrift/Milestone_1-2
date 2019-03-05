@@ -7,18 +7,24 @@
 */
 
 .headbar{
-    background-color: rgba(129, 118, 124, 0.75);
-    width: 100%;
-    height: 144px;
-    border: 1px white;
-    /*opacity: 0.75;*/
+    background-color: rgba(255,255,255, 0.85);
 }
 
+/*Mobile links menu*/
+@media only screen and (max-width: 768px){
+.headlinks{
+        
+    }
+}
+
+/*Desktop links*/
+@media only screen and (min-width: 768px){
 .headlinks{
     font-size: 5;
     color: #24282F;
     padding-top: 72px;
     /*text-align: center*/
+    }
 }
 
 /*Desktop scheme*/
@@ -34,4 +40,3 @@
     background-size: cover;
     background-position: center center;
 }    
-
