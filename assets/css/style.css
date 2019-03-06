@@ -8,6 +8,18 @@
 
 /* --------- General styles ---------*/
 
+/*Fixes white bar appearing on the right side of the screen
+https://stackoverflow.com/questions/4617872/white-space-showing-up-on-right-side-of-page-when-background-image-should-extend
+*/
+html,body
+{
+    width: 100%;
+    height: 100%;
+    margin: 0px;
+    padding: 0px;
+    overflow-x: hidden; 
+}
+
 .spoticon {
     height: 50px;
     min-width: 50px;
