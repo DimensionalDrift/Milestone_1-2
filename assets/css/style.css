@@ -6,66 +6,127 @@
 #24282F - Off Black 
 */
 
+/* --------- General styles ---------*/
+
+.spoticon {
+    height: 50px;
+    min-width: 50px;
+    max-width: 50px;
+    border-radius: 50%;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    margin: 10px;
+}
 
 /* --------- Navbar styles ---------*/
 
+.navbar {
+    background-color: rgba(255, 255, 255, 0.85);
+}
+
 /*Larger screen fix navbar height*/
-@media only screen and (min-width: 768px){
-    
-    .navbar-brand{
+@media only screen and (min-width: 768px) {
+
+    .navbar-brand {
         padding-top: 64px;
     }
 
-    .navbar{
+    .navbar {
         background-color: rgba(255, 255, 255, 0.85);
-        height: 144px !important;    
-    }   
-}
-
-
-@media only screen and (max-width: 768px){
-    
-    .navbar{
-        background-color: rgba(255, 255, 255, 0.85);
+        height: 144px !important;
     }
 }
 
-.nav-link  {
+
+
+.nav-link {
     font-size: 150%;
     color: #24282F !important;
 
 }
 
-.searchspot{
-    height: 44px;
-    max-width: 44px;
+.searchspot {
     background-color: #D52B1E;
-    border-radius: 22px;
-
-    }
-
-.searchicon{
     color: white;
-    height: 44px;
-    width: 44px;
-    font-size: 125%;
-    justify-content: center;
-    align-items: center;
-    display: flex;
+    font-size: 150%;
 }
 
 
 /*--------- Hero Image Styles ---------*/
-.hero {
-    position: fixed;
-    right: 0;
+
+.heroimg {
+    position: relative;
     left: 0;
     top: 0;
-    z-index: -1;
-    background-image: url('../images/dummy-1024x768-Cottage.jpg');
     width: 100%;
-    min-height: 700px;
-    background-size: cover;
-    background-position: center center;
+    z-index: -1;
 }
 
+.herotxt {
+    position: absolute;
+    top: 70%;
+    left: 0;
+    width: 100%;
+    color: white;
+    font-size: 5vw;
+
+}
+
+/* ---------- Footer Styles ----------*/
+.footer {
+    background-color: #81767C;
+    margin-top: 20px
+}
+
+.footerleft,
+.footerright {
+    text-align: center;
+}
+
+@media only screen and (min-width: 768px) {
+
+    .footerleft {
+        text-align: left;
+    }
+
+    .footerright {
+        text-align: right;
+    }
+
+    .footer {
+        height: 108px;
+    }
+
+}
+
+.sociallink{
+    font-size: 175%;
+}
+
+.sociallink:hover {
+    font-size: 200%;
+    text-decoration: none;
+    color: white;
+    transition: font-size 0.5s;
+}
+
+.fa-facebook {
+    background: #3B5998;
+    color: white;
+}
+
+.fa-twitter {
+    background: #1da1f2;
+    color: white;
+}
+
+.fa-instagram {
+    background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
+    color: white;
+}
+
+.fa-pinterest {
+    background: #bd081c;
+    color: white;
+}
