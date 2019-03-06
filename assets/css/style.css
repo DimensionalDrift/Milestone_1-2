@@ -6,37 +6,66 @@
 #24282F - Off Black 
 */
 
-.headbar{
-    background-color: rgba(255,255,255, 0.85);
-}
 
-/*Mobile links menu*/
-@media only screen and (max-width: 768px){
-.headlinks{
-        
-    }
-}
+/* --------- Navbar styles ---------*/
 
-/*Desktop links*/
+/*Larger screen fix navbar height*/
 @media only screen and (min-width: 768px){
-.headlinks{
-    font-size: 5;
-    color: #24282F;
-    padding-top: 72px;
-    /*text-align: center*/
+    
+    .navbar-brand{
+        padding-top: 64px;
+    }
+
+    .navbar{
+        background-color: rgba(255, 255, 255, 0.85);
+        height: 144px !important;    
+    }   
+}
+
+
+@media only screen and (max-width: 768px){
+    
+    .navbar{
+        background-color: rgba(255, 255, 255, 0.85);
     }
 }
 
-/*Desktop scheme*/
-.hero{
+.nav-link  {
+    font-size: 150%;
+    color: #24282F !important;
+
+}
+
+.searchspot{
+    height: 44px;
+    max-width: 44px;
+    background-color: #D52B1E;
+    border-radius: 22px;
+
+    }
+
+.searchicon{
+    color: white;
+    height: 44px;
+    width: 44px;
+    font-size: 125%;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+
+
+/*--------- Hero Image Styles ---------*/
+.hero {
     position: fixed;
     right: 0;
     left: 0;
     top: 0;
     z-index: -1;
-    background-image: url('http://rndimg.com/ImageStore/OilPaintingOrangeReal/992x600_OilPaintingOrangeReal_79ed9af9f73a4569b7ae528e3cdc6dea.jpg');
+    background-image: url('../images/dummy-1024x768-Cottage.jpg');
     width: 100%;
-    min-height: 500px;
+    min-height: 700px;
     background-size: cover;
     background-position: center center;
-}    
+}
+
