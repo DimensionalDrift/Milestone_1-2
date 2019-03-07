@@ -35,6 +35,7 @@ body {
 /* Button redesign take from Bootstrap css file*/
 .btn-spot{
     border-radius: 10px;
+    border-width: 2px;
     color: #D52B1E;
     background-color: white;
     border-color: #D52B1E;
