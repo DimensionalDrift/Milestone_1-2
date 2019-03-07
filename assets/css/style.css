@@ -17,7 +17,8 @@ html,body
     height: 100%;
     margin: 0px;
     padding: 0px;
-    overflow-x: hidden; 
+    overflow-x: hidden;
+    font-size: 24px; 
 }
 
 .spoticon {
@@ -34,18 +35,18 @@ html,body
 /* --------- Navbar styles ---------*/
 
 .navbar {
-    background-color: rgba(255, 255, 255, 0.85);
+    background-color: rgba(255, 255, 255, 0.99);
 }
 
 /*Larger screen fix navbar height*/
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 992px) {
 
     .navbar-brand {
         padding-top: 64px;
     }
 
     .navbar {
-        background-color: rgba(255, 255, 255, 0.85);
+        background-color: rgba(255, 255, 255, 0.99);
         height: 144px !important;
     }
 }
@@ -53,7 +54,7 @@ html,body
 
 
 .nav-link {
-    font-size: 150%;
+    font-size: 1.5em;
     color: #24282F !important;
 
 }
@@ -61,7 +62,6 @@ html,body
 .searchspot {
     background-color: #D52B1E;
     color: white;
-    font-size: 150%;
 }
 
 
@@ -78,7 +78,6 @@ html,body
 .herotxt {
     position: absolute;
     top: 70%;
-    left: 0;
     width: 100%;
     color: white;
     font-size: 5vw;
@@ -94,9 +93,10 @@ html,body
 .footerleft,
 .footerright {
     text-align: center;
+    font-size: 0.8em;
 }
 
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 992px) {
 
     .footerleft {
         text-align: left;
@@ -113,11 +113,11 @@ html,body
 }
 
 .sociallink{
-    font-size: 175%;
+    font-size: 1.2em;
 }
 
 .sociallink:hover {
-    font-size: 200%;
+    font-size: 1.5em;
     text-decoration: none;
     color: white;
     transition: font-size 0.5s;
@@ -141,4 +141,18 @@ html,body
 .fa-pinterest {
     background: #bd081c;
     color: white;
+}
+
+/* ---------- Trending Story Styles ----------*/
+.circleView {
+  width: 400px;
+  height: 400px;
+  overflow: hidden;
+  border-radius: 50%;
+}
+
+.circleImage {
+  width: auto;
+  height: 100%;
+  margin-left: -100px; /*Needed to shift the image */
 }
