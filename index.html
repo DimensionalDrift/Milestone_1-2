@@ -57,9 +57,6 @@
         </div>
     </section>
     <!-- Trending Story -->
-    <!-- X  Fix circle image from squishing at smaller sizes
-            Center image in mobile view 
-            Write better comments to explain what is going on-->
     <section>
         <div class='container m-3 mx-auto'>
             <div class='row'>
@@ -68,7 +65,6 @@
                         <img src="assets/images/dummy-500x375-Cottage.jpg" alt="placeholder+image" class='circleImage'>
                     </div>
                 </div>
-
                 <div class='col-lg-8 align-self-center order-lg-1'>
                     <h1>
                         Story of the Week
@@ -81,12 +77,68 @@
                 </div>
             </div>
         </div>
-
-
+    </section>
+    <!-- Shorter Story Links -->
+    <!-- 
+            I think this may need javascript to generate links when the button is pressed. Also in the future it would make sense to use javascript and JSON to populate these items. For the moment this is just the layout of what the default 3/6 stories will look like 
+    
+          X Create animation for the reveal of more stories 
+            Fix the image sizes at different screen sizes
+        -->
     <section>
-        
+        <!-- <div class="container"> -->
+        <div class="row mx-auto">
+            <div class="col-lg-4">
+                <div class='squareView mx-auto'>
+                    <img src="assets/images/dummy-500x375-Cottage.jpg" alt="placeholder+image" class='squareImage'>
+                </div>
+                <div>
+                    <h5>
+                        Title of the story will go here
+                    </h5>
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
+                    </p>
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class='squareView mx-auto'>
+                    <img src="assets/images/dummy-500x375-Cottage.jpg" alt="placeholder+image" class='squareImage'>
+                </div>
+                <div>
+                    <h5>
+                        Title of the story will go here
+                    </h5>
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
+                    </p>
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class='squareView mx-auto'>
+                    <img src="assets/images/dummy-500x375-Cottage.jpg" alt="placeholder+image" class='squareImage'>
+                </div>
+                <div>
+                    <h5>
+                        Title of the story will go here
+                    </h5>
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="row ">
+            <!-- X Add styling to button, circular button? -->
+            <div class="col-12 text-center">
+                <button type="button" class="btn btn-primary">Conitnue</button>
+            </div>
+
+        </div>
+        <!-- </div> -->
     </section>
-    </section>
+    
+
     <!-- Text to test scroll -->
     <section>
         <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium.</p>
@@ -96,31 +148,31 @@
         <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium.</p>
         <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium.</p>
         <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium.</p>
-    <!-- Footer -->
-    <!-- X Fix the text not going edge to edge -->
-    <footer class='footer d-flex align-items-center'>
-        <div class='container'>
-            <div class='row'>
-                <!-- ordered mobile first, .order-* for desktop -->
-                <div class='col-lg-4 my-1 order-lg-2 d-flex justify-content-center'>
-                    <a href="facebook" class='sociallink spoticon fa fa-facebook'></a>
-                    <a href="twitter" class='sociallink spoticon fa fa-twitter'></a>
-                    <a href="instagram" class='sociallink spoticon fa fa-instagram'></a>
-                    <a href="pinterest" class='sociallink spoticon fa fa-pinterest'></a>
-                </div>
-                <div class='col-lg-4 my-1 order-lg-1 footerleft'>
-                    SPOT MEDIA GmbH </br>
-                    PO Box 448 </br>
-                    8810 Horgen </br>
-                </div>
-                <div class='col-lg-4 my-1 order-lg-3 footerright'>
-                    Spot Media GmbH </br>
-                    C2018 </br>
-                    All rights reserved </br>
+        <!-- Footer -->
+        <!-- X Fix the text not going edge to edge -->
+        <footer class='footer d-flex align-items-center'>
+            <div class='container'>
+                <div class='row'>
+                    <!-- ordered mobile first, .order-* for desktop -->
+                    <div class='col-lg-4 my-1 order-lg-2 d-flex justify-content-center'>
+                        <a href="facebook" class='sociallink spoticon fa fa-facebook'></a>
+                        <a href="twitter" class='sociallink spoticon fa fa-twitter'></a>
+                        <a href="instagram" class='sociallink spoticon fa fa-instagram'></a>
+                        <a href="pinterest" class='sociallink spoticon fa fa-pinterest'></a>
+                    </div>
+                    <div class='col-lg-4 my-1 order-lg-1 footerleft'>
+                        SPOT MEDIA GmbH </br>
+                        PO Box 448 </br>
+                        8810 Horgen </br>
+                    </div>
+                    <div class='col-lg-4 my-1 order-lg-3 footerright'>
+                        Spot Media GmbH </br>
+                        C2018 </br>
+                        All rights reserved </br>
+                    </div>
                 </div>
             </div>
-        </div>
-    </footer>
+        </footer>
 </body>
 <!-- Bootstrap javascript -->
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>

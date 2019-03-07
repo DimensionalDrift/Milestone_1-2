@@ -2,6 +2,14 @@
 
 This front end website is under construction for my first milestone project as part of the Code Institute Full Stack Development course I am completing. 
 
+<!-- 
+Ideas
+    Use JSON to fill in details of stories on the page
+
+    Implement Jasmine testing 
+    Use Jasmine to check that stories are not too long for the page
+ 
+ -->
 
 <!-- 
 This is the sample README from the course, use it for the general layout and to not forget an deatils  
