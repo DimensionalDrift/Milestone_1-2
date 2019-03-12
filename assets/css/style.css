@@ -8,8 +8,13 @@
 
 /* ---------- General styles ----------*/
 
-/*Fixes white bar appearing on the right side of the screen
+/*
+Fixes white bar appearing on the right side of the screen
 https://stackoverflow.com/questions/4617872/white-space-showing-up-on-right-side-of-page-when-background-image-should-extend
+
+Helvetica neue is the font the client wants to use but it's not native to windows or linux
+This helped ensure that should it not be there the next font would be something similar
+https://stackoverflow.com/questions/8118741/css-font-helvetica-neue
 */
 html,
 body {
@@ -19,6 +24,8 @@ body {
     padding: 0px;
     overflow-x: hidden;
     font-size: 22px;
+    font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
+    font-weight: 300;
 }
 
 .spoticon {
@@ -52,6 +59,20 @@ body {
   box-shadow: 0 0 0 0.2rem rgba(213, 43, 30, 0.25);
 }
 
+/*This style is used to move content below the logo*/
+
+.navpadding{
+    height: 145px;
+}
+
+@media only screen and (min-width: 992px) {
+
+.navpadding{
+    height: 220px;
+}
+
+}
+
 /* ---------- Navbar styles ----------*/
 
 .navbar {
@@ -66,12 +87,9 @@ body {
     }
 
     .navbar {
-        background-color: rgba(255, 255, 255, 0.99);
         height: 144px !important;
     }
 }
-
-
 
 .nav-link {
     font-size: 1.5em;
@@ -140,7 +158,7 @@ body {
     font-size: 1.5em;
     text-decoration: none;
     color: white;
-    transition: font-size 0.5s;
+    transition: font-size 0.2s;
 }
 
 .fa-facebook {
