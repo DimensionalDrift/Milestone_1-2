@@ -28,6 +28,26 @@ body {
     font-weight: 300;
 }
 
+/*
+Removes the scrollbar from the page
+https://stackoverflow.com/questions/16670931/hide-scroll-bar-but-while-still-being-able-to-scroll
+*/
+
+html {
+    overflow: scroll;
+    overflow-x: hidden;
+}
+::-webkit-scrollbar {
+    width: 0px;  /* remove scrollbar space */
+    background: transparent;   optional: just make scrollbar invisible 
+}
+/* optional: show position indicator in red */
+/*::-webkit-scrollbar-thumb {
+    background: #FF0000;
+}*/
+
+
+
 .spoticon {
     height: 50px;
     min-width: 50px;
@@ -59,42 +79,39 @@ body {
   box-shadow: 0 0 0 0.2rem rgba(213, 43, 30, 0.25);
 }
 
-/*This style is used to move content below the logo*/
-
-.navpadding{
-    height: 145px;
-}
-
-@media only screen and (min-width: 992px) {
-
-.navpadding{
-    height: 220px;
-}
-
-}
+#
 
 /* ---------- Navbar styles ----------*/
 
+/*This style is used to move content below the logo*/
+.navpadding{
+    height: 135px;
+}
+
 .navbar {
-    background-color: rgba(255, 255, 255, 0.99);
+    /*background-color: rgba(255, 255, 255, 0.95);*/
+    background-color: rgba(255, 255, 255, 1);
 }
 
 /*Larger screen fix navbar height*/
 @media only screen and (min-width: 992px) {
 
-    .navbar-brand {
-        padding-top: 64px;
+    .navpadding{
+        height: 0px;
     }
 
     .navbar {
-        height: 144px !important;
+    height: 144px !important;
+    }
+
+    .navbar-brand {
+        padding-top: 64px;
     }
 }
 
 .nav-link {
     font-size: 1.5em;
     color: #24282F !important;
-
 }
 
 .searchspot {
@@ -114,11 +131,9 @@ body {
 }
 
 .herotxt {
-    position: absolute;
-    top: 70%;
-    width: 100%;
     color: white;
-    font-size: 5vw;
+    font-size: 4vw;
+    text-shadow: 0px 0px 15px rgba(0,0,0,0.95);
 
 }
 

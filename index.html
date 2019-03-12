@@ -8,6 +8,9 @@
     <!-- Adding Bootstrap 4 styling, Font Awesome fonts -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" type="text/css" />
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" type="text/css" />
+    <!-- Adding google font 
+         X This is a close approx to a licenced font the client uses, should be replaced in live version-->
+    <link href="https://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet">
     <!-- My styles -->
     <link rel="stylesheet" href="assets/css/style.css">
     <title>Spot Magazine</title>
@@ -15,10 +18,12 @@
 
 <body>
     <header>
-        <nav class="navbar fixed-top navbar-expand-lg navbar-light nav-fill">
+        <nav class="navbar fixed-top navbar-expand-lg navbar-light nav-fill shadow-sm">
+            <!-- Large Logo size -->
             <a class="navbar-brand d-none d-lg-block " href="index.html">
                 <img src="assets_carina/LOGO/Spot_Magazine.png" width='180px' height='180px' alt="Logo">
             </a>
+            <!-- Small Logo size -->
             <a class="navbar-brand d-lg-none" href="index.html">
                 <img src="assets_carina/LOGO/Spot_Magazine.png" width='100px' height='100px' alt="Logo">
             </a>
@@ -38,22 +43,68 @@
                 <div class="nav-item spoticon searchspot fa fa-search"></div>
         </nav>
     </header>
-    <!-- Hero Image -->
-    <!-- X Ask about the design of the text and image
-        image 
-            full width/margins
-        text
-            size, drop shadow, transparent layer, fade in text and dim/blur image
-      -->
+
+    <!-- Used to move content below the navbar -->
+    <div class='navpadding'></div>
+
+    <!-- Superhero Image -->
+    <!-- This superhero image uses a carousel to cycle through images -->
+    <!-- Sample images Aletsch_lr-5.jpg  chaeserrugg_lr-10.jpg  fribourg_lr-31.jpg -->
     <section>
-        <!-- comment in for non full width image -->
         <div class='container'>
-        <div class='row'>
-            <div class="col-lg-12">
-                <img src="assets/images/dummy-1024x768-Cottage.jpg" alt="placeholder+image" class='heroimg'>
-                <div class='text-center text-uppercase herotxt'>Something Something<br /> Hero Text</div>
+            <div id="Superhero" class="carousel slide" data-ride="carousel">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <a href="gallery.html">
+                            <img class="d-ld-block w-100" src="assets/images/Aletsch_lr-5.jpg" alt="First slide">
+                            <div class='carousel-caption herotxt'>
+                                <p>
+                                    Test Caption 1
+                                </p>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="carousel-item">
+                        <a href="#">
+                            <img class="d-ld-block w-100" src="assets/images/chaeserrugg_lr-10.jpg" alt="Second slide">
+                            <div class='carousel-caption herotxt'>
+                                <p>
+                                    Test Caption 2
+                                </p>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="carousel-item">
+                        <a href="#">
+                            <img class="d-ld-block w-100" src="assets/images/fribourg_lr-31.jpg" alt="Third slide">
+                            <div class='carousel-caption herotxt'>
+                                <p>
+                                    Test Caption 3
+                                </p>
+                            </div>
+                        </a>
+                    </div>
+                    <!-- Use to show shadow effect on text -->
+                    <!-- <div class="carousel-item">
+                        <a href="#">
+                            <img  class="d-ld-block w-100" src="http://dummyimage.com/1800x1201/ffffff/686a82.gif&text=shadow+test" alt="Fourth Slide">
+                            <div class='carousel-caption herotxt'>
+                                <p>
+                                    Test Caption 4
+                                </p>
+                            </div>
+                        </a>
+                    </div> -->
+                </div>
+                <a class="carousel-control-prev" href="#Superhero" role="button" data-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Previous</span>
+                </a>
+                <a class="carousel-control-next" href="#Superhero" role="button" data-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Next</span>
+                </a>
             </div>
-        </div>
         </div>
     </section>
     <!-- Trending Story -->
@@ -62,11 +113,11 @@
             <div class='row'>
                 <div class='col-lg-4 order-lg-2 '>
                     <div class='circleView mx-auto'>
-                        <img src="assets/images/dummy-500x375-Cottage.jpg" alt="placeholder+image" class='circleImage'>
+                        <img src="assets/images/dummy/dummy-500x375-Cottage.jpg" alt="placeholder+image" class='circleImage'>
                     </div>
                 </div>
                 <div class='col-lg-8 align-self-center order-lg-1'>
-                    <h1>
+                    <h1 class='cursivetxt'>
                         Story of the Week
                     </h1>
                     <h3>
@@ -90,7 +141,7 @@
         <div class="row mx-auto">
             <div class="col-lg-4 col-sm-6 col-xs-12">
                 <div class='squareView mx-auto'>
-                    <img src="assets/images/dummy-500x375-Cottage.jpg" alt="placeholder+image" class='squareImage'>
+                    <img src="assets/images/dummy/dummy-500x375-Cottage.jpg" alt="placeholder+image" class='squareImage'>
                 </div>
                 <div>
                     <h5>
@@ -103,7 +154,7 @@
             </div>
             <div class="col-lg-4 col-sm-6 col-xs-12">
                 <div class='squareView mx-auto'>
-                    <img src="assets/images/dummy-500x375-Cottage.jpg" alt="placeholder+image" class='squareImage'>
+                    <img src="assets/images/dummy/dummy-500x375-Cottage.jpg" alt="placeholder+image" class='squareImage'>
                 </div>
                 <div>
                     <h5>
@@ -116,7 +167,7 @@
             </div>
             <div class="col-lg-4 col-sm-6 col-xs-12">
                 <div class='squareView mx-auto'>
-                    <img src="assets/images/dummy-500x375-Cottage.jpg" alt="placeholder+image" class='squareImage'>
+                    <img src="assets/images/dummy/dummy-500x375-Cottage.jpg" alt="placeholder+image" class='squareImage'>
                 </div>
                 <div>
                     <h5>
@@ -129,7 +180,7 @@
             </div>
             <div class="col-lg-4 col-sm-6 col-xs-12">
                 <div class='squareView mx-auto'>
-                    <img src="assets/images/dummy-500x375-Cottage.jpg" alt="placeholder+image" class='squareImage'>
+                    <img src="assets/images/dummy/dummy-500x375-Cottage.jpg" alt="placeholder+image" class='squareImage'>
                 </div>
                 <div>
                     <h5>
@@ -142,7 +193,7 @@
             </div>
             <div class="col-lg-4 col-sm-6 col-xs-12">
                 <div class='squareView mx-auto'>
-                    <img src="assets/images/dummy-500x375-Cottage.jpg" alt="placeholder+image" class='squareImage'>
+                    <img src="assets/images/dummy/dummy-500x375-Cottage.jpg" alt="placeholder+image" class='squareImage'>
                 </div>
                 <div>
                     <h5>
@@ -155,7 +206,7 @@
             </div>
             <div class="col-lg-4 col-sm-6 col-xs-12">
                 <div class='squareView mx-auto'>
-                    <img src="assets/images/dummy-500x375-Cottage.jpg" alt="placeholder+image" class='squareImage'>
+                    <img src="assets/images/dummy/dummy-500x375-Cottage.jpg" alt="placeholder+image" class='squareImage'>
                 </div>
                 <div>
                     <h5>
@@ -172,44 +223,42 @@
             <div class="col-12 text-center">
                 <button type="button" class="btn btn-spot">Continue</button>
             </div>
-
         </div>
         <!-- </div> -->
     </section>
-
     <section>
         <div class="m-5 text-center">
-            <h2>
+            <h2 class='cursivetxt'>
                 Example Instagram Feed
             </h2>
             <img src="assets/images/Instagram_eg.jpg" alt='Instagram+Example'>
         </div>
-    </section>        
-        <!-- Footer -->
-        <!-- X Fix the text not going edge to edge -->
-        <footer class='footer d-flex align-items-center'>
-            <div class='container'>
-                <div class='row'>
-                    <!-- ordered mobile first, .order-* for desktop -->
-                    <div class='col-lg-4 my-1 order-lg-2 d-flex justify-content-center'>
-                        <a href="https://www.facebook.com/SpotMagazineCH/" class='sociallink spoticon fa fa-facebook'></a>
-                        <a href="https://twitter.com/spotmagazinech" class='sociallink spoticon fa fa-twitter'></a>
-                        <a href="https://www.instagram.com/spotmagazinech/" class='sociallink spoticon fa fa-instagram'></a>
-                        <a href="https://www.pinterest.ie/swissspots/" class='sociallink spoticon fa fa-pinterest'></a>
-                    </div>
-                    <div class='col-lg-4 my-1 order-lg-1 footerleft'>
-                        SPOT MEDIA GmbH </br>
-                        PO Box 448 </br>
-                        8810 Horgen </br>
-                    </div>
-                    <div class='col-lg-4 my-1 order-lg-3 footerright'>
-                        Spot Media GmbH </br>
-                        C2018 </br>
-                        All rights reserved </br>
-                    </div>
+    </section>
+    <!-- Footer -->
+    <!-- X Fix the text not going edge to edge -->
+    <footer class='footer d-flex align-items-center'>
+        <div class='container'>
+            <div class='row'>
+                <!-- ordered mobile first, .order-* for desktop -->
+                <div class='col-lg-4 my-1 order-lg-2 d-flex justify-content-center'>
+                    <a href="https://www.facebook.com/SpotMagazineCH/" class='sociallink spoticon fa fa-facebook'></a>
+                    <a href="https://twitter.com/spotmagazinech" class='sociallink spoticon fa fa-twitter'></a>
+                    <a href="https://www.instagram.com/spotmagazinech/" class='sociallink spoticon fa fa-instagram'></a>
+                    <a href="https://www.pinterest.ie/swissspots/" class='sociallink spoticon fa fa-pinterest'></a>
+                </div>
+                <div class='col-lg-4 my-1 order-lg-1 footerleft'>
+                    SPOT MEDIA GmbH </br>
+                    PO Box 448 </br>
+                    8810 Horgen </br>
+                </div>
+                <div class='col-lg-4 my-1 order-lg-3 footerright'>
+                    Spot Media GmbH </br>
+                    C2018 </br>
+                    All rights reserved </br>
                 </div>
             </div>
-        </footer>
+        </div>
+    </footer>
 </body>
 <!-- Bootstrap javascript -->
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
