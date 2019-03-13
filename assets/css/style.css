@@ -23,7 +23,7 @@ body {
     margin: 0px;
     padding: 0px;
     overflow-x: hidden;
-    font-size: 22px;
+    font-size: 20px;
     font-family: "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
 
 }
@@ -50,7 +50,9 @@ html {
     background: #FF0000;
 }*/
 
-
+h1, h2, h3, h4, h5, h6{
+    text-align: center;
+}
 
 .spoticon {
     height: 50px;
@@ -217,31 +219,103 @@ html {
     color: white;
 }
 
-/* ---------- Trending Story Styles ----------*/
-.circleview {
-    width: 500px;
-    height: 500px;
+/* ---------- Trending Story Styles 1 ----------*/
+.circleview1 {
+    width: 300px;
+    height: 300px;
     overflow: hidden;
     border-radius: 50%;
 }
 
-.circleimage {
+.circleimage1 {
     width: auto;
     height: 100%;
     margin-left: -100px;
     /*Needed to shift the image */
 }
 
-.frameview{
+.frameview1{
     width: auto;
     height: 300px;
+    overflow: hidden;
 }
 
 @media only screen and (min-width: 992px) {
 
-    .circleview {
+    .circleview1 {
         width: 500px;
         height: 500px;
+    }
+
+
+}
+
+/* ---------- Trending Story Styles 2 ----------*/
+.circleview2 {
+    width: 300px;
+    height: 300px;
+    overflow: hidden;
+    border-radius: 50%;
+}
+
+.circleimage2 {
+    width: auto;
+    height: 100%;
+    margin-left: -100px;
+    /*Needed to shift the image */
+}
+
+.frameview2{
+    width: auto;
+    height: 300px;
+    overflow: hidden;
+}
+
+@media only screen and (min-width: 992px) {
+
+    .circleview2 {
+        width: 450px;
+        height: 450px;
+        float: left;
+        shape-outside: inset(1% round 50%);
+        /*margin-left: 50px !important;*/
+    }
+
+
+}
+
+/* ---------- Trending Story Styles 3 ----------*/
+.circleview3 {
+    width: 300px;
+    height: 300px;
+    overflow: hidden;
+    border-radius: 50%;
+    z-index: -1;
+}
+
+.circleimage3 {
+    width: auto;
+    height: 100%;
+    margin-left: -100px;
+    /*Needed to shift the image */
+}
+
+.frameview3{
+    width: auto;
+    height: 300px;
+    overflow: hidden;
+}
+
+#SoTWcard{
+    background-color: rgba(255, 255, 255, 0.95);
+}
+
+@media only screen and (min-width: 992px) {
+
+    .circleview3 {
+        width: 500px !important;
+        height: 500px;
+        margin-left: -150px;
     }
 
 
