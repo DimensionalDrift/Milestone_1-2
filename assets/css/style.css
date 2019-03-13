@@ -55,6 +55,49 @@ h1, h2, h3, h4, h5, h6{
     text-align: center;
 }
 
+/* Removing link color and underline*/
+a:hover, a:visited, a:link, a:active
+{
+    text-decoration: none;
+    color: inherit;
+}
+
+.linkhover:hover {
+    text-decoration: underline;
+}
+
+/* Hover over image to indicate it's a link
+https://www.w3schools.com/howto/howto_css_image_overlay.asp
+*/
+
+.imlink {
+  opacity: 1;
+  display: block;
+  width: 100%;
+  height: auto;
+  transition: .5s ease;
+  backface-visibility: hidden;
+}
+
+.linkspot {
+  transition: .5s ease;
+  opacity: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  font-size: 1.5em;
+}
+
+.card:hover .imlink {
+  opacity: 0.3;
+}
+
+.card:hover .linkspot {
+  opacity: 1;
+}
+
 .spoticon {
     height: 50px;
     min-width: 50px;
@@ -66,7 +109,12 @@ h1, h2, h3, h4, h5, h6{
     margin: 10px;
 }
 
-/* Button redesign take from Bootstrap css file*/
+.spotred {
+    background-color: #D52B1E;
+    color: white !important;
+}
+
+/* Button redesign taken from Bootstrap css file*/
 .btn-spot {
     border-radius: 10px;
     border-width: 2px;
@@ -122,11 +170,6 @@ h1, h2, h3, h4, h5, h6{
 .nav-link {
     font-size: 1.5em;
     color: #24282F !important;
-}
-
-.searchspot {
-    background-color: #D52B1E;
-    color: white;
 }
 
 
@@ -197,6 +240,7 @@ h1, h2, h3, h4, h5, h6{
 
 .sociallink {
     font-size: 1.2em;
+    color: white !important;
 }
 
 .sociallink:hover {
@@ -360,3 +404,4 @@ h1, h2, h3, h4, h5, h6{
 .card-text{
     margin: 10px;
 }
+
