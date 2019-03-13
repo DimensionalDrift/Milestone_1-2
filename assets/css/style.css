@@ -140,15 +140,20 @@ html {
 
 .herotxt {
     color: white;
-    font-size: 5vw;
+    font-size: 4vw;
     text-shadow: 0px 0px 15px rgba(0, 0, 0, 0.95);
 
 }
 
-@media only screen and (min-width: 992px) {
+
+@media only screen and (max-width: 992px) {
 
     .herotxt {
-        font-size: 4vw;
+        font-size: 5vw;
+    }
+
+    #heroContainer{
+        max-width: 100%; 
     }
 }
 
@@ -213,28 +218,28 @@ html {
 }
 
 /* ---------- Trending Story Styles ----------*/
-.circleView {
+.circleview {
     width: 500px;
     height: 500px;
     overflow: hidden;
     border-radius: 50%;
 }
 
-.circleImage {
+.circlevmage {
     width: auto;
     height: 100%;
     margin-left: -100px;
     /*Needed to shift the image */
 }
 
-.frameView{
+.frameview{
     width: auto;
     height: 300px;
 }
 
 @media only screen and (min-width: 992px) {
 
-    .circleView {
+    .circleview {
         width: 500px;
         height: 500px;
     }
@@ -245,13 +250,13 @@ html {
 
 /* ---------- Listed Stories Styles ----------*/
 
-.squareView {
+.squareview {
     width: 400px;
     height: 350px;
     overflow: hidden;
 }
 
-.squareImage {
+.squareimage {
     width: auto;
     height: 100%;
 }
