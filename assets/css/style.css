@@ -2,6 +2,7 @@
 #FFFFFF - White
 #D52B1E - Spot Red 
 #B23D40 - Second Red   
+#e7e7e7 - Spot Footer
 #81767C - Brown/Grey
 #24282F - Off Black 
 */
@@ -162,7 +163,7 @@ h1, h2, h3, h4, h5, h6{
 
 /* ---------- Footer Styles ----------*/
 .footer {
-    background-color: #81767C;
+    background-color: #e7e7e7;
     margin-top: 20px
 }
 
@@ -322,15 +323,34 @@ h1, h2, h3, h4, h5, h6{
 }
 
 
-/* ---------- Listed Stories Styles ----------*/
+/* ---------- Short Stories Styles ----------*/
 
+/* Depricated */
 .squareview {
     width: 400px;
     height: 350px;
     overflow: hidden;
 }
 
+/* Depricated */
 .squareimage {
     width: auto;
     height: 100%;
+}
+
+#SStory_design2 *{
+    border-radius: 0;
+}
+
+.card-footer {
+  margin-bottom: 0;
+  background-color: #e7e7e7
+}
+
+.card-title{
+    margin: 10px;
+}
+
+.card-text{
+    margin: 10px;
 }
