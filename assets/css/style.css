@@ -5,6 +5,8 @@
 #e7e7e7 - Spot Footer
 #81767C - Brown/Grey
 #24282F - Off Black 
+#08acd2 - Focus Story 
+
 */
 
 /* ---------- General styles ----------*/
@@ -94,7 +96,7 @@ https://www.w3schools.com/howto/howto_css_image_overlay.asp
     left: 50%;
     transform: translate(-50%, -50%);
     text-align: center;
-    font-size: 1.5em;
+    font-size: 1.3em;
 }
 
 .card:hover .imlink {
@@ -106,9 +108,9 @@ https://www.w3schools.com/howto/howto_css_image_overlay.asp
 }
 
 .spoticon {
-    height: 50px;
-    min-width: 50px;
-    max-width: 50px;
+    height: 40px;
+    min-width: 40px;
+    max-width: 40px;
     border-radius: 50% !important;
     justify-content: center;
     align-items: center;
@@ -226,7 +228,7 @@ https://www.w3schools.com/howto/howto_css_image_overlay.asp
 
 .herotxt {
     color: white;
-    text-shadow: 0px 0px 15px rgba(0, 0, 0, 0.95);
+    text-shadow: 0px 0px 15px rgba(0, 0, 0, 0.3);
 }
 
 .herocaption{
@@ -450,4 +452,19 @@ https://www.w3schools.com/howto/howto_css_image_overlay.asp
 
 .card-text {
     margin: 10px;
+}
+
+/* ---------- Story Page Styles --------- */
+
+#storyinfocard{
+    background-color: #08acd2;
+    margin:10px;
+    font-size: 0.75em;
+}
+
+#storyinfocard .spoticon {
+    height: 30px;
+    min-width: 30px;
+    max-width: 30px;
+    margin: 5px;
 }
