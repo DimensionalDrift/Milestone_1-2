@@ -51,13 +51,20 @@ html {
     background: #FF0000;
 }*/
 
-h1, h2, h3, h4, h5, h6{
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
     text-align: center;
 }
 
 /* Removing link color and underline*/
-a:hover, a:visited, a:link, a:active
-{
+a:hover,
+a:visited,
+a:link,
+a:active {
     text-decoration: none;
     color: inherit;
 }
@@ -71,31 +78,31 @@ https://www.w3schools.com/howto/howto_css_image_overlay.asp
 */
 
 .imlink {
-  opacity: 1;
-  display: block;
-  width: 100%;
-  height: auto;
-  transition: .5s ease;
-  backface-visibility: hidden;
+    opacity: 1;
+    display: block;
+    width: 100%;
+    height: auto;
+    transition: .5s ease;
+    backface-visibility: hidden;
 }
 
 .linkspot {
-  transition: .5s ease;
-  opacity: 0;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  text-align: center;
-  font-size: 1.5em;
+    transition: .5s ease;
+    opacity: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    font-size: 1.5em;
 }
 
 .card:hover .imlink {
-  opacity: 0.3;
+    opacity: 0.3;
 }
 
 .card:hover .linkspot {
-  opacity: 1;
+    opacity: 1;
 }
 
 .spoticon {
@@ -139,6 +146,39 @@ https://www.w3schools.com/howto/howto_css_image_overlay.asp
     font-family: 'Pacifico', cursive;
 }
 
+/* Responsive Font Size*/
+.responsivefont {
+    font-size: 1em;
+}
+
+/*Small devices (landscape phones, 576px and up)*/
+@media (min-width: 576px) {
+    .responsivefont {
+        font-size: 1.5em;
+    }
+}
+
+/*Medium devices (tablets, 768px and up)*/
+@media (min-width: 768px) {
+    .responsivefont {
+        font-size: 2em;
+    }
+}
+
+/*Large devices (desktops, 992px and up)*/
+@media (min-width: 992px) {
+    .responsivefont {
+        font-size: 2.5em;
+    }
+}
+
+/*Extra large devices (large desktops, 1200px and up)*/
+@media (min-width: 1200px) {
+    .responsivefont {
+        font-size: 3em;
+    }
+}
+
 /* ---------- Navbar styles ----------*/
 
 /*This style is used to move content below the logo*/
@@ -176,36 +216,35 @@ https://www.w3schools.com/howto/howto_css_image_overlay.asp
 /* ---------- Hero Image Styles ----------*/
 
 /*Possibly Depricated*/
-.heroimg {
+/*.heroimg {
     position: relative;
     left: 0;
     top: 0;
     width: 100%;
     z-index: -1;
-}
+}*/
 
 .herotxt {
     color: white;
-    font-size: 4vw;
     text-shadow: 0px 0px 15px rgba(0, 0, 0, 0.95);
 
 }
 
 /* Use this to set the carousel size on desktop*/
-.slideview{
+.heroview {
     width: 100%;
-    max-height: 555px;
+    max-height: 600px;
+}
+
+.heroimg{
+    margin-top: -70px;
 }
 
 
 @media only screen and (max-width: 992px) {
 
-    .herotxt {
-        font-size: 5vw;
-    }
-
-    #heroContainer{
-        max-width: 100%; 
+    .heroContainer {
+        max-width: 100%;
     }
 }
 
@@ -285,7 +324,7 @@ https://www.w3schools.com/howto/howto_css_image_overlay.asp
     /*Needed to shift the image */
 }
 
-.frameview1{
+.frameview1 {
     width: auto;
     height: 300px;
     overflow: hidden;
@@ -316,7 +355,7 @@ https://www.w3schools.com/howto/howto_css_image_overlay.asp
     /*Needed to shift the image */
 }
 
-.frameview2{
+.frameview2 {
     width: auto;
     height: 300px;
     overflow: hidden;
@@ -351,13 +390,13 @@ https://www.w3schools.com/howto/howto_css_image_overlay.asp
     /*Needed to shift the image */
 }
 
-.frameview3{
+.frameview3 {
     width: auto;
     height: 300px;
     overflow: hidden;
 }
 
-#SoTWcard{
+#SoTWcard {
     background-color: rgba(255, 255, 255, 0.95);
 }
 
@@ -388,20 +427,19 @@ https://www.w3schools.com/howto/howto_css_image_overlay.asp
     height: 100%;
 }
 
-#SStory_design2 *{
+#SStory_design2 * {
     border-radius: 0;
 }
 
 .card-footer {
-  margin-bottom: 0;
-  background-color: #e7e7e7
+    margin-bottom: 0;
+    background-color: #e7e7e7
 }
 
-.card-title{
+.card-title {
     margin: 10px;
 }
 
-.card-text{
+.card-text {
     margin: 10px;
 }
-
