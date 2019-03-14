@@ -53,9 +53,9 @@
     <section>
         <div class='container heroContainer'>
             <div class="card heroview">
-                <img class="card-img" src="assets/images/pizol/pizol_lr-13.jpg" alt="Card image">
+                <img class="card-img" src="assets/images/flumserberg/Flumserberge_LR-1.jpg" alt="Card image">
                 <div class="card-img-overlay d-flex flex-column justify-content-end">
-                    <p class="card-text herotxt herocaption responsivefont">Should this title fade in?</p>
+                    <h1 class="card-text herotxt herocaption">Should this title fade in?</h1>
                 </div>
             </div>
         </div>
@@ -66,32 +66,122 @@
         <div class='container'>
             <div class="row">
                 <!-- This box should be colored depending on story type -->
-                <div class='col-lg-3 '>
-                    <div class='card' id='storyinfocard'>
-                            Text: Carina <br> 
-                            Photo: Probably also Carina <br>
-                            More Info: <a href="#" class='linkhover'>prettymountain.ch</a> 
-                            Share: 
-                        <div class='d-flex justify-content-left'>
-                        <a href="https://www.facebook.com/SpotMagazineCH/" class='sociallink spoticon fa fa-facebook'></a>
-                        <a href="https://twitter.com/spotmagazinech" class='sociallink spoticon fa fa-twitter'></a>
-                        <a href="https://www.instagram.com/spotmagazinech/" class='sociallink spoticon fa fa-instagram'></a>
-                        <a href="https://www.pinterest.ie/swissspots/" class='sociallink spoticon fa fa-pinterest'></a>
+                <div class='col-lg-4 '>
+                    <div class="card" id='storyinfocard'>
+                        <div class='row'>
+                            <div class='col-12 col-sm-6 col-md-6 col-lg-12'>
+                                    <table>
+                                      <tr>
+                                        <td>Text:</td>
+                                        <td>Carina</td>
+                                      </tr>
+                                      <tr>
+                                        <td>Photos:</td>
+                                        <td>Probably Also Carina</td>
+                                      </tr>
+                                      <tr>
+                                        <td></td>
+                                        <td>Should this be a circle?</td>
+                                      </tr>
+                                      <tr>
+                                        <td>Info:&nbsp;</td>
+                                        <td><a href="#" class='linkhover'>prettymountain.ch</a></td>
+                                      </tr>
+                                    </table>
+                            </div>
+                            <div class='col-12 col-sm-6 col-md-6 col-lg-12 d-flex align-items-end'>
+                                <p>Share:</p>
+                                <div class='d-flex justify-content-lg-center justify-content-start'>
+                                    <a href="https://www.facebook.com/SpotMagazineCH/" class='sociallink spoticon fa fa-facebook'></a>
+                                    <a href="https://twitter.com/spotmagazinech" class='sociallink spoticon fa fa-twitter'></a>
+                                    <a href="https://www.instagram.com/spotmagazinech/" class='sociallink spoticon fa fa-instagram'></a>
+                                    <a href="https://www.pinterest.ie/swissspots/" class='sociallink spoticon fa fa-pinterest'></a>
+                                </div> 
+                            </div>
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-9">
-                    <h3>
-                        
-                    </h3>
+                <div class="col-lg-8 align-self-end">
+                    <h4 id='storysubtitle'>
+                        This is the story subtitle that can go on and on for maybe a few lines. Should this subtitle be in line with the top/middle/bottom of the card?
+                    </h4>
                 </div>
             </div>
         </div>
     </section>
-    <!-- Footer -->
-    <!-- X Fix the text not going edge to edge -->
-    <footer class='footer d-flex align-items-center'>
+
+    <!-- Body of the Story -->
+    <section>
         <div class='container'>
+            <div class='row'>
+                <div class='col-12'>
+                    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium.</p>
+
+                    <!-- Pic 1 only on mobile -->
+                    <img src="assets/images/flumserberg/Flumserberge_LR-24.jpg" alt="Picture1" class='d-lg-none img-fluid'>
+
+
+
+
+                    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium.</p>
+                </div>
+            </div>
+
+            <!-- Pic 2 only on mobile -->
+            <img src="assets/images/flumserberg/Flumserberge_LR-31.jpg" alt="Picture2" class='d-lg-none img-fluid'>
+
+            
+            <!-- Collage of pics on desktop -->
+            <!-- X Make center image circular in future 
+                   Future feature - display image in lightbox when clicked 
+                                    needs javascript to implement 
+            -->
+            <div class='container d-none d-lg-block'>
+                <div class='row'>
+                    <div class='col-lg-5'>
+                        <figure class='figure'>
+                            <img src="assets/images/flumserberg/Flumserberge_LR-24.jpg" alt="Picture1" class='img-fluid figure-img'>
+                            <figcaption class="figure-caption">A caption for the image.</figcaption>
+                        </figure>
+                    </div>
+                    <div class='col-lg-3'>
+                        <figure class='figure'>
+                            <img src="assets/images/flumserberg/Flumserberge_LR-2.jpg" alt="Picture2" class='img-fluid figure-img'>
+                            <figcaption class="figure-caption">A caption for the image.</figcaption>
+                        </figure>
+                    </div>
+                    <div class='col-lg-4'>
+                        <figure class='figure'>
+                            <img src="assets/images/flumserberg/Flumserberge_LR-31.jpg" alt="Picture3" class='img-fluid figure-img'>
+                            <figcaption class="figure-caption">A caption for the image.</figcaption>
+                        </figure>
+                    </div>
+                </div>
+            </div>
+
+            <div class='col-12'>
+                <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium.</p>
+
+                <!-- Pic 3 only on mobile -->
+                <img src="assets/images/flumserberg/Flumserberge_LR-2.jpg" alt="Picture3" class='d-lg-none img-fluid'>
+
+
+                <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium.</p>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        
+
+
+    </section>
+
+
+        <!-- Footer -->
+        <!-- X Fix the text not going edge to edge -->
+        <footer class='footer d-flex align-items-center'>
+            <div class='container'>
             <div class='row'>
                 <!-- ordered mobile first, .order-* for desktop -->
                 <div class='col-lg-4 my-1 order-lg-2 d-flex justify-content-center'>

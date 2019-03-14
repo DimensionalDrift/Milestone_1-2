@@ -468,3 +468,7 @@ https://www.w3schools.com/howto/howto_css_image_overlay.asp
     max-width: 30px;
     margin: 5px;
 }
+
+#storysubtitle{
+    text-align: left;
+}
