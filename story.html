@@ -60,43 +60,42 @@
             </div>
         </div>
     </section>
-
     <!-- Article Body -->
     <section>
         <div class='container'>
             <div class="row">
                 <!-- This box should be colored depending on story type -->
                 <div class='col-lg-4 '>
-                    <div class="card" id='storyinfocard'>
+                    <div class="card mx-0" id='storyinfocard'>
                         <div class='row'>
-                            <div class='col-12 col-sm-6 col-md-6 col-lg-12'>
-                                    <table>
-                                      <tr>
+                            <div class='col-12 col-sm-6 col-md-6 col-lg-12 tablepad'>
+                                <table>
+                                    <tr>
                                         <td>Text:</td>
                                         <td>Carina</td>
-                                      </tr>
-                                      <tr>
+                                    </tr>
+                                    <tr>
                                         <td>Photos:</td>
                                         <td>Probably Also Carina</td>
-                                      </tr>
-                                      <tr>
+                                    </tr>
+                                    <tr>
                                         <td></td>
                                         <td>Should this be a circle?</td>
-                                      </tr>
-                                      <tr>
+                                    </tr>
+                                    <tr>
                                         <td>Info:&nbsp;</td>
-                                        <td><a href="#" class='linkhover'>prettymountain.ch</a></td>
-                                      </tr>
-                                    </table>
+                                        <td><a href="#" class='linkhover'>www.swissalps.ch</a></td>
+                                    </tr>
+                                </table>
                             </div>
                             <div class='col-12 col-sm-6 col-md-6 col-lg-12 d-flex align-items-end'>
-                                <p>Share:</p>
+                                <p class='pad'>Share:</p>
                                 <div class='d-flex justify-content-lg-center justify-content-start'>
                                     <a href="https://www.facebook.com/SpotMagazineCH/" class='sociallink spoticon fa fa-facebook'></a>
                                     <a href="https://twitter.com/spotmagazinech" class='sociallink spoticon fa fa-twitter'></a>
                                     <a href="https://www.instagram.com/spotmagazinech/" class='sociallink spoticon fa fa-instagram'></a>
                                     <a href="https://www.pinterest.ie/swissspots/" class='sociallink spoticon fa fa-pinterest'></a>
-                                </div> 
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -109,86 +108,148 @@
             </div>
         </div>
     </section>
-
     <!-- Body of the Story -->
     <section>
         <div class='container'>
             <div class='row'>
                 <div class='col-12'>
                     <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium.</p>
-
                     <!-- Pic 1 only on mobile -->
                     <figure class='figure d-lg-none img-fluid'>
                         <img src="assets/images/flumserberg/Flumserberge_LR-24.jpg" alt="Picture1" class='img-fluid figure-img'>
                         <figcaption class="figure-caption">A caption for image 1.</figcaption>
                     </figure>
-
+                    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium.</p>
+                    <!-- Pic 2 only on mobile -->
+                    <figure class='figure d-lg-none img-fluid'>
+                        <img src="assets/images/flumserberg/Flumserberge_LR-31.jpg" alt="Picture2" class='img-fluid figure-img'>
+                        <figcaption class="figure-caption">A caption for image 2.</figcaption>
+                    </figure>
+                </div>
+                <!-- Collage of pics on desktop -->
+                <!-- X Make center image circular in future 
+                       Future feature - display image in lightbox when clicked 
+                                        needs javascript to implement 
+                -->
+                <div class='col-12 d-none d-lg-block'>
+                    <div class='row'>
+                        <div class='col-lg-5'>
+                            <figure class='figure'>
+                                <img src="assets/images/flumserberg/Flumserberge_LR-24.jpg" alt="Picture1" class='img-fluid figure-img'>
+                                <figcaption class="figure-caption">A caption for image 1.</figcaption>
+                            </figure>
+                        </div>
+                        <div class='col-lg-3'>
+                            <figure class='figure'>
+                                <img src="assets/images/flumserberg/Flumserberge_LR-2.jpg" alt="Picture3" class='img-fluid figure-img'>
+                                <figcaption class="figure-caption">A caption for image 3.</figcaption>
+                            </figure>
+                        </div>
+                        <div class='col-lg-4'>
+                            <figure class='figure'>
+                                <img src="assets/images/flumserberg/Flumserberge_LR-31.jpg" alt="Picture2" class='img-fluid figure-img'>
+                                <figcaption class="figure-caption">A caption for image 2, yeah they are in a different order.</figcaption>
+                            </figure>
+                        </div>
+                    </div>
+                </div>
+                <div class='col-12'>
+                    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium.</p>
+                    <!-- Pic 3 only on mobile -->
+                    <figure class='figure d-lg-none img-fluid'>
+                        <img src="assets/images/flumserberg/Flumserberge_LR-2.jpg" alt="Picture3" class='img-fluid figure-img'>
+                        <figcaption class="figure-caption">A caption for image 3.</figcaption>
+                    </figure>
                     <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium.</p>
                 </div>
             </div>
-
-            <!-- Pic 3 only on mobile -->
-            <!-- Yeah, they're jumbled around -->
-            <figure class='figure d-lg-none img-fluid'>
-                <img src="assets/images/flumserberg/Flumserberge_LR-31.jpg" alt="Picture3" class='img-fluid figure-img'>
-                <figcaption class="figure-caption">A caption for image 3.</figcaption>
-            </figure>
-
-            
-            <!-- Collage of pics on desktop -->
-            <!-- X Make center image circular in future 
-                   Future feature - display image in lightbox when clicked 
-                                    needs javascript to implement 
-            -->
-            <div class='container d-none d-lg-block'>
-                <div class='row'>
-                    <div class='col-lg-5'>
-                        <figure class='figure'>
-                            <img src="assets/images/flumserberg/Flumserberge_LR-24.jpg" alt="Picture1" class='img-fluid figure-img'>
-                            <figcaption class="figure-caption">A caption for image 1.</figcaption>
-                        </figure>
-                    </div>
-                    <div class='col-lg-3'>
-                        <figure class='figure'>
-                            <img src="assets/images/flumserberg/Flumserberge_LR-2.jpg" alt="Picture2" class='img-fluid figure-img'>
-                            <figcaption class="figure-caption">A caption for image 2.</figcaption>
-                        </figure>
-                    </div>
-                    <div class='col-lg-4'>
-                        <figure class='figure'>
-                            <img src="assets/images/flumserberg/Flumserberge_LR-31.jpg" alt="Picture3" class='img-fluid figure-img'>
-                            <figcaption class="figure-caption">A caption for image 3.</figcaption>
-                        </figure>
+        </div>
+    </section>
+    <!-- Extra Info -->
+    <section>
+        <div class='container'>
+            <div class='row'>
+                <div class='col-12'>
+                    <div class='card'>
+                        <!-- Tab header for larger screen -->
+                        <div class='card-header d-none d-sm-block'>
+                            <div class="nav nav-tabs card-header-tabs">
+                                <a class="nav-item nav-link active" data-toggle="tab" href="#nav-tip">
+                                    Spot Tip
+                                </a>
+                                <a class="nav-item nav-link" data-toggle="tab" href="#nav-practicle">
+                                    Practicle
+                                </a>
+                                <a class="nav-item nav-link" data-toggle="tab" href="#nav-contact">
+                                    Contact
+                                </a>
+                            </div>
+                        </div>
+                        <!-- Pill header for smaller screen -->
+                        <div class='card-header d-sm-none'>
+                            <div class="nav nav-pills flex-column card-header-pills">
+                                <a class="nav-item nav-link active" data-toggle="pill" href="#nav-tip">
+                                    Spot Tip
+                                </a>
+                                <a class="nav-item nav-link" data-toggle="pill" href="#nav-practicle">
+                                    Practicle
+                                </a>
+                                <a class="nav-item nav-link" data-toggle="pill" href="#nav-contact">
+                                    Contact
+                                </a>
+                            </div>
+                        </div>
+                        <!-- Content on all screens -->
+                        <div class="tab-content card-body" id="nav-tabContent">
+                            <div class="tab-pane fade show active" id="nav-tip" role="tabpanel">
+                                Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium.
+                            </div>
+                            <div class="tab-pane fade" id="nav-practicle" role="tabpanel">
+                                <ol>
+                                    <li>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</li>
+                                    <li>Aliquam tincidunt mauris eu risus.</li>
+                                    <li>Vestibulum auctor dapibus neque.</li>
+                                </ol>
+                            </div>
+                            <div class="tab-pane fade" id="nav-contact" role="tabpanel">
+                                <div class='row'>
+                                    <div class='col-12 col-lg-6'>
+                                        <p>
+                                            <u>Address:</u> <br>
+                                            Edelweiss AG <br>
+                                            Heidi Schmid <br>
+                                            Gemeindestraße 123<br>
+                                            1234 Swiss <br>
+                                        </p>
+                                    </div>
+                                    <div class='col-12 col-lg-6 tablepad'>
+                                        <table>
+                                            <tr>
+                                                <td class='fa fa-phone'></td>
+                                                <td>045 678 91 23</td>
+                                            </tr>
+                                            <tr>
+                                                <td class='fa fa-envelope'></td>
+                                                <td><a href="#" class='linkhover'>heidi@swissalps.ch</a></td>
+                                            </tr>
+                                            <tr>
+                                                <td class="fa fa-cloud"></td>
+                                                <td><a href="#" class='linkhover'>www.swissalps.ch</a></td>
+                                            </tr>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
-
-            <div class='col-12'>
-                <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium.</p>
-
-                <!-- Pic 2 only on mobile -->
-                <figure class='figure d-lg-none img-fluid'>
-                    <img src="assets/images/flumserberg/Flumserberge_LR-2.jpg" alt="Picture2" class='img-fluid figure-img'>
-                    <figcaption class="figure-caption">A caption for image 2.</figcaption>
-                </figure>
-
-
-                <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium.</p>
-            </div>
         </div>
     </section>
-
-    <section>
-        
-
-
-    </section>
-
-
-        <!-- Footer -->
-        <!-- X Fix the text not going edge to edge -->
-        <footer class='footer d-flex align-items-center'>
-            <div class='container'>
+    <!-- Footer -->
+    <!-- X Fix the text not going edge to edge -->
+    <footer class='footer d-flex align-items-center'>
+        <div class='container'>
             <div class='row'>
                 <!-- ordered mobile first, .order-* for desktop -->
                 <div class='col-lg-4 my-1 order-lg-2 d-flex justify-content-center'>

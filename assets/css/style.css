@@ -441,11 +441,6 @@ https://www.w3schools.com/howto/howto_css_image_overlay.asp
     border-radius: 0;
 }
 
-.card-footer {
-    margin-bottom: 0;
-    background-color: #e7e7e7
-}
-
 .card-title {
     margin: 10px;
 }
@@ -454,10 +449,19 @@ https://www.w3schools.com/howto/howto_css_image_overlay.asp
     margin: 10px;
 }
 
+.card-header {
+    background-color: #e7e7e7
+}
+
+.card-footer {
+    margin-bottom: 0;
+    background-color: #e7e7e7
+}
+
 /* ---------- Story Page Styles --------- */
 
 #storyinfocard{
-    background-color: #08acd2;
+    background-color: #e7e7e7;
     margin:10px;
     font-size: 0.75em;
 }
@@ -469,6 +473,22 @@ https://www.w3schools.com/howto/howto_css_image_overlay.asp
     margin: 5px;
 }
 
+.pad{
+    padding-left: 10px;
+}
+
+.tablepad td{
+    padding-left: 10px;
+}
+
 #storysubtitle{
     text-align: left;
 }
+
+.nav-pills .nav-link.active,
+.nav-pills .show > .nav-link {
+  color: #fff;
+  background-color: #ffffff;
+}
+
+
