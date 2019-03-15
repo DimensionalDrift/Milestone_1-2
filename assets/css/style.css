@@ -75,6 +75,19 @@ a:active {
     text-decoration: underline;
 }
 
+/* Fade in effect from:
+https://codepen.io/jmelgoza/pen/jEaGYg
+*/
+.fade-in {
+  opacity:0; 
+  animation:fadeIn ease-in 1;
+  animation-fill-mode:forwards;
+  animation-duration:1s;
+}
+
+@keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
+
+
 /* Hover over image to indicate it's a link
 https://www.w3schools.com/howto/howto_css_image_overlay.asp
 */
