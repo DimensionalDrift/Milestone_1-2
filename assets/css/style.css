@@ -546,3 +546,18 @@ https://www.w3schools.com/howto/howto_css_image_overlay.asp
     width: 150px;
     height: 150px;
 }
+
+#prizenext, #prizeprev{
+    top: 30%;
+}
+
+@media only screen and (min-width: 768px) {
+
+    #prizeprev {
+        left: 50%;
+        top: 70% !important;
+    }
+    #prizenext {
+        top: 70% !important;
+    }
+}
