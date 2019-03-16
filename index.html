@@ -20,9 +20,8 @@
 </head>
 <!-- Grid image to use to test for stretching -->
 <!-- https://s6.postimg.cc/unjz87dz5/grd.png -->
-
 <!-- X Greater to do list:
-        - Make headers responsive so text isn't 'uge on smaller screens
+        - Make headers responsive so text isn't huge on smaller screens
         - Check that the hover effect for the story and magazine links funtionally works ok on mobile
         - 
  -->
@@ -56,12 +55,11 @@
     </header>
     <!-- Used to move content below the navbar -->
     <div class='navpadding'></div>
-
     <!-- Superhero image -->
     <!-- This superhero image uses a carousel to cycle through images -->
     <!-- Sample images Aletsch_lr-5.jpg  chaeserrugg_lr-10.jpg  fribourg_lr-31.jpg -->
     <section>
-        <div class='container heroContainer'>
+        <div class='container maxcontainer'>
             <div id="Superhero" class="carousel slide" data-ride="carousel">
                 <div class="carousel-inner">
                     <div class="carousel-item active heroview">
@@ -117,110 +115,50 @@
             </div>
         </div>
     </section>
-
-    <!-- Trending Story Design 1 Large Image-->
-    <section id='SoTW_design1' class='collapse'>
-        <div class='container my-lg-5 my-md-4 mx-auto'>
+    <!-- Trending Story -->
+    <section style='margin-bottom: 150px;'>
+        <!-- Mobile screen -->
+        <div class='container d-md-none'>
             <div class='row'>
-                <div class='col-xl-4 col-lg-5 order-lg-2 '>
-                    <div class=''>
-                        <div class='circleview1 mx-auto'>
-                            <img src="assets/images/dummy/dummy-500x375-Cottage.jpg" alt="placeholder+image" class='circleimage1'>
-                        </div>
-                    </div>
-                </div>
-                <div class='col-xl-8 col-lg-7 align-self-center order-lg-1'>
-                    <h1 class='cursivetxt my-4 text-center'>
+                <div class='col-12'>
+                    <h1 class='cursivetxt my-4'>
                         Story of the Week
                     </h1>
+                    <div class='circleview mx-auto'>
+                        <img src="assets/images/dummy/dummy-500x375-Cottage.jpg" alt="placeholder+image" class='circleimage'>
+                    </div>
+                </div>
+                <div class='col-12 my-auto'>
                     <h3>
-                        This is design 1 of the story of the week
-                    </h3>
-                    <p>In this design the image in the spot will run over the edge of the screen at smaller desktop sized browsers, this is intentional. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
-                    </p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Trending Story Design 2 Text Wrap-->
-    <section id='SoTW_design2' class='collapse' style='margin-bottom: 150px;'>
-        <div class='container my-lg-5 my-md-4 mx-auto d-lg-none'>
-            <div class='row'>
-                <div class='col-xl-4 col-lg-5 order-lg-1 '>
-                    <div class=''>
-                        <div class='circleview2 mx-auto'>
-                            <img src="assets/images/dummy/dummy-500x375-Cottage.jpg" alt="placeholder+image" class='circleimage2'>
-                        </div>
-                    </div>
-                </div>
-                <div class='col-xl-8 col-lg-7 align-self-center order-lg-2'>
-                    <h1 class='cursivetxt my-4 text-lg-left '>
-                        Story of the Week
-                    </h1>
-                    <h3 class='text-lg-left'>
-                        This is design 2 of the story of the week
+                        This is design 2 of the story of the week on mobile
                     </h3>
                     <p>In this design the text is meant to wrap around the edge of the spot. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
                     </p>
                 </div>
             </div>
         </div>
-        <!-- Large Screen -->
-        <div class='container my-lg-5 my-md-4 mx-auto d-none d-lg-block'>
-            <div class='circleview2 m-4'>
-                <img src="assets/images/dummy/dummy-500x375-Cottage.jpg" alt="placeholder+image" class='circleimage2'>
-            </div>
-            <div style='padding-top: 75px;'></div>
-            <h1 class='cursivetxt my-4 text-left'>
-                Story of the Week
-            </h1>
-            <h3 class='text-left'>
-                This is design 2 of the story of the week
-            </h3>
-            <p>In this design the text is meant to wrap around the edge of the spot. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
-            </p>
-        </div>
-    </section>
-    
-
-    <!-- Trending Story Design 3 White Card-->
-    <section id='SoTW_design3' class='collapse'>
-        <div class='container my-lg-5 my-md-4 mx-auto '>
-            <div class='row'>
-                <div class='col-lg-4 order-lg-2'>
-                        <div class='circleview3'>
-                            <img src="assets/images/dummy/dummy-500x375-Cottage.jpg" alt="placeholder+image" class='circleimage3'>
-                        </div>
-                </div>
-                <div class='col-lg-8 align-self-center order-lg-1 card' id='SoTWcard'>
-                    <h1 class='cursivetxt my-4 text-lg-left'>
-                        Story of the Week
-                    </h1>
-                    <h3 class='text-lg-left'>
-                        This is design 3 of the story of the week
-                    </h3>
-                    <p>In this design the text of the story is written on a card, this then overlaps the image in the spot, again this is intentional. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
-                    </p>
+        <!-- Larger Screen -->
+        <div class='container maxcontainer d-none d-md-block'>
+            <div class='row align-items-center'>
+                <div class='col-12 '>
+                    <div class='circleview m-3'>
+                        <img src="assets/images/dummy/dummy-500x375-Cottage.jpg" alt="placeholder+image" class='circleimage'>
+                    </div>
+                    <div class='my-lg-5 my-md-3'>
+                        <h1 class='cursivetxt text-left'>
+                            Story of the Week
+                        </h1>
+                        <h3 class='text-left'>
+                            This is design of the story of the week on desktop
+                        </h3>
+                        <p>In this design the text is meant to wrap around the edge of the spot. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
+                        <a href="#"><u>Read more...</u></a>
+                        </p>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
-
-
-    <!-- SoTW Buttons -->
-    <div class='container' style='margin-top: 150px;'>
-        <h1>
-            Story of the week designs NOT FINAL
-        </h1>
-        <div class='row justify-content-center '>
-            <button type="button" class="btn btn-secondary m-3" data-toggle="collapse" data-target='#SoTW_design1'>Design 1</button>
-            <button type="button" class="btn btn-secondary m-3" data-toggle="collapse" data-target='#SoTW_design2'>Design 2</button>
-            <button type="button" class="btn btn-secondary m-3" data-toggle="collapse" data-target='#SoTW_design3'>Design 3</button>
-        </div>
-    </div>
-    <div style='margin-bottom: 200px'></div>
-    
     <!-- Shorter Story Links -->
     <!-- 
             I think this may need javascript to generate links when the button is pressed. Also in the future it would make sense to use javascript and JSON to populate these items. For the moment this is just the layout of what the default 3/6 stories will look like 
@@ -228,9 +166,8 @@
           X Create animation for the reveal of more stories 
             Fix the image sizes or breakpoints for different screen sizes
         -->
-    
     <!-- Short Story Design 1 Cards with boarders -->
-    <section id='SStory_design1' class='collapse'>
+    <section>
         <div class="container">
             <div class="row">
                 <div class="col-lg-4 col-sm-6 col-xs-12 my-2">
@@ -335,10 +272,8 @@
                         <a href='#' class='linkspot spoticon spotred fa fa-arrow-right'></a>
                     </div>
                 </div>
-
             </div>
         </div>
-            
         <div class="row ">
             <!-- X Add styling to button, circular button? -->
             <div class="col-12 text-center my-4">
@@ -347,139 +282,6 @@
         </div>
         </div>
     </section>
-    
-
-    <!-- Short Story Design 2 'No Cards' -->
-    <section id='SStory_design2' class='collapse'>
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-4 col-sm-6 col-xs-12 my-2 px-0 ">
-                    <div class='card border-0'>
-                        <a href="#" class='imlink'>
-                            <img src="assets/images/dummy/dummy-500x375-Cottage.jpg" alt="placeholder+image" class='card-img-top'>
-                            <h5 class='card-title'>
-                                Title of the story will go here
-                            </h5>
-                            <p class='card-text'>
-                                Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
-                            </p>
-                            <p class='card-footer border-0'>
-                                Read time 3 mins
-                            </p>
-                        </a>
-                        <a href='#' class='linkspot spoticon spotred fa fa-arrow-right'></a>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-sm-6 col-xs-12 my-2 px-0 ">
-                    <div class='card border-0'>
-                        <a href="#" class='imlink'>
-                            <img src="assets/images/dummy/dummy-500x375-Cottage.jpg" alt="placeholder+image" class='card-img-top'>
-                            <h5 class='card-title'>
-                                Title of the story will go here
-                            </h5>
-                            <p class='card-text'>
-                                Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
-                            </p>
-                            <p class='card-footer border-0'>
-                                Read time 3 mins
-                            </p>
-                        </a>
-                        <a href='#' class='linkspot spoticon spotred fa fa-arrow-right'></a>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-sm-6 col-xs-12 my-2 px-0 ">
-                    <div class='card border-0'>
-                        <a href="#" class='imlink'>
-                            <img src="assets/images/dummy/dummy-500x375-Cottage.jpg" alt="placeholder+image" class='card-img-top'>
-                            <h5 class='card-title'>
-                                Title of the story will go here
-                            </h5>
-                            <p class='card-text'>
-                                Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
-                            </p>
-                            <p class='card-footer border-0'>
-                                Read time 3 mins
-                            </p>
-                        </a>
-                        <a href='#' class='linkspot spoticon spotred fa fa-arrow-right'></a>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-sm-6 col-xs-12 my-2 px-0 ">
-                    <div class='card border-0'>
-                        <a href="#" class='imlink'>
-                            <img src="assets/images/dummy/dummy-500x375-Cottage.jpg" alt="placeholder+image" class='card-img-top'>
-                            <h5 class='card-title'>
-                                Title of the story will go here
-                            </h5>
-                            <p class='card-text'>
-                                Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
-                            </p>
-                            <p class='card-footer border-0'>
-                                Read time 3 mins
-                            </p>
-                        </a>
-                        <a href='#' class='linkspot spoticon spotred fa fa-arrow-right'></a>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-sm-6 col-xs-12 my-2 px-0 ">
-                    <div class='card border-0'>
-                        <a href="#" class='imlink'>
-                            <img src="assets/images/dummy/dummy-500x375-Cottage.jpg" alt="placeholder+image" class='card-img-top'>
-                            <h5 class='card-title'>
-                                Title of the story will go here
-                            </h5>
-                            <p class='card-text'>
-                                Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
-                            </p>
-                            <p class='card-footer border-0'>
-                                Read time 3 mins
-                            </p>
-                        </a>
-                        <a href='#' class='linkspot spoticon spotred fa fa-arrow-right'></a>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-sm-6 col-xs-12 my-2 px-0 ">
-                    <div class='card border-0'>
-                        <a href="#" class='imlink'>
-                            <img src="assets/images/dummy/dummy-500x375-Cottage.jpg" alt="placeholder+image" class='card-img-top'>
-                            <h5 class='card-title'>
-                                Title of the story will go here
-                            </h5>
-                            <p class='card-text'>
-                                Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
-                            </p>
-                            <p class='card-footer border-0'>
-                                Read time 3 mins
-                            </p>
-                        </a>
-                        <a href='#' class='linkspot spoticon spotred fa fa-arrow-right'></a>
-                    </div>
-                </div>
-
-            </div>
-        </div>
-            
-        <div class="row ">
-            <!-- X Add styling to button, circular button? -->
-            <div class="col-12 text-center my-4">
-                <button type="button" class="btn btn-spot">Continue</button>
-            </div>
-        </div>
-        </div>
-    </section>
-
-    <!-- SStory Buttons -->
-    <div class='container' style='margin-top: 150px;'>
-        <h1>
-            Short Story designs NOT FINAL
-        </h1>
-        <div class='row justify-content-center '>
-            <button type="button" class="btn btn-secondary m-3" data-toggle="collapse" data-target='#SStory_design1'>Design 1</button>
-            <button type="button" class="btn btn-secondary m-3" data-toggle="collapse" data-target='#SStory_design2'>Design 2</button>
-        </div>
-    </div>
-    <div style='margin-bottom: 200px'></div>
-
     <section>
         <div class="m-5 text-center">
             <h2 class='cursivetxt'>
@@ -520,10 +322,6 @@
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 
 </html>
-
-
-
-
 <!-- <div class="container-fluid">
     <div class="row">
         <div class="col-sm-6">

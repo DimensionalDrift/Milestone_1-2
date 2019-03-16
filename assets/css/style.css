@@ -264,14 +264,6 @@ https://www.w3schools.com/howto/howto_css_image_overlay.asp
 }
 
 
-@media only screen and (max-width: 992px) {
-
-    .heroContainer {
-        max-width: 100%;
-    }
-}
-
-
 /* ---------- Footer Styles ----------*/
 .footer {
     background-color: #e7e7e7;
@@ -332,63 +324,56 @@ https://www.w3schools.com/howto/howto_css_image_overlay.asp
     color: white;
 }
 
-/* ---------- Trending Story Styles 1 ----------*/
-.circleview1 {
-    width: 300px;
-    height: 300px;
-    overflow: hidden;
-    border-radius: 50%;
-}
+/* ---------- Front page style ----------*/
+/*Used to make container full width below desktop screen size
+   X Not very mobile first, look for better way*/
+@media only screen and (max-width: 992px) {
 
-.circleimage1 {
-    width: auto;
-    height: 100%;
-    margin-left: -100px;
-    /*Needed to shift the image */
-}
-
-.frameview1 {
-    width: auto;
-    height: 300px;
-    overflow: hidden;
-}
-
-@media only screen and (min-width: 992px) {
-
-    .circleview1 {
-        width: 500px;
-        height: 500px;
+    .maxcontainer {
+        max-width: 100%;
     }
-
-
 }
 
-/* ---------- Trending Story Styles 2 ----------*/
-.circleview2 {
+/* ---------- Trending Story Styles ----------*/
+.circleview {
     width: 300px;
     height: 300px;
     overflow: hidden;
     border-radius: 50%;
 }
 
-.circleimage2 {
+.circleimage {
     width: auto;
     height: 100%;
     margin-left: -100px;
     /*Needed to shift the image */
 }
 
-.frameview2 {
+/*Depricated*/
+.frameview {
     width: auto;
     height: 300px;
     overflow: hidden;
 }
 
+/* Tablet size*/
+@media only screen and (min-width: 768px) {
+    
+    .circleview {
+        width: 350px;
+        height: 350px;
+        float: left;
+        shape-outside: inset(1% round 50%);
+        /*margin-left: 50px !important;*/
+    }
+}
+
+/* Desktop size*/
 @media only screen and (min-width: 992px) {
 
-    .circleview2 {
-        width: 450px;
-        height: 450px;
+    .circleview {
+        width: 400px;
+        height: 400px;
         float: left;
         shape-outside: inset(1% round 50%);
         /*margin-left: 50px !important;*/
@@ -396,44 +381,6 @@ https://www.w3schools.com/howto/howto_css_image_overlay.asp
 
 
 }
-
-/* ---------- Trending Story Styles 3 ----------*/
-.circleview3 {
-    width: 300px;
-    height: 300px;
-    overflow: hidden;
-    border-radius: 50%;
-    z-index: -1;
-}
-
-.circleimage3 {
-    width: auto;
-    height: 100%;
-    margin-left: -100px;
-    /*Needed to shift the image */
-}
-
-.frameview3 {
-    width: auto;
-    height: 300px;
-    overflow: hidden;
-}
-
-#SoTWcard {
-    background-color: rgba(255, 255, 255, 0.95);
-}
-
-@media only screen and (min-width: 992px) {
-
-    .circleview3 {
-        width: 500px !important;
-        height: 500px;
-        margin-left: -150px;
-    }
-
-
-}
-
 
 /* ---------- Short Stories Styles ----------*/
 
@@ -509,3 +456,4 @@ https://www.w3schools.com/howto/howto_css_image_overlay.asp
     border-width: 0px;
 }
 
+/* ---------- Contest Page Styles --------- */
