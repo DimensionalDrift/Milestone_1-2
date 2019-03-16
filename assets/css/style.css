@@ -198,7 +198,7 @@ https://www.w3schools.com/howto/howto_css_image_overlay.asp
 
 /*This style is used to move content below the logo*/
 .navpadding {
-    height: 135px;
+    height: 100px;
 }
 
 .navbar {
@@ -209,12 +209,8 @@ https://www.w3schools.com/howto/howto_css_image_overlay.asp
 /*Larger screen fix navbar height*/
 @media only screen and (min-width: 992px) {
 
-    .navpadding {
-        height: 160px;
-    }
-
     .navbar {
-        height: 144px !important;
+        height: 90px !important;
     }
 
     .navbar-brand {
@@ -223,7 +219,7 @@ https://www.w3schools.com/howto/howto_css_image_overlay.asp
 }
 
 .nav-link {
-    font-size: 1.5em;
+    font-size: 1.2em;
     color: #24282F !important;
 }
 
