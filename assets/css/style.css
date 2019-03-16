@@ -418,8 +418,11 @@ https://www.w3schools.com/howto/howto_css_image_overlay.asp
 .circleimage {
     width: auto;
     height: 100%;
+}
+
+/*Needed to shift the image */
+#trendingimg {
     margin-left: -100px;
-    /*Needed to shift the image */
 }
 
 /*Depricated*/
@@ -437,7 +440,6 @@ https://www.w3schools.com/howto/howto_css_image_overlay.asp
         height: 350px;
         float: left;
         shape-outside: inset(1% round 50%);
-        /*margin-left: 50px !important;*/
     }
 }
 
@@ -449,7 +451,6 @@ https://www.w3schools.com/howto/howto_css_image_overlay.asp
         height: 400px;
         float: left;
         shape-outside: inset(1% round 50%);
-        /*margin-left: 50px !important;*/
     }
 
 
@@ -530,3 +531,18 @@ https://www.w3schools.com/howto/howto_css_image_overlay.asp
 }
 
 /* ---------- Contest Page Styles --------- */
+
+#circlep1{
+    width: 200px;
+    height: 200px;
+}
+
+#circlep2{
+    width: 175px;
+    height: 175px;
+}
+
+#circlep3{
+    width: 150px;
+    height: 150px;
+}
