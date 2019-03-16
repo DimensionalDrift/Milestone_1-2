@@ -1,0 +1,545 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- Adding Bootstrap 4 styling, Font Awesome fonts -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" type="text/css" />
+    <!-- Adding google font 
+         X This is a close approx to a licenced font the client uses, should be replaced in live version-->
+    <link href="https://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet">
+    <!-- Favicon -->
+    <!-- X Add icons for mobile homescreen use -->
+    <link rel="shortcut icon" type="image/png" href="assets/logo/Spot_Magazine.png" />
+    <!-- My styles -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <title>Spot Magazine</title>
+</head>
+<!-- Grid image to use to test for stretching -->
+<!-- https://s6.postimg.cc/unjz87dz5/grd.png -->
+
+<!-- X Greater to do list:
+        - Make headers responsive so text isn't 'uge on smaller screens
+        - Check that the hover effect for the story and magazine links funtionally works ok on mobile
+        - 
+ -->
+
+<body>
+    <header>
+        <nav class="navbar fixed-top navbar-expand-lg navbar-light nav-fill shadow-sm">
+            <!-- Large Logo size -->
+            <a class="navbar-brand d-none d-lg-block " href="index.html">
+                <img src="assets/logo/Spot_Magazine.png" width='180px' height='180px' alt="Logo">
+            </a>
+            <!-- Small Logo size -->
+            <a class="navbar-brand d-lg-none" href="index.html">
+                <img src="assets/logo/Spot_Magazine.png" width='80px' height='80px' alt="Logo">
+            </a>
+            <!-- Button used as menu under 768px -->
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#topNavbar">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id='topNavbar'>
+                <!-- Header links -->
+                <a class='nav-item nav-link' href="index.html"> Home</a>
+                <a class='nav-item nav-link' href="gallery.html">Magazines</a>
+                <a class='nav-item nav-link' href="contest.html">Photo Contest</a>
+                <a class='nav-item nav-link' href="contact.html">Contact</a>
+                <!-- Serach button -->
+                <!-- Non functional as js would be needed for the animations -->
+                <!-- X Figure out why the search button is on the left when in the menu  -->
+                <div class="nav-item spoticon spotred fa fa-search"></div>
+        </nav>
+    </header>
+    <!-- Used to move content below the navbar -->
+    <div class='navpadding'></div>
+
+    <!-- Superhero image -->
+    <!-- This superhero image uses a carousel to cycle through images -->
+    <!-- Sample images Aletsch_lr-5.jpg  chaeserrugg_lr-10.jpg  fribourg_lr-31.jpg -->
+    <section>
+        <div class='container heroContainer'>
+            <div id="Superhero" class="carousel slide" data-ride="carousel">
+                <div class="carousel-inner">
+                    <div class="carousel-item active heroview">
+                        <a href="story.html">
+                            <img class="w-100 heroimg" src="assets/images/aletsch/Aletsch_lr-5.jpg" alt="First slide">
+                            <div class='carousel-caption herotxt responsivefont'>
+                                <p>
+                                    Test Caption 1
+                                </p>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="carousel-item heroview">
+                        <a href="story.html">
+                            <img class="w-100 heroimg" src="assets/images/chaeserrugg/chaeserrugg_lr-10.jpg" alt="Second slide">
+                            <div class='carousel-caption herotxt responsivefont'>
+                                <p>
+                                    Test Caption 2
+                                </p>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="carousel-item heroview">
+                        <a href="story.html">
+                            <img class="w-100 heroimg" src="assets/images/fribourg/fribourg_lr-31.jpg" alt="Third slide">
+                            <div class='carousel-caption herotxt responsivefont'>
+                                <p>
+                                    Test Caption 3
+                                </p>
+                            </div>
+                        </a>
+                    </div>
+                    <!-- Use to show shadow effect on text -->
+                    <!-- <div class="carousel-item">
+                        <a href="#">
+                            <img  class="d-ld-block w-100" src="http://dummyimage.com/1800x1201/ffffff/686a82.gif&text=shadow+test" alt="Fourth Slide">
+                            <div class='carousel-caption herotxt'>
+                                <p>
+                                    Test Caption 4
+                                </p>
+                            </div>
+                        </a>
+                    </div> -->
+                </div>
+                <a class="carousel-control-prev" href="#Superhero" role="button" data-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Previous</span>
+                </a>
+                <a class="carousel-control-next" href="#Superhero" role="button" data-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Next</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Trending Story Design 1 Large Image-->
+    <section id='SoTW_design1' class='collapse'>
+        <div class='container my-lg-5 my-md-4 mx-auto'>
+            <div class='row'>
+                <div class='col-xl-4 col-lg-5 order-lg-2 '>
+                    <div class=''>
+                        <div class='circleview1 mx-auto'>
+                            <img src="assets/images/dummy/dummy-500x375-Cottage.jpg" alt="placeholder+image" class='circleimage1'>
+                        </div>
+                    </div>
+                </div>
+                <div class='col-xl-8 col-lg-7 align-self-center order-lg-1'>
+                    <h1 class='cursivetxt my-4 text-center'>
+                        Story of the Week
+                    </h1>
+                    <h3>
+                        This is design 1 of the story of the week
+                    </h3>
+                    <p>In this design the image in the spot will run over the edge of the screen at smaller desktop sized browsers, this is intentional. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Trending Story Design 2 Text Wrap-->
+    <section id='SoTW_design2' class='collapse' style='margin-bottom: 150px;'>
+        <div class='container my-lg-5 my-md-4 mx-auto d-lg-none'>
+            <div class='row'>
+                <div class='col-xl-4 col-lg-5 order-lg-1 '>
+                    <div class=''>
+                        <div class='circleview2 mx-auto'>
+                            <img src="assets/images/dummy/dummy-500x375-Cottage.jpg" alt="placeholder+image" class='circleimage2'>
+                        </div>
+                    </div>
+                </div>
+                <div class='col-xl-8 col-lg-7 align-self-center order-lg-2'>
+                    <h1 class='cursivetxt my-4 text-lg-left '>
+                        Story of the Week
+                    </h1>
+                    <h3 class='text-lg-left'>
+                        This is design 2 of the story of the week
+                    </h3>
+                    <p>In this design the text is meant to wrap around the edge of the spot. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
+                    </p>
+                </div>
+            </div>
+        </div>
+        <!-- Large Screen -->
+        <div class='container my-lg-5 my-md-4 mx-auto d-none d-lg-block'>
+            <div class='circleview2 m-4'>
+                <img src="assets/images/dummy/dummy-500x375-Cottage.jpg" alt="placeholder+image" class='circleimage2'>
+            </div>
+            <div style='padding-top: 75px;'></div>
+            <h1 class='cursivetxt my-4 text-left'>
+                Story of the Week
+            </h1>
+            <h3 class='text-left'>
+                This is design 2 of the story of the week
+            </h3>
+            <p>In this design the text is meant to wrap around the edge of the spot. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
+            </p>
+        </div>
+    </section>
+    
+
+    <!-- Trending Story Design 3 White Card-->
+    <section id='SoTW_design3' class='collapse'>
+        <div class='container my-lg-5 my-md-4 mx-auto '>
+            <div class='row'>
+                <div class='col-lg-4 order-lg-2'>
+                        <div class='circleview3'>
+                            <img src="assets/images/dummy/dummy-500x375-Cottage.jpg" alt="placeholder+image" class='circleimage3'>
+                        </div>
+                </div>
+                <div class='col-lg-8 align-self-center order-lg-1 card' id='SoTWcard'>
+                    <h1 class='cursivetxt my-4 text-lg-left'>
+                        Story of the Week
+                    </h1>
+                    <h3 class='text-lg-left'>
+                        This is design 3 of the story of the week
+                    </h3>
+                    <p>In this design the text of the story is written on a card, this then overlaps the image in the spot, again this is intentional. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- SoTW Buttons -->
+    <div class='container' style='margin-top: 150px;'>
+        <h1>
+            Story of the week designs NOT FINAL
+        </h1>
+        <div class='row justify-content-center '>
+            <button type="button" class="btn btn-secondary m-3" data-toggle="collapse" data-target='#SoTW_design1'>Design 1</button>
+            <button type="button" class="btn btn-secondary m-3" data-toggle="collapse" data-target='#SoTW_design2'>Design 2</button>
+            <button type="button" class="btn btn-secondary m-3" data-toggle="collapse" data-target='#SoTW_design3'>Design 3</button>
+        </div>
+    </div>
+    <div style='margin-bottom: 200px'></div>
+    
+    <!-- Shorter Story Links -->
+    <!-- 
+            I think this may need javascript to generate links when the button is pressed. Also in the future it would make sense to use javascript and JSON to populate these items. For the moment this is just the layout of what the default 3/6 stories will look like 
+    
+          X Create animation for the reveal of more stories 
+            Fix the image sizes or breakpoints for different screen sizes
+        -->
+    
+    <!-- Short Story Design 1 Cards with boarders -->
+    <section id='SStory_design1' class='collapse'>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 col-sm-6 col-xs-12 my-2">
+                    <div class='card'>
+                        <a href="#" class='imlink'>
+                            <img src="assets/images/dummy/dummy-500x375-Cottage.jpg" alt="placeholder+image" class='card-img-top'>
+                            <h5 class='card-title'>
+                                Title of the story will go here
+                            </h5>
+                            <p class='card-text'>
+                                Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
+                            </p>
+                            <p class='card-footer'>
+                                Read time 3 mins
+                            </p>
+                        </a>
+                        <a href='#' class='linkspot spoticon spotred fa fa-arrow-right'></a>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-sm-6 col-xs-12 my-2">
+                    <div class='card'>
+                        <a href="#" class='imlink'>
+                            <img src="assets/images/dummy/dummy-500x375-Cottage.jpg" alt="placeholder+image" class='card-img-top'>
+                            <h5 class='card-title'>
+                                Title of the story will go here
+                            </h5>
+                            <p class='card-text'>
+                                Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
+                            </p>
+                            <p class='card-footer'>
+                                Read time 3 mins
+                            </p>
+                        </a>
+                        <a href='#' class='linkspot spoticon spotred fa fa-arrow-right'></a>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-sm-6 col-xs-12 my-2">
+                    <div class='card'>
+                        <a href="#" class='imlink'>
+                            <img src="assets/images/dummy/dummy-500x375-Cottage.jpg" alt="placeholder+image" class='card-img-top'>
+                            <h5 class='card-title'>
+                                Title of the story will go here
+                            </h5>
+                            <p class='card-text'>
+                                Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
+                            </p>
+                            <p class='card-footer'>
+                                Read time 3 mins
+                            </p>
+                        </a>
+                        <a href='#' class='linkspot spoticon spotred fa fa-arrow-right'></a>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-sm-6 col-xs-12 my-2">
+                    <div class='card'>
+                        <a href="#" class='imlink'>
+                            <img src="assets/images/dummy/dummy-500x375-Cottage.jpg" alt="placeholder+image" class='card-img-top'>
+                            <h5 class='card-title'>
+                                Title of the story will go here
+                            </h5>
+                            <p class='card-text'>
+                                Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
+                            </p>
+                            <p class='card-footer'>
+                                Read time 3 mins
+                            </p>
+                        </a>
+                        <a href='#' class='linkspot spoticon spotred fa fa-arrow-right'></a>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-sm-6 col-xs-12 my-2">
+                    <div class='card'>
+                        <a href="#" class='imlink'>
+                            <img src="assets/images/dummy/dummy-500x375-Cottage.jpg" alt="placeholder+image" class='card-img-top'>
+                            <h5 class='card-title'>
+                                Title of the story will go here
+                            </h5>
+                            <p class='card-text'>
+                                Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
+                            </p>
+                            <p class='card-footer'>
+                                Read time 3 mins
+                            </p>
+                        </a>
+                        <a href='#' class='linkspot spoticon spotred fa fa-arrow-right'></a>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-sm-6 col-xs-12 my-2">
+                    <div class='card'>
+                        <a href="#" class='imlink'>
+                            <img src="assets/images/dummy/dummy-500x375-Cottage.jpg" alt="placeholder+image" class='card-img-top'>
+                            <h5 class='card-title'>
+                                Title of the story will go here
+                            </h5>
+                            <p class='card-text'>
+                                Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
+                            </p>
+                            <p class='card-footer'>
+                                Read time 3 mins
+                            </p>
+                        </a>
+                        <a href='#' class='linkspot spoticon spotred fa fa-arrow-right'></a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+            
+        <div class="row ">
+            <!-- X Add styling to button, circular button? -->
+            <div class="col-12 text-center my-4">
+                <button type="button" class="btn btn-spot">Continue</button>
+            </div>
+        </div>
+        </div>
+    </section>
+    
+
+    <!-- Short Story Design 2 'No Cards' -->
+    <section id='SStory_design2' class='collapse'>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 col-sm-6 col-xs-12 my-2 px-0 ">
+                    <div class='card border-0'>
+                        <a href="#" class='imlink'>
+                            <img src="assets/images/dummy/dummy-500x375-Cottage.jpg" alt="placeholder+image" class='card-img-top'>
+                            <h5 class='card-title'>
+                                Title of the story will go here
+                            </h5>
+                            <p class='card-text'>
+                                Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
+                            </p>
+                            <p class='card-footer border-0'>
+                                Read time 3 mins
+                            </p>
+                        </a>
+                        <a href='#' class='linkspot spoticon spotred fa fa-arrow-right'></a>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-sm-6 col-xs-12 my-2 px-0 ">
+                    <div class='card border-0'>
+                        <a href="#" class='imlink'>
+                            <img src="assets/images/dummy/dummy-500x375-Cottage.jpg" alt="placeholder+image" class='card-img-top'>
+                            <h5 class='card-title'>
+                                Title of the story will go here
+                            </h5>
+                            <p class='card-text'>
+                                Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
+                            </p>
+                            <p class='card-footer border-0'>
+                                Read time 3 mins
+                            </p>
+                        </a>
+                        <a href='#' class='linkspot spoticon spotred fa fa-arrow-right'></a>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-sm-6 col-xs-12 my-2 px-0 ">
+                    <div class='card border-0'>
+                        <a href="#" class='imlink'>
+                            <img src="assets/images/dummy/dummy-500x375-Cottage.jpg" alt="placeholder+image" class='card-img-top'>
+                            <h5 class='card-title'>
+                                Title of the story will go here
+                            </h5>
+                            <p class='card-text'>
+                                Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
+                            </p>
+                            <p class='card-footer border-0'>
+                                Read time 3 mins
+                            </p>
+                        </a>
+                        <a href='#' class='linkspot spoticon spotred fa fa-arrow-right'></a>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-sm-6 col-xs-12 my-2 px-0 ">
+                    <div class='card border-0'>
+                        <a href="#" class='imlink'>
+                            <img src="assets/images/dummy/dummy-500x375-Cottage.jpg" alt="placeholder+image" class='card-img-top'>
+                            <h5 class='card-title'>
+                                Title of the story will go here
+                            </h5>
+                            <p class='card-text'>
+                                Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
+                            </p>
+                            <p class='card-footer border-0'>
+                                Read time 3 mins
+                            </p>
+                        </a>
+                        <a href='#' class='linkspot spoticon spotred fa fa-arrow-right'></a>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-sm-6 col-xs-12 my-2 px-0 ">
+                    <div class='card border-0'>
+                        <a href="#" class='imlink'>
+                            <img src="assets/images/dummy/dummy-500x375-Cottage.jpg" alt="placeholder+image" class='card-img-top'>
+                            <h5 class='card-title'>
+                                Title of the story will go here
+                            </h5>
+                            <p class='card-text'>
+                                Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
+                            </p>
+                            <p class='card-footer border-0'>
+                                Read time 3 mins
+                            </p>
+                        </a>
+                        <a href='#' class='linkspot spoticon spotred fa fa-arrow-right'></a>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-sm-6 col-xs-12 my-2 px-0 ">
+                    <div class='card border-0'>
+                        <a href="#" class='imlink'>
+                            <img src="assets/images/dummy/dummy-500x375-Cottage.jpg" alt="placeholder+image" class='card-img-top'>
+                            <h5 class='card-title'>
+                                Title of the story will go here
+                            </h5>
+                            <p class='card-text'>
+                                Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
+                            </p>
+                            <p class='card-footer border-0'>
+                                Read time 3 mins
+                            </p>
+                        </a>
+                        <a href='#' class='linkspot spoticon spotred fa fa-arrow-right'></a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+            
+        <div class="row ">
+            <!-- X Add styling to button, circular button? -->
+            <div class="col-12 text-center my-4">
+                <button type="button" class="btn btn-spot">Continue</button>
+            </div>
+        </div>
+        </div>
+    </section>
+
+    <!-- SStory Buttons -->
+    <div class='container' style='margin-top: 150px;'>
+        <h1>
+            Short Story designs NOT FINAL
+        </h1>
+        <div class='row justify-content-center '>
+            <button type="button" class="btn btn-secondary m-3" data-toggle="collapse" data-target='#SStory_design1'>Design 1</button>
+            <button type="button" class="btn btn-secondary m-3" data-toggle="collapse" data-target='#SStory_design2'>Design 2</button>
+        </div>
+    </div>
+    <div style='margin-bottom: 200px'></div>
+
+    <section>
+        <div class="m-5 text-center">
+            <h2 class='cursivetxt'>
+                Example Instagram Feed
+            </h2>
+            <img src="assets/images/Instagram_eg.jpg" alt='Instagram+Example'>
+        </div>
+    </section>
+    <!-- Footer -->
+    <!-- X Fix the text not going edge to edge -->
+    <footer class='footer d-flex align-items-center'>
+        <div class='container'>
+            <div class='row'>
+                <!-- ordered mobile first, .order-* for desktop -->
+                <div class='col-lg-4 my-1 order-lg-2 d-flex justify-content-center'>
+                    <a href="https://www.facebook.com/SpotMagazineCH/" class='sociallink spoticon fa fa-facebook'></a>
+                    <a href="https://twitter.com/spotmagazinech" class='sociallink spoticon fa fa-twitter'></a>
+                    <a href="https://www.instagram.com/spotmagazinech/" class='sociallink spoticon fa fa-instagram'></a>
+                    <a href="https://www.pinterest.ie/swissspots/" class='sociallink spoticon fa fa-pinterest'></a>
+                </div>
+                <div class='col-lg-4 my-1 order-lg-1 footerleft'>
+                    SPOT MEDIA GmbH </br>
+                    PO Box 448 </br>
+                    8810 Horgen </br>
+                </div>
+                <div class='col-lg-4 my-1 order-lg-3 footerright'>
+                    Spot Media GmbH </br>
+                    C2018 </br>
+                    All rights reserved </br>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+<!-- Bootstrap javascript -->
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+</html>
+
+
+
+
+<!-- <div class="container-fluid">
+    <div class="row">
+        <div class="col-sm-6">
+            <div class="card">
+                <div class="card-body">
+                    <h4 class="card-title">Sun Gone</h4>
+                    <p class="'card-text'">Here are the top resources for all things related to the Sun.</p>
+                    <a href="#" class="card-link">Sun Gone</a>
+                    <a href="#" class="card-link">Still Gone</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-6">
+            <div class="card">
+                <div class="card-body">
+                    <h4 class="card-title">Sun Up</h4>
+                    <p class="'card-text'">Looks like the Sun has returned. Here's why.</p>
+                    <a href="#" class="btn btn-primary">Download Report</a>
+                </div> -->
