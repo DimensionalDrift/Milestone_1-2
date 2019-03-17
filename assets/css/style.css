@@ -335,7 +335,7 @@ https://www.w3schools.com/howto/howto_css_image_overlay.asp
 }
 
 .superheroview {
-    height: 95vh !important;
+    height: 100vh !important;
     overflow: hidden;
 }
 
