@@ -261,11 +261,33 @@ https://www.w3schools.com/howto/howto_css_image_overlay.asp
   box-shadow: 0 0 0 0.2rem rgba(213, 43, 30, 0.25);
 }
 
+.custom-select:focus {
+  border-color: #D52B1E;
+  box-shadow: 0 0 0 0.2rem rgba(213, 43, 30, 0.25);
+}
+
+
+/* Used for making forms 
+https://bootstrapformbuilder.com/
+*/
+.form-group {
+  margin-bottom: 0.5rem;
+}
+
+.faicon{
+    width: 25px;
+    height: 25px;
+}
+
 /* ---------- Navbar styles ----------*/
 
 /*This style is used to move content below the logo*/
 .navpadding {
     height: 100px;
+}
+
+.navpaddinghalf {
+    height: 50px;
 }
 
 .navbar {
@@ -615,3 +637,26 @@ https://www.w3schools.com/howto/howto_css_image_overlay.asp
     }
 
 }
+
+/* ---------- Contact Page Styles ----------*/
+
+@media only screen and (min-width: 992px) { 
+
+    .contacttable{
+        border-collapse: separate;
+        border-spacing: 10px 20px;
+    }
+
+    .vline {
+        border-right: 2px solid;
+        border-color: #24282F;
+        height: 95%;
+    }
+}
+
+.aboutcircle{
+    width: 250px;
+    height: 250px;
+}
+
+

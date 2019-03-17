@@ -8,68 +8,281 @@
     <!-- Adding Bootstrap 4 styling, Font Awesome fonts -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" type="text/css" />
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" type="text/css" />
+    <!-- Adding google font 
+         X This is a close approx to a licenced font the client uses, should be replaced in live version-->
+    <link href="https://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet">
+    <!-- Favicon -->
+    <!-- X Add icons for mobile homescreen use -->
+    <link rel="shortcut icon" type="image/png" href="assets/logo/Spot_Magazine.png" />
     <!-- My styles -->
     <link rel="stylesheet" href="assets/css/style.css">
     <title>Spot Magazine</title>
 </head>
 
 <body>
+    <!-- Nav bar -->
+    <!-- I would love for it to be transparent then fade into white while scrolling on mobile but from what I could see it would require custom javascript -->
     <header>
-        <nav class="navbar fixed-top navbar-expand-lg navbar-light nav-fill">
-            <a class="navbar-brand d-none d-lg-block " href="index.html">
-                <img src="https://placeholder.pics/svg/180/D52B1E/000/Spot%20Magazine" alt="Logo">
-            </a>
-            <a class="navbar-brand d-lg-none" href="index.html">
-                <img src="https://placeholder.pics/svg/100/D52B1E/000/Spot" alt="Logo">
-            </a>
-            <!-- Button used as menu under 768px -->
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#topNavbar">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id='topNavbar'>
-                <!-- Header links -->
-                <a class='nav-item nav-link' href="index.html"> Home</a>
-                <a class='nav-item nav-link' href="gallery.html">Magazines</a>
-                <a class='nav-item nav-link' href="contest.html">Photo Contest</a>
-                <a class='nav-item nav-link' href="contact.html">Contact</a>
-                <!-- Serach button -->
-                <!-- Non functional as js would be needed for the animations -->
-                <!-- X Figure out why the search button is on the left when in the menu  -->
-                <div class="nav-item spoticon searchspot fa fa-search"></div>
+        <nav class="navbar fixed-top navbar-expand-lg navbar-light nav-fill shadow-sm py-1">
+            <div class='container maxcontainer'>
+                <div class='mr-auto'>
+                    <!-- Large Logo size -->
+                    <a class="navbar-brand d-none d-lg-block " href="index.html">
+                        <img src="assets/logo/Spot_Magazine.png" alt="Logo" class='logosize'>
+                    </a>
+                    <!-- Small Logo size -->
+                    <a class="navbar-brand d-lg-none p-0" href="index.html">
+                        <img src="assets/logo/Spot_Magazine.png" alt="Logo" class='logosize'>
+                    </a>
+                </div>
+                <!-- Button used as menu under 768px -->
+                <div class='d-flex flex-row order-lg-2'>
+                    <div class='pt-lg-2'>
+                        <div class="nav-item spoticon spotred fa fa-search"></div>
+                    </div>
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#topNavbar">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                </div>
+                <div class="collapse navbar-collapse order-lg-1" id='topNavbar'>
+                    <!-- Header links -->
+                    <a class='nav-item nav-link pt-lg-4' href="index.html">Home</a>
+                    <a class='nav-item nav-link pt-lg-4' href="gallery.html">Magazines</a>
+                    <a class='nav-item nav-link pt-lg-4' href="contest.html">Photo Contest</a>
+                    <a class='nav-item nav-link pt-lg-4' href="contact.html">Contact</a>
+                    <!-- Serach button -->
+                    <!-- Non functional as js would be needed for the animations -->
+                    <!-- X Figure out why the search button is on the left when in the menu  -->
+                </div>
+            </div>
         </nav>
     </header>
-
-    <!-- Filler Section -->
-    <section style="margin: 200px 50px 75px 100px;">
-        <h1>This is a filler page with some filler html</h1>
-        
-        <p><strong>Pellentesque habitant morbi tristique</strong> senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. <em>Aenean ultricies mi vitae est.</em> Mauris placerat eleifend leo. Quisque sit amet est et sapien ullamcorper pharetra. Vestibulum erat wisi, condimentum sed, <code>commodo vitae</code>, ornare sit amet, wisi. Aenean fermentum, elit eget tincidunt condimentum, eros ipsum rutrum orci, sagittis tempus lacus enim ac dui. <a href="#">Donec non enim</a> in turpis pulvinar facilisis. Ut felis.</p>
-        
-        <h2>Header Level 2</h2>
-        
-        <ol>
-            <li>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</li>
-            <li>Aliquam tincidunt mauris eu risus.</li>
-        </ol>
-        
-        <blockquote><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus magna. Cras in mi at felis aliquet congue. Ut a est eget ligula molestie gravida. Curabitur massa. Donec eleifend, libero at sagittis mollis, tellus est malesuada tellus, at luctus turpis elit sit amet quam. Vivamus pretium ornare est.</p></blockquote>
-        
-        <h3>Header Level 3</h3>
-        
-        <ul>
-            <li>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</li>
-            <li>Aliquam tincidunt mauris eu risus.</li>
-        </ul>
-        
-        <pre><code>
-        #header h1 a { 
-            display: block; 
-            width: 300px; 
-            height: 80px; 
-        }
-        </code></pre>
+    <!-- Used to move content below the navbar -->
+    <div class='navpadding'></div>
+    <div class='navpadding'></div>
+    <!-- <div class='navpaddinghalf '></div> -->
+    <!-- Enquireies and Subscription -->
+    <section>
+        <div class='container'>
+            <div class='row'>
+                <div class='col-12'>
+                    <h2 class='cursivetxt text-left'>Contact Us</h2>
+                    Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim
+                </div>
+            </div>
+        </div>
     </section>
-
+    <!-- Contact info and form -->
+    <section>
+        <div class='container mt-4'>
+            <div class='row'>
+                <div class='col-12 col-lg-5 my-4'>
+                    <h3 class='cursivetxt text-left'>Contact Details:</h3>
+                    <div class='row'>
+                        <div class='col-lg-12 col-sm-6'>
+                            <div class='d-flex justify-content-start '>
+                                <table class='contacttable'>
+                                    <tr>
+                                        <td class='fa faicon fa-map-marker'>
+                                        </td>
+                                        <td>
+                                            SPOT MEDIA GmbH </br>
+                                            PO Box 448 </br>
+                                            8810 Horgen </br>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </div>
+                        <div class='col-lg-12 col-sm-6 d-flex justify-content-start'>
+                            <table class='contacttable'>
+                                <tr>
+                                    <td class='fa faicon fa-phone'></td>
+                                    <td>045 678 91 23</td>
+                                </tr>
+                                <tr>
+                                    <td class='fa faicon fa-envelope'></td>
+                                    <td><a href="#" class='linkhover'>carina@spotmagazine.ch</a></td>
+                                </tr>
+                                <tr>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+                <div class='col-12 col-lg-1 d-flex justify-content-center align-items-center'>
+                    <div class='vline'></div>
+                </div>
+                <div class='col-12 col-lg-6 my-4'>
+                    <h3 class='cursivetxt text-left'>Message:</h3>
+                    <p>Have a story idea, interested in placing an ad or wish to stock the magazine? Please let us know using the form below</p>
+                    <form>
+                        <div class="form-group">
+                            <label for="cf_name">Name:</label>
+                            <input id="cf_name" name="cf_name" placeholder="Name" type="text" required="required" class="form-control">
+                        </div>
+                        <div class="form-group">
+                            <label for="cf_email">Email:</label>
+                            <input id="cf_email" name="cf_email" placeholder="example@spotmagazine.ch" type="text" required="required" class="form-control">
+                        </div>
+                        <div class="form-group">
+                            <label for="cf_subject">Subject:</label>
+                            <div>
+                                <select id="cf_subject" name="cf_subject" required="required" class="custom-select">
+                                    <option value="cf_story">Story Idea</option>
+                                    <option value="cf_subscription">Subscription</option>
+                                    <option value="cf_distribution">Distribution</option>
+                                    <option value="cf_general">Other</option>
+                                </select>
+                                <span id="cf_subjectHelpBlock" class="form-text text-muted">Why do you want to get in touch?</span>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="cf_message">Message:</label>
+                            <textarea id="cf_message" name="cf_message" cols="40" rows="3" required="required" class="form-control"></textarea>
+                        </div>
+                        <div class="form-group d-flex justify-content-center">
+                            <button name="submit" type="submit" class="btn btn-spot">Send</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- About Us Section Desktop -->
+    <section class='d-none d-md-block'>
+        <div class='container'>
+            <div class='row'>
+                <h2 class='cursivetxt text-left'>Meet the team</h2>
+            </div>
+        </div>
+        <div class='container maxcontainer'>
+            <div class='row align-items-center'>
+                <div class='col-12'>
+                    <div class='circleview aboutcircle border m-3'>
+                        <img src="assets/images/sketches/Carina.jpeg" class='circleimage' alt="Carina">
+                    </div>
+                    <div class='my-5'>
+                        <h4 class='text-left'>
+                            Carina Scheuringer - Editor
+                        </h4>
+                        <a href="#" class='linkhover'>carina@spotmagazine.ch</a>
+                        <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium.
+                        </p>
+                    </div>
+                </div>
+                <div class='col-12'>
+                    <div class='circleview aboutcircle float-right border m-3'>
+                        <img src="assets/images/sketches/andy.jpeg" class='circleimage' alt="Andy">
+                    </div>
+                    <div class='my-5 text-right'>
+                        <h4 class='text-right'>
+                            Andy Seddon - Contributor
+                        </h4>
+                        <a href="#" class='linkhover'>andy@spotmagazine.ch</a>
+                        <p>In sem justo, commodo ut, suscipit at, pharetra vitae, orci. Duis sapien nunc, commodo et, interdum suscipit, sollicitudin et, dolor. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Aliquam id dolor. Class aptent taciti sociosqu ad litora.
+                        </p>
+                    </div>
+                </div>
+                <div class='col-12'>
+                    <div class='circleview aboutcircle border m-3'>
+                        <img src="assets/images/sketches/Isabel_b.jpeg" class='circleimage' alt="Geigers">
+                    </div>
+                    <div class='my-5'>
+                        <h4 class='text-left'>
+                            Isabel Steiner - Advertising  and Sales
+                        </h4>
+                        <a href="#" class='linkhover'>isabel@spotmagazine.ch</a>
+                        <p>Etiam posuere quam ac quam. Maecenas aliquet accumsan leo. Nullam dapibus fermentum ipsum. Etiam quis quam. Integer lacinia. Nulla est. Nulla turpis magna, cursus sit amet, suscipit a, interdum id, felis. Integer vulputate sem a nibh rutrum consequat. Maecenas lorem. Pellentesque pretium.
+                        </p>
+                    </div>
+                </div>
+                <div class='col-12'>
+                    <div class='circleview aboutcircle float-right border m-3'>
+                        <img src="assets/images/sketches/Sam.jpeg" class='circleimage' alt="Sam">
+                    </div>
+                    <div class='my-5 text-right'>
+                        <h4 class='text-right'>
+                            Sam Anderson - ¯\_(ツ)_/¯
+                        </h4>
+                        <a href="#" class='linkhover'>sam@spotmagazine.ch</a>
+                        <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Morbi gravida libero nec velit. Morbi scelerisque luctus velit. Etiam dui sem, fermentum vitae, sagittis id, malesuada in, quam. Proin mattis lacinia justo. Vestibulum facilisis auctor urna. Aliquam in lorem sit amet leo accumsan.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- About us Mobile -->
+    <section class='d-md-none'>
+        <div class='container'>
+            <div class='row'>
+                <h2 class='cursivetxt text-left'>Meet the team</h2>
+            </div>
+        </div>
+        <div class='container'>
+            <div class='row d-flex justify-content-lg-start'>
+                <div class='col-12 d-flex justify-content-center'>
+                    <div class='circleview aboutcircle border'>
+                        <img src="assets/images/sketches/Carina.jpeg" class='circleimage' alt="Carina">
+                    </div>
+                </div>
+                <div class='col-12'>
+                    <h3 class='text-left'>
+                        Carina Scheuringer - Editor
+                    </h3>
+                    <a href="#" class='linkhover'>carina@spotmagazine.ch</a>
+                    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium.
+                    </p>
+                </div>
+            </div>
+            <div class='row d-flex justify-content-lg-end'>
+                <div class='col-12 d-flex justify-content-center'>
+                    <div class='circleview aboutcircle border'>
+                        <img src="assets/images/sketches/andy.jpeg" class='circleimage' alt="Andy">
+                    </div>
+                </div>
+                <div class='col-12'>
+                    <h3 class='text-right'>
+                        Andy Seddon - Contributor
+                    </h3>
+                    <a href="#" class='linkhover'>andy@spotmagazine.ch</a>
+                    <p>In sem justo, commodo ut, suscipit at, pharetra vitae, orci. Duis sapien nunc, commodo et, interdum suscipit, sollicitudin et, dolor. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Aliquam id dolor. Class aptent taciti sociosqu ad litora.
+                    </p>
+                </div>
+            </div>
+            <div class='row d-flex justify-content-lg-start'>
+                <div class='col-12 d-flex justify-content-center'>
+                    <div class='circleview aboutcircle border'>
+                        <img src="assets/images/sketches/geigers_b.jpeg" class='circleimage' alt="Geigers">
+                    </div>
+                </div>
+                <div class='col-12'>
+                    <h3 class='text-left'>
+                        The Geiger Family - Contributors
+                    </h3>
+                    <a href="#" class='linkhover'>geiger@spotmagazine.ch</a>
+                    <p>Etiam posuere quam ac quam. Maecenas aliquet accumsan leo. Nullam dapibus fermentum ipsum. Etiam quis quam. Integer lacinia. Nulla est. Nulla turpis magna, cursus sit amet, suscipit a, interdum id, felis. Integer vulputate sem a nibh rutrum consequat. Maecenas lorem. Pellentesque pretium.
+                    </p>
+                </div>
+            </div>
+            <div class='row d-flex justify-content-lg-end'>
+                <div class='col-12 d-flex justify-content-center'>
+                    <div class='circleview aboutcircle border'>
+                        <img src="assets/images/sketches/Sam.jpeg" class='circleimage' alt="Sam">
+                    </div>
+                </div>
+                <div class='col-12'>
+                    <h3 class='text-right'>
+                        Sam Anderson - ¯\_(ツ)_/¯
+                    </h3>
+                    <a href="#" class='linkhover'>sam@spotmagazine.ch</a>
+                    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Morbi gravida libero nec velit. Morbi scelerisque luctus velit. Etiam dui sem, fermentum vitae, sagittis id, malesuada in, quam. Proin mattis lacinia justo. Vestibulum facilisis auctor urna. Aliquam in lorem sit amet leo accumsan.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
     <!-- Footer -->
     <!-- X Fix the text not going edge to edge -->
     <footer class='footer d-flex align-items-center'>
