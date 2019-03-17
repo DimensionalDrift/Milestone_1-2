@@ -20,22 +20,31 @@
 </head>
 
 <body>
+    <!-- Nav bar -->
+    <!-- I would love for it to be transparent then fade into white while scrolling on mobile but from what I could see it would require custom javascript -->
     <header>
         <nav class="navbar fixed-top navbar-expand-lg navbar-light nav-fill shadow-sm py-1">
             <div class='container maxcontainer'>
-                <!-- Large Logo size -->
-                <a class="navbar-brand d-none d-lg-block " href="index.html">
-                    <img src="assets/logo/Spot_Magazine.png" alt="Logo" class='logosize'>
-                </a>
-                <!-- Small Logo size -->
-                <a class="navbar-brand d-lg-none p-0" href="index.html">
-                    <img src="assets/logo/Spot_Magazine.png" alt="Logo" class='logosize'>
-                </a>
+                <div class='mr-auto'>
+                    <!-- Large Logo size -->
+                    <a class="navbar-brand d-none d-lg-block " href="index.html">
+                        <img src="assets/logo/Spot_Magazine.png" alt="Logo" class='logosize'>
+                    </a>
+                    <!-- Small Logo size -->
+                    <a class="navbar-brand d-lg-none p-0" href="index.html">
+                        <img src="assets/logo/Spot_Magazine.png" alt="Logo" class='logosize'>
+                    </a>
+                </div>
                 <!-- Button used as menu under 768px -->
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#topNavbar">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id='topNavbar'>
+                <div class='d-flex flex-row order-lg-2'>
+                    <div class='pt-lg-2'>
+                        <div class="nav-item spoticon spotred fa fa-search"></div>
+                    </div>
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#topNavbar">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                </div>
+                <div class="collapse navbar-collapse order-lg-1" id='topNavbar'>
                     <!-- Header links -->
                     <a class='nav-item nav-link pt-lg-4' href="index.html">Home</a>
                     <a class='nav-item nav-link pt-lg-4' href="gallery.html">Magazines</a>
@@ -44,7 +53,6 @@
                     <!-- Serach button -->
                     <!-- Non functional as js would be needed for the animations -->
                     <!-- X Figure out why the search button is on the left when in the menu  -->
-                    <div class="nav-item spoticon spotred fa fa-search"></div>
                 </div>
             </div>
         </nav>
