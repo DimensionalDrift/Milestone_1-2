@@ -241,7 +241,7 @@ https://www.w3schools.com/howto/howto_css_image_overlay.asp
 .bounce {
   position: relative;
   animation-name: jump;
-  animation-duration: 1s; 
+  animation-duration: 1.5s; 
   animation-timing-function: cubic-bezier(0.895, 0.03, 0.685, 0.22);
   animation-iteration-count: infinite;
   animation-direction: alternate;
@@ -249,7 +249,7 @@ https://www.w3schools.com/howto/howto_css_image_overlay.asp
 
 @keyframes jump {
   from {top:0px;}
-  to {top: 15px;}
+  to {top: 10px;}
 }
 
 /* Button redesign taken from Bootstrap css file*/
