@@ -546,6 +546,7 @@ https://bootstrapformbuilder.com/
 
 /* ---------- Short Stories Styles ----------*/
 
+/*Used to make the masonry layout of the cards dynamic*/
 @media only screen and (min-width: 576px) {
     .card-columns {
         column-count: 1;
