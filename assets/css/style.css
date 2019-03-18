@@ -9,32 +9,35 @@
 
 */
 
-/* ---------- General styles ----------*/
+/*-------------------- General styles --------------------*/
 
 /*
-Fixes white bar appearing on the right side of the screen
+A - Fixes white bar appearing on the right side of the screen
 https://stackoverflow.com/questions/4617872/white-space-showing-up-on-right-side-of-page-when-background-image-should-extend
 
-Helvetica neue is the font the client wants to use but it's not native to windows or linux
+B- Helvetica neue is the font the client wants to use but it's not native to windows or linux
 This helped ensure that should it not be there the next font would be something similar
 https://stackoverflow.com/questions/8118741/css-font-helvetica-neue
+
+C- Makes the scroll behavior smooth for the homepage bouncing link
+    X This is only suported on chrome and firefox
+        There is a way to do it without using this but I cannot figure it out:;
+        https://stackoverflow.com/questions/17631417/css-pure-css-scroll-animation
 */
+
 html,
 body {
+    /*A*/
     width: 100%;
     height: 100%;
     margin: 0px;
     padding: 0px;
     overflow-x: hidden;
     font-size: 20px;
+    /*B*/
     font-family: "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
-    /* Makes the scroll behavior smooth for the homepage bouncing link*/
-    /* X This is only suported on chrome and firefox
-         There is a way to do it without using this but I cannot figure it out:;
-         https://stackoverflow.com/questions/17631417/css-pure-css-scroll-animation
-    */
+    /*C*/
     scroll-behavior: smooth;
-
 }
 
 /*
@@ -49,18 +52,19 @@ html {
 
 ::-webkit-scrollbar {
     width: 0px;
-    /* remove scrollbar space */
+    /*remove scrollbar space */
     background: transparent;
 }
 
-
+/*Defines Horizontal line*/
 hr {
     display: block;
     height: 1px;
     background-color: #24282F;
 }
 
-
+/*Center Align Headers
+    X May have been a mistake, should check if there are more exceptions than the rule*/
 h1,
 h2,
 h3,
@@ -70,7 +74,7 @@ h6 {
     text-align: center;
 }
 
-/* This is an effort to make headings dynamic across screen sizes, not sure it's worth implementing
+/*This is an effort to make headings dynamic across screen sizes, not sure it's worth implementing
 
 @media only screen and (min-width: 768px) {
     h1 {
@@ -96,6 +100,7 @@ h6 {
     h6 {
         font-size: 0.81em;
     }
+
 }
 
 @media only screen and (min-width: 992px) {
@@ -122,6 +127,7 @@ h6 {
     h6 {
         font-size: 0.96em;
     }
+
 }
 
 @media only screen and (min-width: 1200px) {
@@ -148,14 +154,16 @@ h6 {
     h6 {
         font-size: 1.20em;
     }
+
 } 
 */
 
-.cursivetxt {
+/*This is close to a licenced font the client uses, should be replaced in the real version*/
+.cursive-text {
     font-family: 'Pacifico', cursive;
 }
 
-/* Removing link color and underline*/
+/*Removing link color and underline*/
 a:hover,
 a:visited,
 a:link,
@@ -164,11 +172,11 @@ a:active {
     color: inherit;
 }
 
-.linkhover:hover {
+.link-hover:hover {
     text-decoration: underline;
 }
 
-/* Fade in effect from:
+/*Fade in effect from:
 https://codepen.io/jmelgoza/pen/jEaGYg
 */
 .fade-in {
@@ -186,10 +194,10 @@ https://codepen.io/jmelgoza/pen/jEaGYg
     to {
         opacity: 1;
     }
+
 }
 
-
-/* Hover over image to indicate it's a link
+/*Hover over image to indicate it's a link
 https://www.w3schools.com/howto/howto_css_image_overlay.asp
 */
 
@@ -221,21 +229,23 @@ https://www.w3schools.com/howto/howto_css_image_overlay.asp
     opacity: 1;
 }
 
-.spoticon, .spoticon_s {
+/*Defining the circular icon and it's default red*/
+.spoticon,
+.spoticon_s {
     border-radius: 50% !important;
     justify-content: center;
     align-items: center;
     display: flex;
 }
 
-.spoticon{
+.spoticon {
     height: 40px;
     min-width: 40px;
     max-width: 40px;
     margin: 10px;
 }
 
-.spoticon_s{
+.spoticon_s {
     height: 30px;
     min-width: 30px;
     max-width: 30px;
@@ -244,36 +254,42 @@ https://www.w3schools.com/howto/howto_css_image_overlay.asp
 
 .spotred {
     background-color: #D52B1E;
-    color: white !important;
+    color: #FFFFFF !important;
 }
 
 /*From earlier lesson*/
 .bounce {
-  position: relative;
-  animation-name: jump;
-  animation-duration: 1.5s; 
-  animation-timing-function: cubic-bezier(0.895, 0.03, 0.685, 0.22);
-  animation-iteration-count: infinite;
-  animation-direction: alternate;
+    position: relative;
+    animation-name: jump;
+    animation-duration: 1.5s;
+    animation-timing-function: cubic-bezier(0.895, 0.03, 0.685, 0.22);
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
 }
 
 @keyframes jump {
-  from {top:0px;}
-  to {top: 10px;}
+    from {
+        top: 0px;
+    }
+
+    to {
+        top: 10px;
+    }
+
 }
 
-/* Button redesign taken from Bootstrap css file*/
+/*Button redesign taken from Bootstrap css file*/
 .btn-spot {
     border-radius: 10px;
     border-width: 2px;
     color: #D52B1E;
-    background-color: white;
+    background-color: #FFFFFF;
     border-color: #D52B1E;
     font-size: 1.2em;
 }
 
 .btn-spot:hover {
-    color: white;
+    color: #FFFFFF;
     background-color: #D52B1E;
     border-color: #D52B1E;
 }
@@ -294,42 +310,44 @@ https://www.w3schools.com/howto/howto_css_image_overlay.asp
     box-shadow: 0 0 0 0.2rem rgba(213, 43, 30, 0.25);
 }
 
-
-/* Used for making forms 
+/*Used for making forms 
 https://bootstrapformbuilder.com/
 */
 .form-group {
     margin-bottom: 0.5rem;
 }
 
+/*Creates a little box around any Font Awesome icons to help align and center them*/
 .faicon {
     width: 40px;
     height: 25px;
     text-align: center;
 }
 
-/* ---------- Navbar styles ----------*/
+/*----- Navbar styles -----*/
 
 /*This style is used to move content below the logo*/
 .navpadding {
     height: 100px;
 }
 
+/*Finer control if needed*/
 .navpaddinghalf {
     height: 50px;
 }
 
+/*Bootstrap style*/
 .navbar {
-    /*background-color: rgba(255, 255, 255, 0.95);*/
     background-color: rgba(255, 255, 255, 1);
 }
 
+/*Logo Size on small screen*/
 .logosize {
     height: 80px;
     width: 80px;
 }
 
-/*Larger screen fix navbar height*/
+/*Larger screen fix navbar height and logo size*/
 @media only screen and (min-width: 992px) {
 
     .navbar {
@@ -352,14 +370,16 @@ https://bootstrapformbuilder.com/
     color: #24282F !important;
 }
 
+/*Used to have the navbutton items on the right*/
 @media only screen and (max-width: 576px) {
+
     #topNavbar .nav-item {
         text-align: right !important;
     }
+
 }
 
-
-/* ---------- Hero Image Styles ----------*/
+/*----- Hero and Superhero Image Styles -----*/
 
 /*Possibly Depricated*/
 /*.heroimg {
@@ -370,42 +390,50 @@ https://bootstrapformbuilder.com/
     z-index: -1;
 }*/
 
-.herotxt {
-    color: white;
+/*Merged herotxt with herocaption as they don't seem to be called speratly, leaving this here just in case*/
+/*.herotxt {
+    color: #FFFFFF;
     text-shadow: 0px 0px 15px rgba(0, 0, 0, 0.3);
 }
+*/
 
 .herocaption {
+    color: #FFFFFF;
+    text-shadow: 0px 0px 15px rgba(0, 0, 0, 0.3);
     text-align: center;
     padding-bottom: 5%;
 }
 
-.herocaption h1{
+.herocaption h1 {
     font-weight: 900;
-    font-size: 2em;
-    
+    font-size: 1.75em;
 }
 
-
+/*Needed to bump the carousel caption above the chrome bar on at least my android*/
 .carousel-caption {
-  bottom: 10%;
+    bottom: 10%;
 }
 
-@media only screen and (min-width: 768px){
-    .herocaption h1{
+@media only screen and (min-width: 768px) {
+    .herocaption h1 {
         font-size: 3em;
     }
 
     .carousel-caption {
-      bottom: 20px;
+        bottom: 20px;
     }
+
 }
 
-/* Possibly Depricated*/
-.superherocaption {
+/*Possibly Depricated*/
+/*.superherocaption {
     padding-bottom: 5%;
-}
+}*/
 
+/*Hero image control 
+This method is a lot to control the size and shape of images without stretching. 
+An image is nested in a div with class with name _____view of a fixed size, then the image below it with class _____img can use overflow to fill as much as is needed without stretching/distorting
+In this case the image is the full screen height allowing for as much image as possible to be shown on the home page */
 .heroview {
     width: 100%;
     max-height: 600px;
@@ -422,8 +450,7 @@ https://bootstrapformbuilder.com/
     object-fit: cover;
 }
 
-
-/* ---------- Footer Styles ----------*/
+/*----- Footer Styles -----*/
 .footer {
     background-color: #e7e7e7;
     margin-top: 20px
@@ -451,39 +478,44 @@ https://bootstrapformbuilder.com/
 
 }
 
+/*sociallink is used to control the size of the font awesome icons and to create the grow effect on hover*/
 .sociallink {
     font-size: 1.2em;
-    color: white !important;
+    color: #FFFFFF !important;
 }
 
 .sociallink:hover {
     font-size: 1.5em;
     text-decoration: none;
-    color: white;
+    color: #FFFFFF;
     transition: font-size 0.2s;
 }
 
+/*Social media colors found on 
+https://www.materialui.co/socialcolors
+https://codepen.io/thomasrye/pen/VaRoYv
+*/
 .fa-facebook {
-    background: #3B5998;
-    color: white;
+    background: #3b5999;
+    color: #FFFFFF;
 }
 
 .fa-twitter {
-    background: #1da1f2;
-    color: white;
+    background: #55acee;
+    color: #FFFFFF;
 }
 
 .fa-instagram {
     background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
-    color: white;
+    color: #FFFFFF;
 }
 
 .fa-pinterest {
     background: #bd081c;
-    color: white;
+    color: #FFFFFF;
 }
 
-/* ---------- Front page style ----------*/
+/*-------------------- Front Page styles --------------------*/
 /*Used to make container full width below desktop screen size
    X Not very mobile first, look for better way*/
 @media only screen and (max-width: 992px) {
@@ -491,9 +523,12 @@ https://bootstrapformbuilder.com/
     .maxcontainer {
         max-width: 100%;
     }
+
 }
 
-/* ---------- Trending Story Styles ----------*/
+/*----- Trending Story Styles -----*/
+/*Circle image control
+Uses a circular aperture to keep with the spot theme*/
 .circleview {
     width: 300px;
     height: 300px;
@@ -508,19 +543,19 @@ https://bootstrapformbuilder.com/
     height: 100%;
 }
 
-/*Needed to shift the image */
+/*Needed to shift the image within the aperture*/
 #trendingimg {
     margin-left: -100px;
 }
 
 /*Depricated*/
-.frameview {
+/*.frameview {
     width: auto;
     height: 300px;
     overflow: hidden;
-}
+}*/
 
-/* Tablet size*/
+/*Tablet size*/
 @media only screen and (min-width: 768px) {
 
     .circleview {
@@ -529,9 +564,10 @@ https://bootstrapformbuilder.com/
         float: left;
         shape-outside: inset(1% round 50%);
     }
+
 }
 
-/* Desktop size*/
+/*Desktop size*/
 @media only screen and (min-width: 992px) {
 
     .circleview {
@@ -541,35 +577,30 @@ https://bootstrapformbuilder.com/
         shape-outside: inset(1% round 50%);
     }
 
-
 }
 
-/* ---------- Short Stories Styles ----------*/
+/*----- Shorter Stories Styles -----*/
 
 /*Used to make the masonry layout of the cards dynamic*/
 @media only screen and (min-width: 576px) {
     .card-columns {
         column-count: 1;
     }
+
 }
 
 @media only screen and (min-width: 768px) {
     .card-columns {
         column-count: 2;
     }
+
 }
 
 @media only screen and (min-width: 992px) {
     .card-columns {
         column-count: 3;
     }
-}
 
-.masonry {
-  display: grid;
-  grid-gap: 2em; /* [1] Add some gap between rows and columns */
-  grid-template-columns: repeat( auto-fill, minmax( 200px, 1fr ) ); /* [2] Make columns adjust according to the available viewport */
-  grid-auto-rows: 250px; /* [3] Set the height for implicitly-created row track */
 }
 
 .card-title {
@@ -591,15 +622,16 @@ https://bootstrapformbuilder.com/
     padding: 5px;
 }
 
-.flagview{
+/*Creates a small aperture for the flag icons in the cards
+uses the squareimage class from the Contest Page Styles section for the nested image*/
+.flagview {
     height: 30px !important;
     width: 30px !important;
     border: 1px solid #dee2e6;
     margin: 5px;
 }
 
-
-/* ---------- Story Page Styles --------- */
+/*-------------------- Story Page Styles ------------------- */
 
 #storyinfocard {
     background-color: #e7e7e7;
@@ -607,9 +639,10 @@ https://bootstrapformbuilder.com/
     font-size: 0.75em;
 }
 
-.pad {
+/*Depricated*/
+/*.pad {
     padding-left: 10px;
-}
+}*/
 
 .tablepad td {
     padding-left: 10px;
@@ -631,12 +664,14 @@ https://bootstrapformbuilder.com/
     border-width: 0px;
 }
 
-.adbadge{
+.adbadge {
     background-color: #e7e7e7;
 }
 
-/* ---------- Contest Page Styles --------- */
+/*-------------------- Contest Page Styles ------------------- */
 
+/*Prize image control
+Overrides circleview sizes for each prize*/
 #circlep1 {
     width: 200px;
     height: 200px;
@@ -652,6 +687,7 @@ https://bootstrapformbuilder.com/
     height: 150px;
 }
 
+/*Applying the styles for the prize carousel at different screen sizes */
 #prizenext,
 #prizeprev {
     top: 30%;
@@ -665,12 +701,12 @@ https://bootstrapformbuilder.com/
     max-height: 150px;
 }
 
-
+/*Square Image control
+Used to control the square images from the sponsors at three different screen sizes*/
 .squareview {
     width: 125px;
     height: 125px;
 }
-
 
 .squareimage {
     height: auto;
@@ -685,8 +721,7 @@ https://bootstrapformbuilder.com/
 
 }
 
-
-/* Applying different style for tablet size*/
+/*Applying different style for tablet size*/
 @media only screen and (min-width: 768px) {
 
     #Prizeslides {
@@ -706,9 +741,10 @@ https://bootstrapformbuilder.com/
         width: 200px !important;
         height: 200px !important;
     }
+
 }
 
-/* Desktop View*/
+/*Desktop View*/
 @media only screen and (min-width: 992px) {
 
     .squareview {
@@ -718,7 +754,7 @@ https://bootstrapformbuilder.com/
 
 }
 
-/* ---------- Contact Page Styles ----------*/
+/*-------------------- Contact Page Styles --------------------*/
 
 @media only screen and (min-width: 992px) {
 
@@ -727,13 +763,16 @@ https://bootstrapformbuilder.com/
         border-spacing: 10px 20px;
     }
 
+    /*Used for verticle line only on desktop*/
     .vline {
         border-right: 2px solid;
         border-color: #24282F;
         height: 95%;
     }
+
 }
 
+/*Again overriding the circleview aperture*/
 .aboutcircle {
     width: 250px;
     height: 250px;
