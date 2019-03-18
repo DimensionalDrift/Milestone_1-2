@@ -20,8 +20,7 @@
 </head>
 
 <body>
-    <!-- Nav bar -->
-    <!-- I would love for it to be transparent then fade into white while scrolling on mobile but from what I could see it would require custom javascript -->
+    <!-- Navbar Header -->
     <header>
         <nav class="navbar fixed-top navbar-expand-lg navbar-light nav-fill shadow-sm py-1">
             <div class='container maxcontainer'>
@@ -31,52 +30,52 @@
                         <img src="assets/logo/Spot_Magazine.png" alt="Logo" class='logosize'>
                     </a>
                     <!-- Small Logo size -->
-                    <a class="navbar-brand d-lg-none p-0" href="index.html">
+                    <a class="navbar-brand d-lg-none" href="index.html">
                         <img src="assets/logo/Spot_Magazine.png" alt="Logo" class='logosize'>
                     </a>
                 </div>
-                <!-- Button used as menu under 768px -->
+                <!-- The ordering is used to ensure the search icon is on the left of the mobile menu and on the right of the desktop links -->
                 <div class='d-flex flex-row order-lg-2'>
+                    <!-- Serach button -->
+                    <!-- Non functional as js would be needed for the animations -->
                     <div class='pt-lg-2'>
                         <div class="nav-item spoticon spotred fa fa-search"></div>
                     </div>
+                    <!-- Button used as menu under 768px -->
                     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#topNavbar">
                         <span class="navbar-toggler-icon"></span>
                     </button>
                 </div>
                 <div class="collapse navbar-collapse order-lg-1" id='topNavbar'>
                     <!-- Header links -->
+                    <!-- Is it better if these are in a list? -->
                     <a class='nav-item nav-link pt-lg-4' href="index.html">Home</a>
                     <a class='nav-item nav-link pt-lg-4' href="gallery.html">Magazines</a>
                     <a class='nav-item nav-link pt-lg-4' href="contest.html">Photo Contest</a>
                     <a class='nav-item nav-link pt-lg-4' href="contact.html">Contact</a>
-                    <!-- Serach button -->
-                    <!-- Non functional as js would be needed for the animations -->
-                    <!-- X Figure out why the search button is on the left when in the menu  -->
                 </div>
             </div>
         </nav>
     </header>
     <!-- Used to move content below the navbar -->
     <div class='navpadding'></div>
-    <!-- Hero Image -->
-    <!-- X Include icon for story type, Top right? -->
+    <!-- Hero Image Section -->
     <section>
         <div class='container heroContainer'>
             <div class="card heroview">
-                <img class="card-img" src="assets/images/bad_ragaz/badragaz_lr-173.jpg" alt="Card image">
+                <img class="card-img" src="assets/images/pizol/pizol_lr-13.jpg" alt="Card image">
                 <div class="card-img-overlay d-flex flex-column justify-content-end">
                     <h1 class="card-text herotxt fade-in herocaption">Photo Competition</h1>
                 </div>
             </div>
         </div>
     </section>
-    <!-- Contest Theme -->
+    <!-- Contest Theme Section -->
     <section>
         <div class='container mt-4'>
             <div class='row'>
-                <div class='col-12'>
-                    <h2 class='cursivetxt text-left '>Theme: Outdoors</h2>
+                <div class='col'>
+                    <h2 class='cursivetxt text-left '>Theme: Snow</h2>
                     <p>This issues theme is the great outdoors. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim.</p>
                 </div>
             </div>
@@ -86,16 +85,18 @@
     <section class='d-lg-none'>
         <div class='container'>
             <div class='row'>
-                <div class='col-12'>
+                <div class='col'>
                     <h2 class='cursivetxt text-left mb-3'>Prizes:</h2>
                 </div>
             </div>
             <div class='row'>
+                <!-- w-100 is used to fix the card width for differing amounts of content -->
                 <div class='card w-100'>
                     <div id="Prizeslides" class="carousel slide " data-ride="carousel" data-interval="false">
                         <div class="carousel-inner">
+                            <!-- 1st Prize Slide -->
                             <div class="carousel-item active align-items-center">
-                                <div class='circleview border mx-auto my-3 m-md-3'>
+                                <div class='circleview mx-auto my-3 m-md-3'>
                                     <img src="assets/images/prizes/1st_prize.jpg" class='img-fluid circleimage' alt="1st Prize">
                                 </div>
                                 <div class='my-md-5 mx-md-3 mx-3'>
@@ -107,8 +108,9 @@
                                     </p>
                                 </div>
                             </div>
+                            <!-- 2nd Prize Slide -->
                             <div class="carousel-item">
-                                <div class='circleview border mx-auto my-3 m-md-3'>
+                                <div class='circleview mx-auto my-3 m-md-3'>
                                     <img src="assets/images/prizes/2nd_prize.jpg" class='img-fluid circleimage' alt="2nd Prize">
                                 </div>
                                 <div class='my-md-5 mx-md-3 mx-3'>
@@ -120,8 +122,9 @@
                                     </p>
                                 </div>
                             </div>
+                            <!-- 3rd Prize Slide -->
                             <div class="carousel-item">
-                                <div class='circleview border mx-auto my-3 m-md-3'>
+                                <div class='circleview mx-auto my-3 m-md-3'>
                                     <img src="assets/images/prizes/3rd_prize.jpg" class='img-fluid circleimage' alt="3rd Prize">
                                 </div>
                                 <div class='my-md-5 mx-md-3 mx-3'>
@@ -133,10 +136,11 @@
                                     </p>
                                 </div>
                             </div>
+                            <!-- Sponsors Slide -->
                             <div class="carousel-item">
                                 <div class='container'>
                                     <div class='row'>
-                                        <div class='col mt-5'>
+                                        <div class='col-12 mt-5'>
                                             <p>
                                                 This issues sponsors:
                                             </p>
@@ -180,21 +184,19 @@
         </div>
     </section>
     <!-- Prizes Section Desktop -->
-    <!-- X Try use card to help make look less busy -->
     <section class='d-none d-lg-block'>
         <div class='container'>
             <div class='row'>
-                <div class='col-12'>
+                <div class='col'>
                     <h2 class='cursivetxt text-left'>Prizes:</h2>
                     <hr>
                 </div>
             </div>
             <div class='row'>
-                <!-- <div class='card'> -->
                 <div class='col'>
                     <div class='row'>
                         <div class='col-4 d-flex justify-content-end'>
-                            <div class='circleview border' id='circlep1'>
+                            <div class='circleview' id='circlep1'>
                                 <img src="assets/images/prizes/1st_prize.jpg" class='img-fluid circleimage' alt="1st Prize">
                             </div>
                         </div>
@@ -211,7 +213,7 @@
                     </div>
                     <div class='row'>
                         <div class='col-4 d-flex justify-content-start'>
-                            <div class='circleview border' id='circlep2'>
+                            <div class='circleview' id='circlep2'>
                                 <img src="assets/images/prizes/2nd_prize.jpg" class='img-fluid circleimage' alt="2nd Prize">
                             </div>
                         </div>
@@ -228,7 +230,7 @@
                     </div>
                     <div class='row'>
                         <div class='col-4 d-flex justify-content-end'>
-                            <div class='circleview border' id='circlep3'>
+                            <div class='circleview' id='circlep3'>
                                 <img src="assets/images/prizes/3rd_prize.jpg" class='img-fluid circleimage' alt="3rd Prize">
                             </div>
                         </div>
@@ -282,9 +284,11 @@
             </div>
         </div>
     </section>
-    <!-- Entry form and Rules Accordion -->
+    <!-- Entry Form and Rules Section -->
+    <!-- This section uses an accordian to display the entry form and rules at seperate times -->
     <section>
         <div class='container'>
+            <!-- The two buttons use a card header as a link to the accordian containers -->
             <div class='row my-3'>
                 <div class='col-md-6 col-12 my-1'>
                     <a href="#entryform" data-toggle="collapse">
@@ -305,11 +309,12 @@
                     </a>
                 </div>
             </div>
+            <!-- The Accordian -->
             <div class='row'>
                 <div class='col' id="accordion">
-                    <!-- <div class="card"> -->
+                    <!-- The Form Slide -->
                     <div id="entryform" class="collapse show" data-parent="#accordion">
-                        <!-- <div class="card-body"> -->
+                        <!-- Containers and rows used to stylize the form -->
                         <div class='container'>
                             <form>
                                 <div class='row'>
@@ -343,7 +348,6 @@
                                         <div class="form-group">
                                             <label for="pc_reason">Tell us about your photo:</label>
                                             <textarea id="pc_reason" name="pc_reason" cols="40" rows="5" class="form-control" required="required" placeholder="Where and how did your photo come from? Tell us the story and why it goes so well with the competition theme"></textarea>
-                                            <span id="pc_reasonHelpBlock" class="form-text text-muted"></span>
                                         </div>
                                         <div class="d-flex justify-content-center">
                                             <button name="submit" type="submit" class="btn btn-spot">Submit</button>
@@ -352,12 +356,9 @@
                                 </div>
                             </form>
                         </div>
-                        <!-- </div> -->
                     </div>
-                    <!-- </div> -->
-                    <!-- <div class="card"> -->
+                    <!-- The Rules Slide -->
                     <div id="rules" class="collapse" data-parent="#accordion">
-                        <!-- <div class="card-body"> -->
                         <div class='container'>
                             <ul>
                                 <li>Morbi in sem quis dui placerat ornare. Pellentesque odio nisi, euismod in, pharetra a, ultricies in, diam. Sed arcu. Cras consequat.</li>
@@ -369,9 +370,7 @@
                                 <li>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</li>
                             </ul>
                         </div>
-                        <!-- </div> -->
                     </div>
-                    <!-- </div> -->
                 </div>
             </div>
         </div>

@@ -20,8 +20,7 @@
 </head>
 
 <body>
-    <!-- Nav bar -->
-    <!-- I would love for it to be transparent then fade into white while scrolling on mobile but from what I could see it would require custom javascript -->
+    <!-- Navbar Header -->
     <header>
         <nav class="navbar fixed-top navbar-expand-lg navbar-light nav-fill shadow-sm py-1">
             <div class='container maxcontainer'>
@@ -31,51 +30,51 @@
                         <img src="assets/logo/Spot_Magazine.png" alt="Logo" class='logosize'>
                     </a>
                     <!-- Small Logo size -->
-                    <a class="navbar-brand d-lg-none p-0" href="index.html">
+                    <a class="navbar-brand d-lg-none" href="index.html">
                         <img src="assets/logo/Spot_Magazine.png" alt="Logo" class='logosize'>
                     </a>
                 </div>
-                <!-- Button used as menu under 768px -->
+                <!-- The ordering is used to ensure the search icon is on the left of the mobile menu and on the right of the desktop links -->
                 <div class='d-flex flex-row order-lg-2'>
+                    <!-- Serach button -->
+                    <!-- Non functional as js would be needed for the animations -->
                     <div class='pt-lg-2'>
                         <div class="nav-item spoticon spotred fa fa-search"></div>
                     </div>
+                    <!-- Button used as menu under 768px -->
                     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#topNavbar">
                         <span class="navbar-toggler-icon"></span>
                     </button>
                 </div>
                 <div class="collapse navbar-collapse order-lg-1" id='topNavbar'>
                     <!-- Header links -->
+                    <!-- Is it better if these are in a list? -->
                     <a class='nav-item nav-link pt-lg-4' href="index.html">Home</a>
                     <a class='nav-item nav-link pt-lg-4' href="gallery.html">Magazines</a>
                     <a class='nav-item nav-link pt-lg-4' href="contest.html">Photo Contest</a>
                     <a class='nav-item nav-link pt-lg-4' href="contact.html">Contact</a>
-                    <!-- Serach button -->
-                    <!-- Non functional as js would be needed for the animations -->
-                    <!-- X Figure out why the search button is on the left when in the menu  -->
                 </div>
             </div>
         </nav>
     </header>
     <!-- Used to move content below the navbar -->
     <div class='navpadding'></div>
-    <!-- Hero Image -->
-    <!-- X Include icon for story type, Top right? -->
+    <!-- Hero Image Section -->
     <section>
         <div class='container'>
             <div class="card heroview">
-                <img class="card-img" src="assets/images/flumserberg/Flumserberge_LR-1.jpg" alt="Card image">
+                <img class="card-img" src="assets/images/flumserberg/Flumserberge_LR-1.jpg" alt="Hero image">
                 <div class="card-img-overlay d-flex flex-column justify-content-end">
                     <h1 class="card-text herotxt fade-in herocaption">The Article Title</h1>
                 </div>
             </div>
         </div>
     </section>
-    <!-- Article Subtitle -->
+    <!-- Article Card and Subtitle Section -->
     <section>
         <div class='container'>
             <div class="row">
-                <!-- This box should be colored depending on story type -->
+                <!-- This card might be colored depending on story type -->
                 <div class='col-lg-4 '>
                     <div class="card mx-0" id='storyinfocard'>
                         <div class='row'>
@@ -94,7 +93,7 @@
                                         <td>Maybe someone else</td>
                                     </tr>
                                     <tr>
-                                        <td>Info:&nbsp;</td>
+                                        <td>Info:</td>
                                         <td><a href="#" class='linkhover'>www.swissalps.ch</a></td>
                                     </tr>
                                 </table>
@@ -119,36 +118,36 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-8 align-self-end">
+                <div class="col-lg-8 align-self-center">
                     <h4 id='storysubtitle'>
-                        This is the story subtitle that can go on and on for maybe a few lines. Should this subtitle be in line with the top/middle/bottom of the card?
+                        This is the story subtitle that can go on for maybe a few lines. Should this align top middle or bottom?
                     </h4>
                 </div>
             </div>
         </div>
     </section>
-    <!-- Article Body -->
+    <!-- Article Body Section -->
     <section>
         <div class='container'>
             <div class='row'>
-                <div class='col-12'>
+                <div class='col'>
                     <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium.</p>
                     <!-- Pic 1 only on mobile -->
-                    <figure class='figure d-lg-none img-fluid'>
+                    <figure class='figure d-lg-none'>
                         <img src="assets/images/flumserberg/Flumserberge_LR-24.jpg" alt="Picture1" class='img-fluid figure-img'>
                         <figcaption class="figure-caption">A caption for image 1.</figcaption>
                     </figure>
                     <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium.</p>
                     <!-- Pic 2 only on mobile -->
-                    <figure class='figure d-lg-none img-fluid'>
-                        <img src="assets/images/flumserberg/Flumserberge_LR-31.jpg" alt="Picture2" class='img-fluid figure-img'>
-                        <figcaption class="figure-caption">A caption for image 2.</figcaption>
+                    <figure class='figure d-lg-none'>
+                        <img src="assets/images/flumserberg/Flumserberge_LR-31.jpg" alt="Picture3" class='img-fluid figure-img'>
+                        <figcaption class="figure-caption">A caption for image 3.</figcaption>
                     </figure>
                 </div>
                 <!-- Collage of pics on desktop -->
-                <!-- X Make center image circular in future 
-                       Future feature - display image in lightbox when clicked
-                                        Fade in on scroll - AOS? 
+                <!-- Future features - display image in lightbox when clicked
+                                     - Fade in on scroll - AOS? 
+                                     - Include circular images in the collage
                 -->
                 <div class='col-12 d-none d-lg-block'>
                     <div class='row'>
@@ -160,14 +159,14 @@
                         </div>
                         <div class='col-lg-3'>
                             <figure class='figure'>
-                                <img src="assets/images/flumserberg/Flumserberge_LR-2.jpg" alt="Picture3" class='img-fluid figure-img'>
-                                <figcaption class="figure-caption">A caption for image 3.</figcaption>
+                                <img src="assets/images/flumserberg/Flumserberge_LR-2.jpg" alt="Picture2" class='img-fluid figure-img'>
+                                <figcaption class="figure-caption">A caption for image 2.</figcaption>
                             </figure>
                         </div>
                         <div class='col-lg-4'>
                             <figure class='figure'>
-                                <img src="assets/images/flumserberg/Flumserberge_LR-31.jpg" alt="Picture2" class='img-fluid figure-img'>
-                                <figcaption class="figure-caption">A caption for image 2.</figcaption>
+                                <img src="assets/images/flumserberg/Flumserberge_LR-31.jpg" alt="Picture3" class='img-fluid figure-img'>
+                                <figcaption class="figure-caption">A caption for image 3.</figcaption>
                             </figure>
                         </div>
                     </div>
@@ -175,16 +174,17 @@
                 <div class='col-12'>
                     <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium.</p>
                     <!-- Pic 3 only on mobile -->
-                    <figure class='figure d-lg-none img-fluid'>
-                        <img src="assets/images/flumserberg/Flumserberge_LR-2.jpg" alt="Picture3" class='img-fluid figure-img'>
-                        <figcaption class="figure-caption">A caption for image 3.</figcaption>
+                    <figure class='figure d-lg-none'>
+                        <img src="assets/images/flumserberg/Flumserberge_LR-2.jpg" alt="Picture2" class='img-fluid figure-img'>
+                        <figcaption class="figure-caption">A caption for image 2.</figcaption>
                     </figure>
                     <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium.</p>
                 </div>
             </div>
         </div>
     </section>
-    <!-- Article Footer Info -->
+    <!-- Article Footer Info Section -->
+    <!-- Uses a tabbed/pilled interface to display related information -->
     <section>
         <div class='container'>
             <div class='row'>
@@ -206,7 +206,7 @@
                         </div>
                         <!-- Pill header for smaller screen -->
                         <div class='card-header d-sm-none'>
-                            <div class="nav nav-pills flex-column card-header-pills">
+                            <div class="nav nav-pills card-header-pills flex-column align-content-start">
                                 <a class="nav-item nav-link active" data-toggle="pill" href="#nav-tip">
                                     Spot Tip
                                 </a>
@@ -219,40 +219,47 @@
                             </div>
                         </div>
                         <!-- Content on all screens -->
-                        <div class="tab-content card-body" id="nav-tabContent">
-                            <div class="tab-pane fade show active" id="nav-tip" role="tabpanel">
+                        <div class="tab-content card-body">
+                            <div class="tab-pane fade show active" id="nav-tip">
                                 Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium.
                             </div>
-                            <div class="tab-pane fade" id="nav-practicle" role="tabpanel">
+                            <div class="tab-pane fade" id="nav-practicle">
                                 <ol>
                                     <li>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</li>
                                     <li>Aliquam tincidunt mauris eu risus.</li>
                                     <li>Vestibulum auctor dapibus neque.</li>
                                 </ol>
                             </div>
-                            <div class="tab-pane fade" id="nav-contact" role="tabpanel">
+                            <div class="tab-pane fade" id="nav-contact">
                                 <div class='row'>
-                                    <div class='col-12 col-lg-6'>
-                                        <p>
-                                            <u>Address:</u> <br>
-                                            Edelweiss AG <br>
-                                            Heidi Schmid <br>
-                                            Gemeindestraße 123<br>
-                                            1234 Swiss <br>
-                                        </p>
-                                    </div>
-                                    <div class='col-12 col-lg-6 tablepad'>
+                                    <div class='col-12 col-md-6 pad'>
                                         <table>
                                             <tr>
-                                                <td class='fa fa-phone'></td>
+                                                <td class='faicon'></td>
+                                                <td>
+                                                    <p>
+                                                        <u>Address:</u> <br>
+                                                        Edelweiss AG <br>
+                                                        Heidi Schmid <br>
+                                                        Gemeindestraße 123<br>
+                                                        1234 Swiss <br>
+                                                    </p>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </div>
+                                    <div class='col-12 col-md-6'>
+                                        <table>
+                                            <tr>
+                                                <td class='fa faicon fa-phone'></td>
                                                 <td>045 678 91 23</td>
                                             </tr>
                                             <tr>
-                                                <td class='fa fa-envelope'></td>
+                                                <td class='fa faicon fa-envelope'></td>
                                                 <td><a href="#" class='linkhover'>heidi@swissalps.ch</a></td>
                                             </tr>
                                             <tr>
-                                                <td class="fa fa-cloud"></td>
+                                                <td class="fa faicon fa-cloud"></td>
                                                 <td><a href="#" class='linkhover'>www.swissalps.ch</a></td>
                                             </tr>
                                         </table>

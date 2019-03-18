@@ -28,6 +28,12 @@ body {
     overflow-x: hidden;
     font-size: 20px;
     font-family: "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+    /* Makes the scroll behavior smooth for the homepage bouncing link*/
+    /* X This is only suported on chrome and firefox
+         There is a way to do it without using this but I cannot figure it out:;
+         https://stackoverflow.com/questions/17631417/css-pure-css-scroll-animation
+    */
+    scroll-behavior: smooth;
 
 }
 
@@ -45,13 +51,8 @@ html {
     width: 0px;
     /* remove scrollbar space */
     background: transparent;
-    optional: just make scrollbar invisible
 }
 
-/* optional: show position indicator in red */
-/*::-webkit-scrollbar-thumb {
-    background: #FF0000;
-}*/
 
 hr {
     display: block;
@@ -69,8 +70,9 @@ h6 {
     text-align: center;
 }
 
+/* This is an effort to make headings dynamic across screen sizes, not sure it's worth implementing
 
-@media (min-width: 768px) {
+@media only screen and (min-width: 768px) {
     h1 {
         font-size: 2.51em;
     }
@@ -96,7 +98,7 @@ h6 {
     }
 }
 
-@media (min-width: 992px) {
+@media only screen and (min-width: 992px) {
     h1 {
         font-size: 3.14em;
     }
@@ -122,7 +124,7 @@ h6 {
     }
 }
 
-@media (min-width: 1200px) {
+@media only screen and (min-width: 1200px) {
     h1 {
         font-size: 3.87em;
     }
@@ -146,7 +148,8 @@ h6 {
     h6 {
         font-size: 1.20em;
     }
-}
+} 
+*/
 
 .cursivetxt {
     font-family: 'Pacifico', cursive;
@@ -234,6 +237,21 @@ https://www.w3schools.com/howto/howto_css_image_overlay.asp
     color: white !important;
 }
 
+/*From earlier lesson*/
+.bounce {
+  position: relative;
+  animation-name: jump;
+  animation-duration: 1s; 
+  animation-timing-function: cubic-bezier(0.895, 0.03, 0.685, 0.22);
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+
+@keyframes jump {
+  from {top:0px;}
+  to {top: 15px;}
+}
+
 /* Button redesign taken from Bootstrap css file*/
 .btn-spot {
     border-radius: 10px;
@@ -257,13 +275,13 @@ https://www.w3schools.com/howto/howto_css_image_overlay.asp
 
 /*Form focus take from Bootstrap css file*/
 .form-control:focus {
-  border-color: #D52B1E;
-  box-shadow: 0 0 0 0.2rem rgba(213, 43, 30, 0.25);
+    border-color: #D52B1E;
+    box-shadow: 0 0 0 0.2rem rgba(213, 43, 30, 0.25);
 }
 
 .custom-select:focus {
-  border-color: #D52B1E;
-  box-shadow: 0 0 0 0.2rem rgba(213, 43, 30, 0.25);
+    border-color: #D52B1E;
+    box-shadow: 0 0 0 0.2rem rgba(213, 43, 30, 0.25);
 }
 
 
@@ -271,12 +289,13 @@ https://www.w3schools.com/howto/howto_css_image_overlay.asp
 https://bootstrapformbuilder.com/
 */
 .form-group {
-  margin-bottom: 0.5rem;
+    margin-bottom: 0.5rem;
 }
 
-.faicon{
-    width: 25px;
+.faicon {
+    width: 40px;
     height: 25px;
+    text-align: center;
 }
 
 /* ---------- Navbar styles ----------*/
@@ -324,7 +343,7 @@ https://bootstrapformbuilder.com/
 }
 
 @media only screen and (max-width: 576px) {
-    .nav-item{
+    #topNavbar .nav-item {
         text-align: right !important;
     }
 }
@@ -351,11 +370,11 @@ https://bootstrapformbuilder.com/
     padding-bottom: 5%;
 }
 
-.superherocaption{
+/* Possibly Depricated*/
+.superherocaption {
     padding-bottom: 5%;
 }
 
-/* Use this to set the carousel size on desktop*/
 .heroview {
     width: 100%;
     max-height: 600px;
@@ -367,12 +386,8 @@ https://bootstrapformbuilder.com/
     overflow: hidden;
 }
 
-
-
 .heroimg {
-
     height: 100%;
-    z-index: -1;
     object-fit: cover;
 }
 
@@ -453,6 +468,8 @@ https://bootstrapformbuilder.com/
     height: 300px;
     overflow: hidden;
     border-radius: 50%;
+    border: 1px solid #dee2e6;
+    /*Take from bootstrap*/
 }
 
 .circleimage {
@@ -551,38 +568,40 @@ https://bootstrapformbuilder.com/
 .nav-pills .show>.nav-link {
     color: #fff;
     background-color: #ffffff;
+    width: 100%;
 }
 
-#storyinfotab .navlink {
+#storyinfotab .nav-link {
     border-width: 0px;
 }
 
 /* ---------- Contest Page Styles --------- */
 
-#circlep1{
+#circlep1 {
     width: 200px;
     height: 200px;
 }
 
-#circlep2{
+#circlep2 {
     width: 175px;
     height: 175px;
 }
 
-#circlep3{
+#circlep3 {
     width: 150px;
     height: 150px;
 }
 
-#prizenext, #prizeprev{
+#prizenext,
+#prizeprev {
     top: 30%;
 }
 
-#Prizeslides{
+#Prizeslides {
     height: 525px;
 }
 
-#sponsorcard{
+#sponsorcard {
     max-height: 150px;
 }
 
@@ -610,7 +629,7 @@ https://bootstrapformbuilder.com/
 /* Applying different style for tablet size*/
 @media only screen and (min-width: 768px) {
 
-    #Prizeslides{
+    #Prizeslides {
         height: 400px;
     }
 
@@ -618,6 +637,7 @@ https://bootstrapformbuilder.com/
         left: 50%;
         top: 70% !important;
     }
+
     #prizenext {
         top: 70% !important;
     }
@@ -640,9 +660,9 @@ https://bootstrapformbuilder.com/
 
 /* ---------- Contact Page Styles ----------*/
 
-@media only screen and (min-width: 992px) { 
+@media only screen and (min-width: 992px) {
 
-    .contacttable{
+    .contacttable {
         border-collapse: separate;
         border-spacing: 10px 20px;
     }
@@ -654,9 +674,7 @@ https://bootstrapformbuilder.com/
     }
 }
 
-.aboutcircle{
+.aboutcircle {
     width: 250px;
     height: 250px;
 }
-
-

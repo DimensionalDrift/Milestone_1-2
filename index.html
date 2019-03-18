@@ -25,11 +25,11 @@
         - Check that the hover effect for the story and magazine links funtionally works ok on mobile
         - Edit the style of the carousel buttons, maybe a 1/3 red spot on either side?
         -Add in indicator that there is more further down on the page, red spot down that fades in?
-        
+
  -->
 
 <body>
-    <!-- Nav bar -->
+    <!-- Navbar Header -->
     <!-- I would love for it to be transparent then fade into white while scrolling on mobile but from what I could see it would require custom javascript -->
     <header>
         <nav class="navbar fixed-top navbar-expand-lg navbar-light nav-fill shadow-sm py-1">
@@ -46,6 +46,8 @@
                 </div>
                 <!-- Button used as menu under 768px -->
                 <div class='d-flex flex-row order-lg-2'>
+                    <!-- Serach button -->
+                    <!-- Non functional as js would be needed for the animations -->
                     <div class='pt-lg-2'>
                         <div class="nav-item spoticon spotred fa fa-search"></div>
                     </div>
@@ -59,17 +61,11 @@
                     <a class='nav-item nav-link pt-lg-4' href="gallery.html">Magazines</a>
                     <a class='nav-item nav-link pt-lg-4' href="contest.html">Photo Contest</a>
                     <a class='nav-item nav-link pt-lg-4' href="contact.html">Contact</a>
-                    <!-- Serach button -->
-                    <!-- Non functional as js would be needed for the animations -->
-                    <!-- X Figure out why the search button is on the left when in the menu  -->
                 </div>
             </div>
         </nav>
     </header>
-    <!-- Used to move content below the navbar -->
-    <!-- <div class='navpadding'></div> -->
-    <!--  -->
-    <!-- Superhero image -->
+    <!-- Superhero Image Section -->
     <!-- This superhero image uses a carousel to cycle through images -->
     <section>
         <div class=''>
@@ -78,13 +74,16 @@
                     <div class="carousel-item active superheroview align-items-center">
                         <a href="story.html">
                             <img class="w-100 heroimg" src="assets/images/aletsch/Aletsch_lr-5.jpg" alt="First slide">
-                            <div class='carousel-caption herotxt herocaption fade-in'>
+                            <div class='carousel-caption herotxt herocaption'>
                                 <h1>
                                     Spot Magazine
                                 </h1>
                                 <h3 class='d-none d-md-block'>
                                     Switzerlands Premeier Travel and Lifestyle Magazine
                                 </h3>
+                                <div class='w-100 d-flex justify-content-center'>
+                                    <a href='#trendingstory' class='spoticon spotred bounce fa fa-arrow-down' id='test'></a>
+                                </div>
                             </div>
                         </a>
                     </div>
@@ -98,6 +97,9 @@
                                 <h3 class='d-none d-md-block'>
                                     Check out the latest issue for great stories this spring season
                                 </h3>
+                                <div class='w-100 d-flex justify-content-center'>
+                                    <a href='#trendingstory' class='spoticon spotred bounce fa fa-arrow-down'></a>
+                                </div>
                             </div>
                         </a>
                     </div>
@@ -111,6 +113,9 @@
                                 <h3 class='d-none d-md-block'>
                                     Enter our photo competition for a chance to be featured in the Magazine
                                 </h3>
+                                <div class='w-100 d-flex justify-content-center'>
+                                    <a href='#trendingstory' class='spoticon spotred bounce fa fa-arrow-down'></a>
+                                </div>
                             </div>
                         </a>
                     </div>
@@ -140,7 +145,13 @@
             </div>
         </div>
     </section>
-    <!-- Trending Story -->
+    
+    <!-- This section is used to link to the trending story -->
+    <!-- If you link directly to the section it will overscroll by the width of the navbar, linking to this div means the padding between the superhero image and the story is enough to prevent the overscroll -->
+    <section id='scrollspot'>
+        <div id='trendingstory' class='testclass'></div>
+    </section>
+    <!-- Trending Story Section -->
     <section class='my-5'>
         <!-- Mobile screen -->
         <div class='container d-md-none'>
@@ -184,12 +195,8 @@
             </div>
         </div>
     </section>
-    <!-- Shorter Story Links -->
-    <!-- 
-            I think this may need javascript to generate links when the button is pressed. Also in the future it would make sense to use javascript and JSON to populate these items. For the moment this is just the layout of what the default 3/6 stories will look like 
-    
-          X Create animation for the reveal of more stories 
-            Fix the image sizes or breakpoints for different screen sizes
+    <!-- Shorter Story Section -->
+    <!-- I think this may need javascript to generate links when the button is pressed. Also in the future it would make sense to use javascript and JSON to populate these items. For the moment this is just the layout of what the default 3/6 stories will look like 
         -->
     <section>
         <div class="container">

@@ -20,8 +20,7 @@
 </head>
 
 <body>
-    <!-- Nav bar -->
-    <!-- I would love for it to be transparent then fade into white while scrolling on mobile but from what I could see it would require custom javascript -->
+    <!-- Navbar Header-->
     <header>
         <nav class="navbar fixed-top navbar-expand-lg navbar-light nav-fill shadow-sm py-1">
             <div class='container maxcontainer'>
@@ -31,53 +30,56 @@
                         <img src="assets/logo/Spot_Magazine.png" alt="Logo" class='logosize'>
                     </a>
                     <!-- Small Logo size -->
-                    <a class="navbar-brand d-lg-none p-0" href="index.html">
+                    <a class="navbar-brand d-lg-none" href="index.html">
                         <img src="assets/logo/Spot_Magazine.png" alt="Logo" class='logosize'>
                     </a>
                 </div>
-                <!-- Button used as menu under 768px -->
+                <!-- The ordering is used to ensure the search icon is on the left of the mobile menu and on the right of the desktop links -->
                 <div class='d-flex flex-row order-lg-2'>
+                    <!-- Serach button -->
+                    <!-- Non functional as js would be needed for the animations -->
                     <div class='pt-lg-2'>
                         <div class="nav-item spoticon spotred fa fa-search"></div>
                     </div>
+                    <!-- Button used as menu under 768px -->
                     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#topNavbar">
                         <span class="navbar-toggler-icon"></span>
                     </button>
                 </div>
                 <div class="collapse navbar-collapse order-lg-1" id='topNavbar'>
                     <!-- Header links -->
+                    <!-- Is it better if these are in a list? -->
                     <a class='nav-item nav-link pt-lg-4' href="index.html">Home</a>
                     <a class='nav-item nav-link pt-lg-4' href="gallery.html">Magazines</a>
                     <a class='nav-item nav-link pt-lg-4' href="contest.html">Photo Contest</a>
                     <a class='nav-item nav-link pt-lg-4' href="contact.html">Contact</a>
-                    <!-- Serach button -->
-                    <!-- Non functional as js would be needed for the animations -->
-                    <!-- X Figure out why the search button is on the left when in the menu  -->
                 </div>
             </div>
         </nav>
     </header>
     <!-- Used to move content below the navbar -->
+    <!-- Extra padding needed on desktop as there is no image on this page -->
     <div class='navpadding'></div>
-    <!-- <div class='navpadding'></div> -->
     <div class='navpaddinghalf d-none d-md-block'></div>
-    <!-- Enquireies and Subscription -->
+    <!-- Enquireies and Subscription Section -->
     <section>
         <div class='container'>
             <div class='row'>
-                <div class='col-12'>
+                <div class='col'>
                     <h2 class='cursivetxt text-left'>Contact Us</h2>
                     Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim
                 </div>
             </div>
         </div>
     </section>
-    <!-- Contact info and form -->
+    <!-- Contact info and form Section -->
     <section>
         <div class='container mt-4'>
             <div class='row'>
                 <div class='col-12 col-lg-5 my-4'>
-                    <h3 class='cursivetxt text-left'>Contact Details:</h3>
+                    <h3 class='cursivetxt text-left'>
+                        Contact Details:
+                    </h3>
                     <div class='row'>
                         <div class='col-lg-12 col-sm-6'>
                             <div class='d-flex justify-content-start '>
@@ -110,6 +112,7 @@
                         </div>
                     </div>
                 </div>
+                <!-- This single column is used to have a verticle line on desktop -->
                 <div class='col-12 col-lg-1 d-flex justify-content-center align-items-center'>
                     <div class='vline'></div>
                 </div>
@@ -159,7 +162,7 @@
         <div class='container maxcontainer'>
             <div class='row align-items-center'>
                 <div class='col-12'>
-                    <div class='circleview aboutcircle border m-3'>
+                    <div class='circleview aboutcircle m-3'>
                         <img src="assets/images/sketches/Carina.jpeg" class='circleimage' alt="Carina">
                     </div>
                     <div class='my-5'>
@@ -172,7 +175,7 @@
                     </div>
                 </div>
                 <div class='col-12'>
-                    <div class='circleview aboutcircle float-right border m-3'>
+                    <div class='circleview aboutcircle float-right m-3'>
                         <img src="assets/images/sketches/andy.jpeg" class='circleimage' alt="Andy">
                     </div>
                     <div class='my-5 text-right'>
@@ -185,12 +188,12 @@
                     </div>
                 </div>
                 <div class='col-12'>
-                    <div class='circleview aboutcircle border m-3'>
+                    <div class='circleview aboutcircle m-3'>
                         <img src="assets/images/sketches/Isabel_b.jpeg" class='circleimage' alt="Geigers">
                     </div>
                     <div class='my-5'>
                         <h4 class='text-left'>
-                            Isabel Steiner - Advertising  and Sales
+                            Isabel Steiner - Advertising and Sales
                         </h4>
                         <a href="#" class='linkhover'>isabel@spotmagazine.ch</a>
                         <p>Etiam posuere quam ac quam. Maecenas aliquet accumsan leo. Nullam dapibus fermentum ipsum. Etiam quis quam. Integer lacinia. Nulla est. Nulla turpis magna, cursus sit amet, suscipit a, interdum id, felis. Integer vulputate sem a nibh rutrum consequat. Maecenas lorem. Pellentesque pretium.
@@ -198,7 +201,7 @@
                     </div>
                 </div>
                 <div class='col-12'>
-                    <div class='circleview aboutcircle float-right border m-3'>
+                    <div class='circleview aboutcircle float-right m-3'>
                         <img src="assets/images/sketches/Sam.jpeg" class='circleimage' alt="Sam">
                     </div>
                     <div class='my-5 text-right'>
@@ -213,7 +216,7 @@
             </div>
         </div>
     </section>
-    <!-- About us Mobile -->
+    <!-- About Us Section Mobile -->
     <section class='d-md-none'>
         <div class='container'>
             <div class='row'>
@@ -223,7 +226,7 @@
         <div class='container'>
             <div class='row d-flex justify-content-lg-start'>
                 <div class='col-12 d-flex justify-content-center'>
-                    <div class='circleview aboutcircle border'>
+                    <div class='circleview aboutcircle'>
                         <img src="assets/images/sketches/Carina.jpeg" class='circleimage' alt="Carina">
                     </div>
                 </div>
@@ -238,7 +241,7 @@
             </div>
             <div class='row d-flex justify-content-lg-end'>
                 <div class='col-12 d-flex justify-content-center'>
-                    <div class='circleview aboutcircle border'>
+                    <div class='circleview aboutcircle'>
                         <img src="assets/images/sketches/andy.jpeg" class='circleimage' alt="Andy">
                     </div>
                 </div>
@@ -253,7 +256,7 @@
             </div>
             <div class='row d-flex justify-content-lg-start'>
                 <div class='col-12 d-flex justify-content-center'>
-                    <div class='circleview aboutcircle border'>
+                    <div class='circleview aboutcircle'>
                         <img src="assets/images/sketches/geigers_b.jpeg" class='circleimage' alt="Geigers">
                     </div>
                 </div>
@@ -268,7 +271,7 @@
             </div>
             <div class='row d-flex justify-content-lg-end'>
                 <div class='col-12 d-flex justify-content-center'>
-                    <div class='circleview aboutcircle border'>
+                    <div class='circleview aboutcircle'>
                         <img src="assets/images/sketches/Sam.jpeg" class='circleimage' alt="Sam">
                     </div>
                 </div>
