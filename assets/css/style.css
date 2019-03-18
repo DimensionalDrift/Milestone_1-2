@@ -370,6 +370,11 @@ https://bootstrapformbuilder.com/
     padding-bottom: 5%;
 }
 
+.herocaption h1{
+    font-weight: 900;
+    font-size: 3em;
+}
+
 /* Possibly Depricated*/
 .superherocaption {
     padding-bottom: 5%;
