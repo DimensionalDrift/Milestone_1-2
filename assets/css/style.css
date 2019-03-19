@@ -24,6 +24,8 @@ C- Makes the scroll behavior smooth for the homepage bouncing link
         There is a way to do it without using this but I cannot figure it out:;
         https://stackoverflow.com/questions/17631417/css-pure-css-scroll-animation
 D- Fixes bug where thers is no inertial scrolling on iOS
+overflow-scrolling: touch;
+-webkit-overflow-scrolling: touch;
 */
 
 html,
@@ -39,8 +41,6 @@ body {
     font-family: 'Helvetica Neue', Helvetica, Arial, 'Lucida Grande', sans-serif;
     /*C*/
     scroll-behavior: smooth;
-    /*D*/
-    -webkit-overflow-scrolling: touch;
 }
 
 /*
@@ -320,7 +320,7 @@ https://www.w3schools.com/howto/howto_css_image_overlay.asp
 https://bootstrapformbuilder.com/
 */
 .form-group {
-    margin-bottom: 0.5rem;
+    margin-bottom: 1rem;
 }
 
 /*Creates a little box around any Font Awesome icons to help align and center them*/
@@ -342,6 +342,9 @@ https://bootstrapformbuilder.com/
     height: 50px;
 }
 
+.navpaddingquater {
+    height: 25px;
+}
 /*Bootstrap style*/
 .navbar {
     background-color: rgba(255, 255, 255, 1);
