@@ -700,6 +700,10 @@ Overrides circleview sizes for each prize*/
     height: 525px;
 }
 
+#prizeprev, #prizenext{
+    opacity: 1;
+}
+
 #sponsorcard {
     max-height: 150px;
 }
