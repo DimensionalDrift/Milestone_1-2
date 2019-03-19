@@ -60,7 +60,8 @@
     <!-- Used to move content below the navbar -->
     <!-- Extra padding needed on desktop as there is no image on this page -->
     <div class='navpadding'></div>
-    <div class='navpaddinghalf d-none d-md-block'></div>
+    <div class='navpaddingquater d-lg-none'></div>
+    <div class='navpaddinghalf d-none d-lg-block'></div>
     <!-- Enquireies and Subscription Section -->
     <section>
         <div class='container maxcontainer'>
@@ -129,7 +130,7 @@
                             <input id="cf_email" name="cf_email" placeholder="example@spotmagazine.ch" type="text" required="required" class="form-control">
                         </div>
                         <div class="form-group">
-                            <label for="cf_subject">Subject:</label>
+                            <label for="cf_subject">Why do you want to get in touch?</label>
                             <div>
                                 <select id="cf_subject" name="cf_subject" required="required" class="custom-select">
                                     <option value="cf_story">Story Idea</option>
@@ -137,7 +138,7 @@
                                     <option value="cf_distribution">Distribution</option>
                                     <option value="cf_general">Other</option>
                                 </select>
-                                <span id="cf_subjectHelpBlock" class="form-text text-muted">Why do you want to get in touch?</span>
+                                <span id="cf_subjectHelpBlock" class="form-text text-muted"></span>
                             </div>
                         </div>
                         <div class="form-group">
@@ -220,7 +221,9 @@
     <section class='d-md-none'>
         <div class='container'>
             <div class='row'>
-                <h2 class='cursive-text text-left'>Meet the team</h2>
+                <div class='col-12'>
+                    <h2 class='cursive-text text-left'>Meet the team</h2>
+                </div>
             </div>
         </div>
         <div class='container'>
