@@ -11,6 +11,11 @@ Ideas
  
  -->
 
+ <!-- X Greater to do list:
+        - Check that the hover effect for the story and magazine links funtionally works ok on mobile
+        - Edit the style of the carousel buttons, maybe a 1/3 red spot on either side?
+ -->
+
 <!-- 
 This is the sample README from the course, use it for the general layout and to not forget an deatils  
 
