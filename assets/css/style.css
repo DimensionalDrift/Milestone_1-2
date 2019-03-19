@@ -172,7 +172,7 @@ a:active {
     color: inherit;
 }
 
-.link-hover:hover {
+.link-hover:hover, .link-hover:active {
     text-decoration: underline;
 }
 
@@ -221,11 +221,11 @@ https://www.w3schools.com/howto/howto_css_image_overlay.asp
     font-size: 1.3em;
 }
 
-.card:hover .imlink {
+.card:hover .imlink, .card:active .imlink {
     opacity: 0.3;
 }
 
-.card:hover .linkspot {
+.card:hover .linkspot, .card:active .linkspot {
     opacity: 1;
 }
 
