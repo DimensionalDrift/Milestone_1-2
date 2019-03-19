@@ -23,6 +23,7 @@ C- Makes the scroll behavior smooth for the homepage bouncing link
     X This is only suported on chrome and firefox
         There is a way to do it without using this but I cannot figure it out:;
         https://stackoverflow.com/questions/17631417/css-pure-css-scroll-animation
+D- Fixes bug where thers is no inertial scrolling on iOS
 */
 
 html,
@@ -38,6 +39,8 @@ body {
     font-family: 'Helvetica Neue', Helvetica, Arial, 'Lucida Grande', sans-serif;
     /*C*/
     scroll-behavior: smooth;
+    /*D*/
+    -webkit-overflow-scrolling: touch;
 }
 
 /*
