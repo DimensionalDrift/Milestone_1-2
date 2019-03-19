@@ -35,7 +35,7 @@ body {
     overflow-x: hidden;
     font-size: 20px;
     /*B*/
-    font-family: "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+    font-family: 'Helvetica Neue', Helvetica, Arial, 'Lucida Grande', sans-serif;
     /*C*/
     scroll-behavior: smooth;
 }
@@ -172,6 +172,9 @@ a:active {
     color: inherit;
 }
 
+/*https://stackoverflow.com/questions/22559756/changing-hover-to-touch-click-for-mobile-devices
+hover active is needed for the interaction to work correctly on mobile*/
+
 .link-hover:hover, .link-hover:active {
     text-decoration: underline;
 }
@@ -246,9 +249,9 @@ https://www.w3schools.com/howto/howto_css_image_overlay.asp
 }
 
 .spoticon_s {
-    height: 30px;
-    min-width: 30px;
-    max-width: 30px;
+    height: 32px;
+    min-width: 32px;
+    max-width: 32px;
     margin: 5px;
 }
 
@@ -625,8 +628,8 @@ Uses a circular aperture to keep with the spot theme*/
 /*Creates a small aperture for the flag icons in the cards
 uses the squareimage class from the Contest Page Styles section for the nested image*/
 .flagview {
-    height: 30px !important;
-    width: 30px !important;
+    height: 32px !important;
+    width: 32px !important;
     border: 1px solid #dee2e6;
     margin: 5px;
 }
