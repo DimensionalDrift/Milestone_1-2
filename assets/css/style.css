@@ -38,12 +38,17 @@ body {
     margin: 0px;
     padding: 0px;
     overflow-x: hidden;
+    /*Setting the default font size to use em sizes for the rest*/
     font-size: 20px;
     /*B*/
     font-family: 'Helvetica Neue', Helvetica, Arial, 'Lucida Grande', sans-serif;
     /*C*/
     /*scroll-behavior: smooth;*/
+    -webkit-overflow-scrolling: touch !important;
+    overflow: auto !important;
+    height: 100% !important;
 }
+
 /*
 section{
     -webkit-overflow-scrolling: touch;
@@ -63,7 +68,7 @@ https://stackoverflow.com/questions/16670931/hide-scroll-bar-but-while-still-bei
     width: 0px;
     background: transparent;
 }*/
-    /*remove scrollbar space */
+/*remove scrollbar space */
 
 /*Defines Horizontal line*/
 hr {
@@ -185,7 +190,8 @@ a:active {
 /*https://stackoverflow.com/questions/22559756/changing-hover-to-touch-click-for-mobile-devices
 hover active is needed for the interaction to work correctly on mobile*/
 
-.link-hover:hover, .link-hover:active {
+.link-hover:hover,
+.link-hover:active {
     text-decoration: underline;
 }
 
@@ -234,11 +240,13 @@ https://www.w3schools.com/howto/howto_css_image_overlay.asp
     font-size: 1.3em;
 }
 
-.card:hover .imlink, .card:active .imlink {
+.card:hover .imlink,
+.card:active .imlink {
     opacity: 0.3;
 }
 
-.card:hover .linkspot, .card:active .linkspot {
+.card:hover .linkspot,
+.card:active .linkspot {
     opacity: 1;
 }
 
@@ -352,6 +360,7 @@ https://bootstrapformbuilder.com/
 .navpaddingquater {
     height: 25px;
 }
+
 /*Bootstrap style*/
 .navbar {
     background-color: rgba(255, 255, 255, 1);
@@ -713,7 +722,8 @@ Overrides circleview sizes for each prize*/
     height: 525px;
 }
 
-#prizeprev, #prizenext{
+#prizeprev,
+#prizenext {
     opacity: 1;
 }
 
