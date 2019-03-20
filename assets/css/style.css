@@ -25,6 +25,7 @@ C- Makes the scroll behavior smooth for the homepage bouncing link
         https://stackoverflow.com/questions/17631417/css-pure-css-scroll-animation
 D- Tried to fix a bug where there is no inertial scrolling on iOS but adding these caused the github hosted page to fail to build
 I have no idea even how to approach solving this problem!
+https://www.igorkromin.net/index.php/2016/05/20/mobile-safari-scrolling-problem-with-an-input-field-inside-a-fixed-div/
 
 overflow-scrolling: touch;
 -webkit-overflow-scrolling: touch;
@@ -33,33 +34,29 @@ overflow-scrolling: touch;
 html,
 body {
     /*A*/
-    width: 100%;
+/*    width: 100%;
     height: 100%;
     margin: 0px;
-    padding: 0px;
-    overflow-x: hidden;
+    padding: 0px;*/
+    /*overflow-x: hidden;*/
     /*Setting the default font size to use em sizes for the rest*/
     font-size: 20px;
     /*B*/
     font-family: 'Helvetica Neue', Helvetica, Arial, 'Lucida Grande', sans-serif;
     /*C*/
-    /*scroll-behavior: smooth;*/
+    scroll-behavior: smooth;
+    /*D*/
     -webkit-overflow-scrolling: touch !important;
     overflow: auto !important;
     height: 100% !important;
 }
 
 /*
-section{
-    -webkit-overflow-scrolling: touch;
-}*/
-
-/*
 Removes the scrollbar from the page
 https://stackoverflow.com/questions/16670931/hide-scroll-bar-but-while-still-being-able-to-scroll
 */
-
-/*html {
+/*
+html {
     overflow: scroll;
     overflow-x: hidden;
 }
@@ -68,7 +65,7 @@ https://stackoverflow.com/questions/16670931/hide-scroll-bar-but-while-still-bei
     width: 0px;
     background: transparent;
 }*/
-/*remove scrollbar space */
+    /*remove scrollbar space */
 
 /*Defines Horizontal line*/
 hr {
