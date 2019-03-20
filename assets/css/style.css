@@ -42,7 +42,7 @@ body {
     /*B*/
     font-family: 'Helvetica Neue', Helvetica, Arial, 'Lucida Grande', sans-serif;
     /*C*/
-    scroll-behavior: smooth;
+    /*scroll-behavior: smooth;*/
 }
 /*
 section{
@@ -355,7 +355,6 @@ https://bootstrapformbuilder.com/
 /*Bootstrap style*/
 .navbar {
     background-color: rgba(255, 255, 255, 1);
-    -webkit-overflow-scrolling: touch;
 }
 
 /*Logo Size on small screen*/
