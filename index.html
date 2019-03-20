@@ -1,6 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
 
+<!-- 
+NOTE: The majority of comments here will be removed when the site goes live for the client.
+They are:
+    - notes to myself in the future (denoted by an X )
+    - to explain my thinking and process to any examiners for the sake of the Code Institute project. 
+-->
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -21,7 +28,7 @@
 
 <body>
     <!-- Navbar Header -->
-    <!-- I would love for it to be transparent then fade into white while scrolling on mobile but from what I could see it would require custom JavaScript -->
+    <!-- X I would love for it to be transparent then fade into white after scrolling down but from what I could see it would require custom JavaScript -->
     <header>
         <nav class="navbar fixed-top navbar-expand-lg navbar-light nav-fill shadow-sm py-1">
             <div class='container maxcontainer'>
@@ -38,7 +45,7 @@
                 <!-- Button used as menu under 768px -->
                 <div class='d-flex flex-row order-lg-2'>
                     <!-- Search button -->
-                    <!-- Non functional asJavaScriptwould be needed for the animations -->
+                    <!-- X Non functional as JavaScript would be needed for the animations -->
                     <div class='pt-lg-2'>
                         <div class="nav-item spoticon spotred fa fa-search"></div>
                     </div>
@@ -124,16 +131,18 @@
     </section>
     <!-- This section is used to link to the trending story -->
     <!-- If you link directly to the section it will overscroll by the width of the navbar, linking to this div means the padding between the superhero image and the story is enough to prevent the overscroll 
-        This can be fixed using the JavaScript package Animate on Scroll -->
+        X This can be fixed using a JavaScript package such as 'Animate on Scroll' -->
     <section id='trendingstory'>
     </section>
     <!-- Trending Story Section -->
+    <!-- I am aware that it isn't the best practice to hide a section at different screen sizes to have multiple designs as it leads to duplicate code and text. Unfortunately in order to have text wrap around the circular image I couldn't have the text and the image in bootstrap columns so it made implementing a responsive design very difficult.In the end this was the best way I could come up with having the text wrap on desktop then have the design responsive on smaller screens. In the future if I had to do something like this I would import the text that displays on the site from a database so it doesn't need to be changed twice every time.
+      -->
     <section class='my-5'>
         <!-- Mobile screen -->
         <div class='container d-md-none'>
             <div class='row'>
                 <div class='col-12'>
-                    <h2 class='cursive-text my-4'>
+                    <h2 class='cursivetxt my-4'>
                         Story of the Week
                     </h2>
                     <div class='circleview mx-auto'>
@@ -144,7 +153,7 @@
                     <h4>
                         This is the story of the week on mobile
                     </h4>
-                    <p>In this design the text is meant to wrap around the edge of the spot. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
+                    <p>In this design the text is below the spot. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
                     </p>
                 </div>
             </div>
@@ -156,8 +165,8 @@
                     <div class='circleview m-3'>
                         <img src="assets/images/bad_ragaz/badragaz_lr-008.jpg" alt="Placeholder Image" class='circleimage' id='trendingimg'>
                     </div>
-                    <div class='my-lg-5 my-md-3'>
-                        <h2 class='cursive-text text-left'>
+                    <div class='my-md-3 my-lg-5'>
+                        <h2 class='cursivetxt text-left'>
                             Story of the Week
                         </h2>
                         <h4 class='text-left my-3'>
@@ -172,18 +181,18 @@
         </div>
     </section>
     <!-- Shorter Story Section -->
-    <!-- I think this may need JavaScript to generate links when the button is pressed. Also in the future it would make sense to use JavaScript and JSON to populate these items. For the moment this is just the layout of what the default 3/6 stories will look like 
+    <!-- I this will need JavaScript to generate links when the button is pressed. Also in the future it would make sense to maybe use JavaScript and JSON to populate these items. For the moment this is just the layout of what the default 1/2/3 stories will look like 
         -->
     <section>
         <div class="container maxcontainer">
             <div class='row'>
                 <div class='col-12'>
-                    <h2 class='cursive-text text-left'>More Stories</h2>
+                    <h2 class='cursivetxt text-left'>More Stories</h2>
                     <hr>
                 </div>
             </div>
             <div class="row">
-                <!-- The masonry layout for these cards unfortunately are ordered vertically rather than horizontally, the fix would require JavaScript so will be saved for the future -->
+                <!-- X The masonry layout for these cards unfortunately are ordered vertically rather than horizontally as the client wants, the fix would require JavaScript so will be saved for the future -->
                 <div class='col-12 card-columns'>
                     <div class='card'>
                         <a href="story.html" class='imlink'>
@@ -194,7 +203,7 @@
                             <div class='card-text'>
                                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean et rutrum lorem. Ut non sagittis elit. Fusce quis pharetra felis. Integer dignissim enim sapien, eu accumsan sem porta sit amet.
                             </div>
-                            <div class='card-footer sstory-footer'>
+                            <div class='card-footer sstoryfooter'>
                                 <div class='row'>
                                     <div class='col-sm-12 col-4 my-1 d-flex align-items-center justify-content-center'>
                                         <div class='text-left text-sm-center'>Read time 3 mins</div>
@@ -205,9 +214,9 @@
                                         </div>
                                     </div>
                                     <div class='col-sm-8 col-4 d-flex justify-content-end align-items-center'>
-                                        <div class="spoticon_s spotred fa fa-car"></div>
-                                        <div class="spoticon_s spotred fa fa-bed"></div>
-                                        <div class="spoticon_s spotred fa fa-map-signs"></div>
+                                        <div class="spoticonsmall spotred fa fa-car"></div>
+                                        <div class="spoticonsmall spotred fa fa-bed"></div>
+                                        <div class="spoticonsmall spotred fa fa-map-signs"></div>
                                     </div>
                                 </div>
                             </div>
@@ -223,7 +232,7 @@
                             <div class='card-text'>
                                 Donec consequat vehicula tortor dapibus efficitur. Aenean dolor ante, efficitur non odio nec, cursus suscipit lectus. Quisque feugiat ac mauris non pellentesque. Quisque nibh dui, placerat ac blandit nec, pharetra a neque.
                             </div>
-                            <div class='card-footer sstory-footer'>
+                            <div class='card-footer sstoryfooter'>
                                 <div class='row'>
                                     <div class='col-sm-12 col-4 my-1 d-flex align-items-center justify-content-center'>
                                         <div class='text-left text-sm-center'>Read time 3 mins</div>
@@ -234,9 +243,9 @@
                                         </div>
                                     </div>
                                     <div class='col-sm-8 col-4 d-flex justify-content-end align-items-center'>
-                                        <div class="spoticon_s spotred fa fa-car"></div>
-                                        <div class="spoticon_s spotred fa fa-cutlery"></div>
-                                        <div class="spoticon_s spotred fa fa-snowflake-o"></div>
+                                        <div class="spoticonsmall spotred fa fa-car"></div>
+                                        <div class="spoticonsmall spotred fa fa-cutlery"></div>
+                                        <div class="spoticonsmall spotred fa fa-snowflake-o"></div>
                                     </div>
                                 </div>
                             </div>
@@ -252,7 +261,7 @@
                             <div class='card-text'>
                                 Morbi quis massa non ipsum eleifend suscipit a in arcu. Vestibulum ut sem quam. In lectus justo, blandit eu commodo vitae, pretium sed massa. Proin sagittis aliquet vulputate. Donec et ipsum laoreet, blandit sapien maximus, hendrerit eros.
                             </div>
-                            <div class='card-footer sstory-footer'>
+                            <div class='card-footer sstoryfooter'>
                                 <div class='row'>
                                     <div class='col-sm-12 col-4 my-1 d-flex align-items-center justify-content-center'>
                                         <div class='text-left text-sm-center'>Read time 3 mins</div>
@@ -263,9 +272,9 @@
                                         </div>
                                     </div>
                                     <div class='col-sm-8 col-4 d-flex justify-content-end align-items-center'>
-                                        <div class="spoticon_s spotred fa fa-bicycle"></div>
-                                        <div class="spoticon_s spotred fa fa-heart"></div>
-                                        <div class="spoticon_s spotred fa fa-map-signs"></div>
+                                        <div class="spoticonsmall spotred fa fa-bicycle"></div>
+                                        <div class="spoticonsmall spotred fa fa-heart"></div>
+                                        <div class="spoticonsmall spotred fa fa-map-signs"></div>
                                     </div>
                                 </div>
                             </div>
@@ -281,7 +290,7 @@
                             <div class='card-text'>
                                 Cras in molestie arcu, non porttitor orci. Quisque facilisis lectus quis scelerisque interdum. Maecenas dictum congue mauris nec feugiat. Nam faucibus quis ipsum eget porttitor. Curabitur vestibulum lacus diam, sit amet vestibulum nisi aliquam vitae.
                             </div>
-                            <div class='card-footer sstory-footer'>
+                            <div class='card-footer sstoryfooter'>
                                 <div class='row'>
                                     <div class='col-sm-12 col-4 my-1 d-flex align-items-center justify-content-center'>
                                         <div class='text-left text-sm-center'>Read time 3 mins</div>
@@ -292,9 +301,9 @@
                                         </div>
                                     </div>
                                     <div class='col-sm-8 col-4 d-flex justify-content-end align-items-center'>
-                                        <div class="spoticon_s spotred fa fa-bicycle"></div>
-                                        <div class="spoticon_s spotred fa fa-cutlery"></div>
-                                        <div class="spoticon_s spotred fa fa-map-signs"></div>
+                                        <div class="spoticonsmall spotred fa fa-bicycle"></div>
+                                        <div class="spoticonsmall spotred fa fa-cutlery"></div>
+                                        <div class="spoticonsmall spotred fa fa-map-signs"></div>
                                     </div>
                                 </div>
                             </div>
@@ -310,7 +319,7 @@
                             <div class='card-text'>
                                 Suspendisse in commodo enim. Morbi euismod sapien eget scelerisque tempus. Praesent egestas tincidunt odio id facilisis. Maecenas a tristique augue, a facilisis dui. Donec ac lacus lacinia ipsum ornare auctor. Nullam ultricies eros mi, vitae elementum felis efficitur quis.
                             </div>
-                            <div class='card-footer sstory-footer'>
+                            <div class='card-footer sstoryfooter'>
                                 <div class='row'>
                                     <div class='col-sm-12 col-4 my-1 d-flex align-items-center justify-content-center'>
                                         <div class='text-left text-sm-center'>Read time 3 mins</div>
@@ -321,9 +330,9 @@
                                         </div>
                                     </div>
                                     <div class='col-sm-8 col-4 d-flex justify-content-end align-items-center'>
-                                        <div class="spoticon_s spotred fa fa-car"></div>
-                                        <div class="spoticon_s spotred fa fa-bed"></div>
-                                        <div class="spoticon_s spotred fa fa-cutlery"></div>
+                                        <div class="spoticonsmall spotred fa fa-car"></div>
+                                        <div class="spoticonsmall spotred fa fa-bed"></div>
+                                        <div class="spoticonsmall spotred fa fa-cutlery"></div>
                                     </div>
                                 </div>
                             </div>
@@ -339,7 +348,7 @@
                             <div class='card-text'>
                                 Morbi quis massa non ipsum eleifend suscipit a in arcu. Vestibulum ut sem quam. In lectus justo, blandit eu commodo vitae, pretium sed massa. Proin sagittis aliquet vulputate. Donec et ipsum laoreet, blandit sapien maximus, hendrerit eros.
                             </div>
-                            <div class='card-footer sstory-footer'>
+                            <div class='card-footer sstoryfooter'>
                                 <div class='row'>
                                     <div class='col-sm-12 col-4 my-1 d-flex align-items-center justify-content-center'>
                                         <div class='text-left text-sm-center'>Read time 3 mins</div>
@@ -350,9 +359,9 @@
                                         </div>
                                     </div>
                                     <div class='col-sm-8 col-4 d-flex justify-content-end align-items-center'>
-                                        <div class="spoticon_s spotred fa fa-ship"></div>
-                                        <div class="spoticon_s spotred fa fa-binoculars"></div>
-                                        <div class="spoticon_s spotred fa fa-map-signs"></div>
+                                        <div class="spoticonsmall spotred fa fa-ship"></div>
+                                        <div class="spoticonsmall spotred fa fa-binoculars"></div>
+                                        <div class="spoticonsmall spotred fa fa-map-signs"></div>
                                     </div>
                                 </div>
                             </div>
@@ -363,7 +372,7 @@
             </div>
             <div class="row ">
                 <div class="col-12 text-center my-4">
-                    <button type="button" class="btn btn-spot">More</button>
+                    <button type="button" class="btn btnspot">More</button>
                 </div>
             </div>
         </div>
@@ -374,7 +383,7 @@
             <div class='row'>
                 <div class='col-12'>
                     <div class="m-5 text-center">
-                        <h2 class='cursive-text'>
+                        <h2 class='cursivetxt'>
                             Instagram Feed Placeholder
                         </h2>
                         <div class='heroview'>
@@ -403,7 +412,7 @@
                 </div>
                 <div class='col-lg-4 my-1 order-lg-3 footerright'>
                     Spot Media GmbH </br>
-                    &copy; 2018 </br>
+                    &copy;2018 </br>
                     All rights reserved </br>
                 </div>
             </div>

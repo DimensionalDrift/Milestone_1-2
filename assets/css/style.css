@@ -1,4 +1,4 @@
-/*Possible color pallet 
+/* X Possible color pallet 
 #FFFFFF - White
 #D52B1E - Spot Red 
 #B23D40 - Second Red   
@@ -7,6 +7,13 @@
 #24282F - Off Black 
 #08acd2 - Focus Story 
 
+*/
+
+/*
+NOTE: The majority of comments here will be removed when the site goes live for the client.
+They are:
+    - notes to myself in the future (denoted by an X )
+    - to explain my thinking and process to any examiners for the sake of the Code Institute project.
 */
 
 /*-------------------- General styles --------------------*/
@@ -24,10 +31,8 @@ https://stackoverflow.com/questions/8118741/css-font-helvetica-neue
 C - Makes the scroll behavior smooth for the homepage bouncing link
     X This is only supported on chrome and Firefox
         Cross browser support requires JavaScript
-        There is a way to do it without using this but I cannot figure it out:;
-        https://stackoverflow.com/questions/17631417/css-pure-css-scroll-animation
 
-D - iOS Scroll fixed!
+D - iOS Scroll issue fixed!
 https://www.igorkromin.net/index.php/2016/05/20/mobile-safari-scrolling-problem-with-an-input-field-inside-a-fixed-div/
 
 */
@@ -40,7 +45,7 @@ body {
     margin: 0px;
     padding: 0px;*/
     /*overflow-x: hidden;*/
-    /*Setting the default font size to use em sizes for the rest*/
+    /*Setting the default font size to use em sizes everywhere else*/
     font-size: 20px;
     /*B*/
     font-family: 'Helvetica Neue', Helvetica, Arial, 'Lucida Grande', sans-serif;
@@ -53,10 +58,9 @@ body {
 }
 
 /*
-Removes the scrollbar from the page
+Removes the scrollbar from the page, I think it looks better that way
 https://stackoverflow.com/questions/16670931/hide-scroll-bar-but-while-still-being-able-to-scroll
 */
-
 html {
     overflow: scroll;
     overflow-x: hidden;
@@ -171,8 +175,9 @@ h6 {
 } 
 */
 
-/*This font is close to a licensed font the client uses, should be replaced in the real version*/
-.cursive-text {
+/*This font is close to a licensed font the client uses
+  X should be replaced in the real version*/
+.cursivetxt {
     font-family: 'Pacifico', cursive;
 }
 
@@ -187,16 +192,15 @@ a:active {
 
 /*https://stackoverflow.com/questions/22559756/changing-hover-to-touch-click-for-mobile-devices
 hover active is needed for the interaction to work correctly on mobile*/
-
-.link-hover:hover,
-.link-hover:active {
+.linkhover:hover,
+.linkhover:active {
     text-decoration: underline;
 }
 
 /*Fade in effect from:
 https://codepen.io/jmelgoza/pen/jEaGYg
 */
-.fade-in {
+.fadein {
     opacity: 0;
     animation: fadeIn ease-in 1;
     animation-fill-mode: forwards;
@@ -250,7 +254,7 @@ https://www.w3schools.com/howto/howto_css_image_overlay.asp
 
 /*Defining the circular icon and it's default red*/
 .spoticon,
-.spoticon_s {
+.spoticonsmall {
     border-radius: 50% !important;
     justify-content: center;
     align-items: center;
@@ -264,7 +268,7 @@ https://www.w3schools.com/howto/howto_css_image_overlay.asp
     margin: 10px;
 }
 
-.spoticon_s {
+.spoticonsmall {
     height: 32px;
     min-width: 32px;
     max-width: 32px;
@@ -298,7 +302,7 @@ https://www.w3schools.com/howto/howto_css_image_overlay.asp
 }
 
 /*Button redesign taken from Bootstrap css file*/
-.btn-spot {
+.btnspot {
     border-radius: 10px;
     border-width: 2px;
     color: #D52B1E;
@@ -307,18 +311,20 @@ https://www.w3schools.com/howto/howto_css_image_overlay.asp
     font-size: 1.2em;
 }
 
-.btn-spot:hover {
+.btnspot:hover {
     color: #FFFFFF;
     background-color: #D52B1E;
     border-color: #D52B1E;
 }
 
-.btn-spot:focus,
-.btn-spot.focus {
+.btnspot:focus,
+.btnspot.focus {
     box-shadow: 0 0 0 0.2rem rgba(213, 43, 30, 0.25);
 }
 
-/*Form focus take from Bootstrap css file*/
+/*Note: Any classes with a hyphen in them are existing classes in either Bootstrap or from Font Awesome
+    classes without are usually my own classes
+    This is done to help better distinguish between the two*/
 .form-control:focus {
     border-color: #D52B1E;
     box-shadow: 0 0 0 0.2rem rgba(213, 43, 30, 0.25);
@@ -432,7 +438,7 @@ https://bootstrapformbuilder.com/
     font-size: 1.75em;
 }
 
-/*Needed to bump the carousel caption above the chrome bar on at least my android*/
+/*Needed to bump the carousel caption up on mobile as it appears Google is thinking of putting the navigation bar in Chrome on the bottom where it obscured it, at least in Chrome Beta*/
 .carousel-caption {
     bottom: 10%;
 }
@@ -454,9 +460,9 @@ https://bootstrapformbuilder.com/
 }*/
 
 /*Hero image control 
-This method is a lot to control the size and shape of images without stretching. 
+This method is used a lot to control the size and shape of images without stretching. 
 An image is nested in a div with class with name _____view of a fixed size, then the image below it with class _____img can use overflow to fill as much as is needed without stretching/distorting
-In this case the image is the full screen height allowing for as much image as possible to be shown on the home page */
+In this case the image is the full screen height (100vh) allowing for as much image as possible to be shown on the home page */
 .heroview {
     width: 100%;
     max-height: 600px;
@@ -514,7 +520,8 @@ In this case the image is the full screen height allowing for as much image as p
     transition: font-size 0.2s;
 }
 
-/*Social media colors found on 
+/*Associating the social media colors to the Font Awesome icons classes
+Social media colors found on 
 https://www.materialui.co/socialcolors
 https://codepen.io/thomasrye/pen/VaRoYv
 */
@@ -539,8 +546,7 @@ https://codepen.io/thomasrye/pen/VaRoYv
 }
 
 /*-------------------- Front Page styles --------------------*/
-/*Used to make container full width below desktop screen size
-   X Not very mobile first, look for better way*/
+/*Used to make container full width below desktop screen size*/
 @media only screen and (max-width: 992px) {
 
     .maxcontainer {
@@ -549,9 +555,9 @@ https://codepen.io/thomasrye/pen/VaRoYv
 
 }
 
-/*----- Trending Story Styles -----*/
+/*----- Trending Story Styles -----
 /*Circle image control
-Uses a circular aperture to keep with the spot theme*/
+Uses a circular aperture to keep with the Spot theme*/
 .circleview {
     width: 300px;
     height: 300px;
@@ -638,7 +644,7 @@ Uses a circular aperture to keep with the spot theme*/
     background-color: #e7e7e7
 }
 
-.sstory-footer {
+.sstoryfooter {
     margin-bottom: 0;
     background-color: #e7e7e7;
     font-size: 0.8em;
@@ -716,7 +722,7 @@ Overrides circleview sizes for each prize*/
     top: 30%;
 }
 
-#Prizeslides {
+#prizeslides {
     height: 525px;
 }
 
@@ -752,7 +758,7 @@ Used to control the square images from the sponsors at three different screen si
 /*Applying different style for tablet size*/
 @media only screen and (min-width: 768px) {
 
-    #Prizeslides {
+    #prizeslides {
         height: 400px;
     }
 

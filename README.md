@@ -4,7 +4,7 @@ This is my redesign of the website of a client who owns a travel magazine in Swi
 
 ## UX
 
-In our initial design brief the client outlined the requirements of the website and the business. The website required:
+In our initial design brief the client outlined the requirements of the website and the business. For the website this included:
 
  - a front page to feature links to the stories from the magazine
  - a sample design of a story from the magazine
@@ -14,14 +14,15 @@ In our initial design brief the client outlined the requirements of the website 
 
 My initial design was based on multiple sources including her website, the design featured in the magazine and some sample websites for inspiration (all of which can be found [below](#design-references-supplied-by-the-client)). My initial mockups can be found [here](https://github.com/DimensionalDrift/Milestone_1/tree/master/assets/mockups). 
 
-
 Here are user stories that came up during our design meetings or during development:
  - As the customer I would like some of the design elements featured in the magazine to feature on the website.
  - As the customer I would like my photographs to be a main feature on the site.
- - As the user I would like to enter the photo competition using an online form.
  - As the customer I would like a gallery of the previous issues of the magazine.
  - As the customer I would like an easy way for potential customers or clients to contact my business. 
+ - As the user I would like to enter the photo competition using an online form.
  - As a user I would like to know that a link is clickable.
+
+Detail into how I addressed these user stories can be found below in the Features section.
 
 ## Technologies Used
 
@@ -35,7 +36,7 @@ Here are user stories that came up during our design meetings or during developm
 
 I felt the current design of the website lacked some of the design elements from the magazine so I tried to include some where I could. For example I featured important images inside circular frames and used a handwritten font similar to one in the magazine. I also featured circular 'Spot' icons for interactive elements like social media links, further emulating the circular theme of the logo. 
 
-The color pallet for the website is quite simple by request of the client. It features 'Spot' red from the logo, white and an off grey color. Since that is the case I tried to use colored accents sparingly, Only using 'Spot' red for icons, buttons and interactive element highlights and the grey for secondary content like the footer and the info card on the story page.
+The color pallet for the website is quite simple by request of the client. It features 'Spot' red from the logo, white and an off grey color. Since that is the case I tried to use colored accents sparingly, Only using 'Spot' red for icons, buttons and interactive elements and the grey for secondary content like the footer and the info card on the story page.
 
 Photography is an important part of the magazine so I also tried to feature images as large as possible on the site which is the inspiration of the full height 'Hero' image on the home page.
 
@@ -50,7 +51,7 @@ There are some features that the client requested that are unfortunately outside
 
  - The search 'Spot' at the top of the screen is non functional at the moment. In the intended design, when the user clicks the search icon it will reveal the search box with a sliding animation. In order to animate this it will require custom JavaScript and other libraries that are outside the scope of this project.
 
- - It is also intended that on the home page that the navigation bar at the top will be transparent, allowing the photo take up the whole screen but to implement that will require more custom JavaScript.
+ - It is also intended that on the home page that the navigation bar at the top will be transparent, allowing the photo take up the whole screen until the user scrolls where it would fade into white. To implement that will require more custom JavaScript.
 
  - No forms or user input have been hooked up to any backend system, this will definitely need to be changed in the future.
 
@@ -64,7 +65,7 @@ There are some features that the client requested that are unfortunately outside
 
  - When the bouncing icon is clicked on the front page it uses 'scroll-behavior: smooth' to scroll to the featured story. It is known that this isn't fully supported in all browsers yet and could be better implemented with something like the 'Animate on scroll' library to achieve the effect cross browser.
 
- - The client would like to use icons to indicate to readers what the story might feature such as nature and sport icons. In the future it will be possible to upgrade from Font Awesome to the latest version as it features many more icons than the version used (4.7.0).
+ - The client would like to use icons to indicate to readers what the story might feature such as nature and sport icons. In the future it will be possible to upgrade Font Awesome to the latest version as it features many more icons than the version used (4.7.0).
 
 
 ## Testing
@@ -77,7 +78,7 @@ Once the site was nearing completion it was tested on multiple devices including
 
 ## Deployment
 
-Since this is only a static design preview the website only needs to be deployed using GitHub Pages. This was done by enabling the option in the GitHub repository and ensuring that the repository was structured correctly. GitHub Pages has been used to host all versions of the website during development as it was the easiest way to lease with the client and showcase multiple designs. There is an example of a period where multiple designs were being considered for the layout of the front page that can be found [here](https://dimensionaldrift.github.io/Milestone_1/old/index_designtest.html).
+Since this is only a static design preview the website only needs to be deployed using GitHub Pages. This was done by enabling the option in the GitHub repository and ensuring that the repository was structured correctly. There has been no significant changes between the development version and the hosted version on GitHub Pages. GitHub Pages has been used to host all versions of the website during development as it was the easiest way to lease with the client and showcase multiple designs. There is an example of a period where multiple designs were being considered for the layout of the front page that can be found [here](https://dimensionaldrift.github.io/Milestone_1/old/index_designtest.html).
 
 ## Credits
 
@@ -98,6 +99,8 @@ I would like to thank Carina Scheuringer and Spot Magazine for being the inspira
 I would like to thank my friends and family for being bug testers and giving their valuable feedback.
 
 #### Code snippets used 
+
+Note: The reason why and how all these code snippets were used are detailed in comments inline in the code itself.
 - https://stackoverflow.com/questions/4617872/white-space-showing-up-on-right-side-of-page-when-background-image-should-extend
 - https://stackoverflow.com/questions/8118741/css-font-helvetica-neue
 - https://stackoverflow.com/questions/17631417/css-pure-css-scroll-animation
@@ -114,7 +117,7 @@ I would like to thank my friends and family for being bug testers and giving the
  - https://www.spotmagazine.ch/
  - https://en.calameo.com/read/002969344fea1dbf87173?
  - https://www.rhb.ch/en/home
- - https://www.madeinbern.com/en/home-en#top
+ - https://www.madeinbern.com/en/home-en
  - https://www.zuerich.com/en
 
 <!-- 

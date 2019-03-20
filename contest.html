@@ -1,6 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
 
+<!-- 
+NOTE: The majority of comments here will be removed when the site goes live for the client.
+They are:
+    - notes to myself in the future (denoted by an X )
+    - to explain my thinking and process to any examiners for the sake of the Code Institute project. 
+-->
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -30,25 +37,23 @@
                         <img src="assets/logo/Spot_Magazine.png" alt="Logo" class='logosize'>
                     </a>
                     <!-- Small Logo size -->
-                    <a class="navbar-brand d-lg-none" href="index.html">
+                    <a class="navbar-brand d-lg-none p-0" href="index.html">
                         <img src="assets/logo/Spot_Magazine.png" alt="Logo" class='logosize'>
                     </a>
                 </div>
-                <!-- The ordering is used to ensure the search icon is on the left of the mobile menu and on the right of the desktop links -->
+                <!-- Button used as menu under 768px -->
                 <div class='d-flex flex-row order-lg-2'>
                     <!-- Search button -->
-                    <!-- Non functional as JavaScript would be needed for the animations -->
+                    <!-- X Non functional as JavaScript would be needed for the animations -->
                     <div class='pt-lg-2'>
                         <div class="nav-item spoticon spotred fa fa-search"></div>
                     </div>
-                    <!-- Button used as menu under 768px -->
                     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#topNavbar">
                         <span class="navbar-toggler-icon"></span>
                     </button>
                 </div>
                 <div class="collapse navbar-collapse order-lg-1" id='topNavbar'>
                     <!-- Header links -->
-                    <!-- Is it better if these are in a list? -->
                     <a class='nav-item nav-link pt-lg-4' href="index.html">Home</a>
                     <a class='nav-item nav-link pt-lg-4' href="gallery.html">Magazines</a>
                     <a class='nav-item nav-link pt-lg-4' href="contest.html">Photo Contest</a>
@@ -65,7 +70,7 @@
             <div class="card heroview">
                 <img class="card-img" src="assets/images/pizol/pizol_lr-13.jpg" alt="Card image">
                 <div class="card-img-overlay d-flex flex-column justify-content-end  herocaption">
-                    <h1 class="card-text fade-in">Photo Competition</h1>
+                    <h1 class="card-text fadein">Photo Competition</h1>
                 </div>
             </div>
         </div>
@@ -75,24 +80,25 @@
         <div class='container maxcontainer mt-4'>
             <div class='row'>
                 <div class='col'>
-                    <h2 class='cursive-text text-left '>Theme: Snow</h2>
+                    <h2 class='cursivetxt text-left '>Theme: Snow</h2>
                     <p>This issues theme is the great outdoors. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim.</p>
                 </div>
             </div>
         </div>
     </section>
     <!-- Prizes Section Mobile -->
+    <!-- It is the same as the Trending Story Section on the first page, I could not find a way to dynamically go from a carousel on smaller screens to none on the larger screen so I resorted to hiding it on larger screens. It would require the same fix though, if the prize content could be automatically pulled in from an external source then it would remove the issue of duplicated text -->
     <section class='d-lg-none'>
         <div class='container'>
             <div class='row'>
                 <div class='col'>
-                    <h2 class='cursive-text text-left mb-3'>Prizes:</h2>
+                    <h2 class='cursivetxt text-left mb-3'>Prizes:</h2>
                 </div>
             </div>
             <div class='row'>
                 <!-- w-100 is used to fix the card width for differing amounts of content -->
                 <div class='card w-100'>
-                    <div id="Prizeslides" class="carousel slide " data-ride="carousel" data-interval="false">
+                    <div id="prizeslides" class="carousel slide " data-ride="carousel" data-interval="false">
                         <div class="carousel-inner">
                             <!-- 1st Prize Slide -->
                             <div class="carousel-item active align-items-center">
@@ -100,7 +106,7 @@
                                     <img src="assets/images/prizes/1st_prize.jpg" class='img-fluid circleimage' alt="1st Prize">
                                 </div>
                                 <div class='my-md-5 mx-md-3 mx-3'>
-                                    <h1 class='cursive-text'>
+                                    <h1 class='cursivetxt'>
                                         1<sup>st</sup> Prize
                                     </h1>
                                     <p>
@@ -114,7 +120,7 @@
                                     <img src="assets/images/prizes/2nd_prize.jpg" class='img-fluid circleimage' alt="2nd Prize">
                                 </div>
                                 <div class='my-md-5 mx-md-3 mx-3'>
-                                    <h1 class='cursive-text'>
+                                    <h1 class='cursivetxt'>
                                         2<sup>nd</sup> Prize
                                     </h1>
                                     <p>
@@ -128,7 +134,7 @@
                                     <img src="assets/images/prizes/3rd_prize.jpg" class='img-fluid circleimage' alt="3rd Prize">
                                 </div>
                                 <div class='my-md-5 mx-md-3 mx-3'>
-                                    <h1 class='cursive-text'>
+                                    <h1 class='cursivetxt'>
                                         3<sup>rd</sup> Prize
                                     </h1>
                                     <p>
@@ -147,21 +153,21 @@
                                         </div>
                                     </div>
                                     <div class='row'>
-                                        <div class='col-md-4 col-sm-6 col-12 mb-3 d-flex justify-content-center'>
+                                        <div class='col-12 col-sm-6 col-md-4 mb-3 d-flex justify-content-center'>
                                             <a href="http://www.profot.ch/">
                                                 <div class='squareview'>
                                                     <img src="assets/images/sponsors/Profotag.jpg" alt="Sponsor 1" class='img-fluid squareimage'>
                                                 </div>
                                             </a>
                                         </div>
-                                        <div class='col-md-4 col-sm-6 col-12 mb-3 d-flex justify-content-center'>
+                                        <div class='col-12 col-sm-6 col-md-4 mb-3 d-flex justify-content-center'>
                                             <a href="https://www.rigi.ch/">
                                                 <div class='squareview'>
                                                     <img src="assets/images/sponsors/rigi.png" alt="Sponsor 2" class='img-fluid squareimage'>
                                                 </div>
                                             </a>
                                         </div>
-                                        <div class='col-md-4 col-sm-12 col-12 d-flex justify-content-center'>
+                                        <div class='col-12 col-sm-12 col-md-4 d-flex justify-content-center'>
                                             <a href="https://www.myswitzerland.com/">
                                                 <div class='squareview'>
                                                     <img src="assets/images/sponsors/switzerlandtourism.jpg" alt="Sponsor 3" class='img-fluid squareimage'>
@@ -172,10 +178,10 @@
                                 </div>
                             </div>
                         </div>
-                        <a class="carousel-control-prev" href="#Prizeslides" role="button" data-slide="prev" id='prizeprev'>
+                        <a class="carousel-control-prev" href="#prizeslides" role="button" data-slide="prev" id='prizeprev'>
                             <div class="spoticon spotred fa fa-arrow-left"></div>
                         </a>
-                        <a class="carousel-control-next" href="#Prizeslides" role="button" data-slide="next" id='prizenext'>
+                        <a class="carousel-control-next" href="#prizeslides" role="button" data-slide="next" id='prizenext'>
                             <div class="spoticon spotred fa fa-arrow-right"></div>
                         </a>
                     </div>
@@ -188,7 +194,7 @@
         <div class='container'>
             <div class='row'>
                 <div class='col'>
-                    <h2 class='cursive-text text-left'>Prizes:</h2>
+                    <h2 class='cursivetxt text-left'>Prizes:</h2>
                     <hr>
                 </div>
             </div>
@@ -202,7 +208,7 @@
                         </div>
                         <div class='col-8 d-flex align-items-center'>
                             <div>
-                                <h3 class='cursive-text text-left'>
+                                <h3 class='cursivetxt text-left'>
                                     1<sup>st</sup> Prize
                                 </h3>
                                 <p>
@@ -219,7 +225,7 @@
                         </div>
                         <div class='col-8 d-flex align-items-center'>
                             <div>
-                                <h3 class='cursive-text text-left'>
+                                <h3 class='cursivetxt text-left'>
                                     2<sup>nd</sup> Prize
                                 </h3>
                                 <p>
@@ -236,7 +242,7 @@
                         </div>
                         <div class='col-8 d-flex align-items-center'>
                             <div>
-                                <h3 class='cursive-text text-left'>
+                                <h3 class='cursivetxt text-left'>
                                     3<sup>rd</sup> Prize
                                 </h3>
                                 <p>
@@ -290,7 +296,7 @@
         <div class='container'>
             <!-- The two buttons use a card header as a link to the accordion containers -->
             <div class='row my-3'>
-                <div class='col-md-6 col-12 my-1'>
+                <div class='col-12 col-md-6 my-1'>
                     <a href="#entryform" data-toggle="collapse">
                         <div class='card'>
                             <h5 class="card-header">
@@ -299,7 +305,7 @@
                         </div>
                     </a>
                 </div>
-                <div class='col-md-6 col-12 my-1'>
+                <div class='col-12 col-md-6 my-1'>
                     <a href="#rules" data-toggle='collapse'>
                         <div class='card'>
                             <h5 class="card-header">
@@ -350,7 +356,7 @@
                                             <textarea id="pc_reason" name="pc_reason" cols="40" rows="5" class="form-control" required="required" placeholder="Tell us the story of your photo and why it relates to the theme"></textarea>
                                         </div>
                                         <div class="d-flex justify-content-center">
-                                            <button name="submit" type="submit" class="btn btn-spot">Submit</button>
+                                            <button name="submit" type="submit" class="btn btnspot">Submit</button>
                                         </div>
                                     </div>
                                 </div>

@@ -1,6 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
 
+<!-- 
+NOTE: The majority of comments here will be removed when the site goes live for the client.
+They are:
+    - notes to myself in the future (denoted by an X )
+    - to explain my thinking and process to any examiners for the sake of the Code Institute project. 
+-->
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -30,25 +37,23 @@
                         <img src="assets/logo/Spot_Magazine.png" alt="Logo" class='logosize'>
                     </a>
                     <!-- Small Logo size -->
-                    <a class="navbar-brand d-lg-none" href="index.html">
+                    <a class="navbar-brand d-lg-none p-0" href="index.html">
                         <img src="assets/logo/Spot_Magazine.png" alt="Logo" class='logosize'>
                     </a>
                 </div>
-                <!-- The ordering is used to ensure the search icon is on the left of the mobile menu and on the right of the desktop links -->
+                <!-- Button used as menu under 768px -->
                 <div class='d-flex flex-row order-lg-2'>
                     <!-- Search button -->
-                    <!-- Non functional as JavaScript would be needed for the animations -->
+                    <!-- X Non functional as JavaScript would be needed for the animations -->
                     <div class='pt-lg-2'>
                         <div class="nav-item spoticon spotred fa fa-search"></div>
                     </div>
-                    <!-- Button used as menu under 768px -->
                     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#topNavbar">
                         <span class="navbar-toggler-icon"></span>
                     </button>
                 </div>
                 <div class="collapse navbar-collapse order-lg-1" id='topNavbar'>
                     <!-- Header links -->
-                    <!-- Is it better if these are in a list? -->
                     <a class='nav-item nav-link pt-lg-4' href="index.html">Home</a>
                     <a class='nav-item nav-link pt-lg-4' href="gallery.html">Magazines</a>
                     <a class='nav-item nav-link pt-lg-4' href="contest.html">Photo Contest</a>
@@ -65,7 +70,7 @@
             <div class="card heroview">
                 <img class="card-img" src="assets/images/flumserberg/Flumserberge_LR-1.jpg" alt="Hero image">
                 <div class="card-img-overlay d-flex flex-column justify-content-end  herocaption">
-                    <h1 class="card-text fade-in">The Article Title</h1>
+                    <h1 class="card-text fadein">The Article Title</h1>
                 </div>
             </div>
         </div>
@@ -74,7 +79,7 @@
     <section>
         <div class='container'>
             <div class="row">
-                <!-- This card might be colored depending on story type -->
+                <!-- X This card might be colored depending on story type -->
                 <div class='col-lg-4 '>
                     <div class="card mx-0" id='storyinfocard'>
                         <div class='row'>
@@ -94,7 +99,7 @@
                                     </tr>
                                     <tr>
                                         <td>Info:</td>
-                                        <td><a href="#" class='link-hover'>www.swissalps.ch</a></td>
+                                        <td><a href="#" class='linkhover'>www.swissalps.ch</a></td>
                                     </tr>
                                 </table>
                             </div>
@@ -106,10 +111,10 @@
                                         </td>
                                         <td>
                                             <div class='d-flex justify-content-lg-center justify-content-start'>
-                                                <a href="https://www.facebook.com/SpotMagazineCH/" class='sociallink spoticon_s fa fa-facebook'></a>
-                                                <a href="https://twitter.com/spotmagazinech" class='sociallink spoticon_s fa fa-twitter'></a>
-                                                <a href="https://www.instagram.com/spotmagazinech/" class='sociallink spoticon_s fa fa-instagram'></a>
-                                                <a href="https://www.pinterest.ie/swissspots/" class='sociallink spoticon_s fa fa-pinterest'></a>
+                                                <a href="https://www.facebook.com/SpotMagazineCH/" class='sociallink spoticonsmall fa fa-facebook'></a>
+                                                <a href="https://twitter.com/spotmagazinech" class='sociallink spoticonsmall fa fa-twitter'></a>
+                                                <a href="https://www.instagram.com/spotmagazinech/" class='sociallink spoticonsmall fa fa-instagram'></a>
+                                                <a href="https://www.pinterest.ie/swissspots/" class='sociallink spoticonsmall fa fa-pinterest'></a>
                                             </div>
                                         </td>
                                     </tr>
@@ -264,11 +269,11 @@
                                             </tr>
                                             <tr>
                                                 <td class='fa faicon fa-envelope'></td>
-                                                <td><a href="#" class='link-hover'>heidi@swissalps.ch</a></td>
+                                                <td><a href="#" class='linkhover'>heidi@swissalps.ch</a></td>
                                             </tr>
                                             <tr>
                                                 <td class="fa faicon fa-cloud"></td>
-                                                <td><a href="#" class='link-hover'>www.swissalps.ch</a></td>
+                                                <td><a href="#" class='linkhover'>www.swissalps.ch</a></td>
                                             </tr>
                                         </table>
                                     </div>
