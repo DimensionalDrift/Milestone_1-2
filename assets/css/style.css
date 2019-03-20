@@ -45,9 +45,9 @@ body {
     scroll-behavior: smooth;
 }
 
-/*body{
+body{
     -webkit-overflow-scrolling: touch;
-}*/
+}
 
 /*
 Removes the scrollbar from the page
@@ -61,9 +61,9 @@ https://stackoverflow.com/questions/16670931/hide-scroll-bar-but-while-still-bei
 
 ::-webkit-scrollbar {
     width: 0px;
+    background: transparent;
+}*/
     /*remove scrollbar space */
-    /*background: transparent;*/
-/*}*/
 
 /*Defines Horizontal line*/
 hr {
