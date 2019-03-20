@@ -45,7 +45,7 @@ body {
     scroll-behavior: smooth;
 }
 
-body{
+section{
     -webkit-overflow-scrolling: touch;
 }
 
