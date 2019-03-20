@@ -15,15 +15,15 @@
 A - It did fix a white bar appearing on the right side of the screen
 https://stackoverflow.com/questions/4617872/white-space-showing-up-on-right-side-of-page-when-background-image-should-extend
 Since been removed as it was causing a scrolling issue on iOS
-This was a very early issue on the site that does not appear to be an issue now, if it reapears then this may need to be reconsidered 
+This was a very early issue on the site that does not appear to be an issue now, if it reappears then this may need to be reconsidered 
 
-B - Helvetica neue is the font the client wants to use but it's not native to windows or linux
+B - Helvetica neue is the font the client wants to use but it's not native to windows or Linux
 This helped ensure that should it not be there the next font would be something similar
 https://stackoverflow.com/questions/8118741/css-font-helvetica-neue
 
 C - Makes the scroll behavior smooth for the homepage bouncing link
-    X This is only suported on chrome and firefox
-        Cross browser support requires javascript
+    X This is only supported on chrome and Firefox
+        Cross browser support requires JavaScript
         There is a way to do it without using this but I cannot figure it out:;
         https://stackoverflow.com/questions/17631417/css-pure-css-scroll-animation
 
@@ -171,7 +171,7 @@ h6 {
 } 
 */
 
-/*This font is close to a licenced font the client uses, should be replaced in the real version*/
+/*This font is close to a licensed font the client uses, should be replaced in the real version*/
 .cursive-text {
     font-family: 'Pacifico', cursive;
 }
@@ -404,7 +404,7 @@ https://bootstrapformbuilder.com/
 
 /*----- Hero and Superhero Image Styles -----*/
 
-/*Possibly Depricated*/
+/*Possibly Deprecated*/
 /*.heroimg {
     position: relative;
     left: 0;
@@ -413,7 +413,7 @@ https://bootstrapformbuilder.com/
     z-index: -1;
 }*/
 
-/*Merged herotxt with herocaption as they don't seem to be called speratly, leaving this here just in case*/
+/*Merged herotxt with herocaption as they don't seem to be called separately, leaving this here just in case*/
 /*.herotxt {
     color: #FFFFFF;
     text-shadow: 0px 0px 15px rgba(0, 0, 0, 0.3);
@@ -448,7 +448,7 @@ https://bootstrapformbuilder.com/
 
 }
 
-/*Possibly Depricated*/
+/*Possibly Deprecated*/
 /*.superherocaption {
     padding-bottom: 5%;
 }*/
@@ -571,7 +571,7 @@ Uses a circular aperture to keep with the spot theme*/
     margin-left: -100px;
 }
 
-/*Depricated*/
+/*Deprecated*/
 /*.frameview {
     width: auto;
     height: 300px;
@@ -662,7 +662,7 @@ uses the squareimage class from the Contest Page Styles section for the nested i
     font-size: 0.75em;
 }
 
-/*Depricated*/
+/*Deprecated*/
 /*.pad {
     padding-left: 10px;
 }*/
@@ -791,7 +791,7 @@ Used to control the square images from the sponsors at three different screen si
         border-spacing: 10px 20px;
     }
 
-    /*Used for verticle line only on desktop*/
+    /*Used for vertical line only on desktop*/
     .vline {
         border-right: 2px solid;
         border-color: #24282F;
