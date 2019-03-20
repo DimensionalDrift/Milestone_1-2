@@ -12,7 +12,7 @@ In our initial design brief the client outlined the requirements of the website 
  - a page with details and a form to enter a photo competition
  - a contact/about page for the magazine staff
 
-My initial design was based on multiple sources including her website, the design featured in the magazine and some sample websites for inspiration (all of which can be found [below](#design-references-supplied-by-the-client)). My initial mockups can be found in the assets folder above. 
+My initial design was based on multiple sources including her website, the design featured in the magazine and some sample websites for inspiration (all of which can be found [below](#design-references-supplied-by-the-client)). My initial mockups can be found [here](https://github.com/DimensionalDrift/Milestone_1/tree/master/assets/mockups). 
 
 
 Here are user stories that came up during our design meetings or during development:
@@ -87,6 +87,7 @@ All text content was either written by me, supplied by Sublime Texts built in lo
 ### Media
  - All images were supplied by © Spot Media GmbH. 
  - Dummy images were found at http://dummy-image-generator.com/
+ - Switzerland Canton Flags were found at https://en.wikipedia.org/wiki/Flags_and_arms_of_cantons_of_Switzerland
 
 ### Resources 
 The bulk of learning and referencing for this project used either Code Institute lessons, the Bootstrap documentation or W3schools examples and lessons. 
