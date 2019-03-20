@@ -23,7 +23,9 @@ C- Makes the scroll behavior smooth for the homepage bouncing link
     X This is only suported on chrome and firefox
         There is a way to do it without using this but I cannot figure it out:;
         https://stackoverflow.com/questions/17631417/css-pure-css-scroll-animation
-D- Fixes bug where thers is no inertial scrolling on iOS
+D- Tried to fix a bug where there is no inertial scrolling on iOS but adding these caused the github hosted page to fail to build
+I have no idea even how to approach solving this problem!
+
 overflow-scrolling: touch;
 -webkit-overflow-scrolling: touch;
 */
@@ -43,12 +45,16 @@ body {
     scroll-behavior: smooth;
 }
 
+/*body{
+    -webkit-overflow-scrolling: touch;
+}*/
+
 /*
 Removes the scrollbar from the page
 https://stackoverflow.com/questions/16670931/hide-scroll-bar-but-while-still-being-able-to-scroll
 */
 
-html {
+/*html {
     overflow: scroll;
     overflow-x: hidden;
 }
@@ -56,8 +62,8 @@ html {
 ::-webkit-scrollbar {
     width: 0px;
     /*remove scrollbar space */
-    background: transparent;
-}
+    /*background: transparent;*/
+/*}*/
 
 /*Defines Horizontal line*/
 hr {
@@ -67,7 +73,8 @@ hr {
 }
 
 /*Center Align Headers
-    X May have been a mistake, should check if there are more exceptions than the rule*/
+    X May have been a mistake, should check if there are more exceptions than the rule
+    A rough calculation indicates that it may be about half of the time this is negated*/
 h1,
 h2,
 h3,
