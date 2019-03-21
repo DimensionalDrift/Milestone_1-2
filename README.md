@@ -67,6 +67,7 @@ There are some features that the client requested that are unfortunately outside
 
  - The client would like to use icons to indicate to readers what the story might feature such as nature and sport icons. In the future it will be possible to upgrade Font Awesome to the latest version as it features many more icons than the version used (4.7.0).
 
+ - As photography is a large part of the business it is important the photos on the site are as large as possible without significantly increasing load times. In the future any photos that are published on the site should be compressed and resized to balance between quality of the photo and load times of the site.
 
 ## Testing
 
@@ -100,7 +101,7 @@ I would like to thank my friends and family for being bug testers and giving the
 
 #### Code snippets used 
 
-Note: The reason why and how all these code snippets were used are detailed in comments inline in the code itself.
+Note: The reasons why and how all these code snippets were used are detailed in comments inline in the code itself.
 - https://stackoverflow.com/questions/4617872/white-space-showing-up-on-right-side-of-page-when-background-image-should-extend
 - https://stackoverflow.com/questions/8118741/css-font-helvetica-neue
 - https://stackoverflow.com/questions/17631417/css-pure-css-scroll-animation
