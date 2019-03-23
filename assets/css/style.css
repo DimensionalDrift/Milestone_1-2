@@ -410,15 +410,6 @@ https://bootstrapformbuilder.com/
 
 /*----- Hero and Superhero Image Styles -----*/
 
-/*Possibly Deprecated*/
-/*.heroimg {
-    position: relative;
-    left: 0;
-    top: 0;
-    width: 100%;
-    z-index: -1;
-}*/
-
 /*Merged herotxt with herocaption as they don't seem to be called separately, leaving this here just in case*/
 /*.herotxt {
     color: #FFFFFF;
@@ -453,11 +444,6 @@ https://bootstrapformbuilder.com/
     }
 
 }
-
-/*Possibly Deprecated*/
-/*.superherocaption {
-    padding-bottom: 5%;
-}*/
 
 /*Hero image control 
 This method is used a lot to control the size and shape of images without stretching. 
@@ -573,16 +559,13 @@ Uses a circular aperture to keep with the Spot theme*/
 }
 
 /*Needed to shift the image within the aperture*/
-#trendingimg {
+#trendingimgl {
     margin-left: -100px;
 }
 
-/*Deprecated*/
-/*.frameview {
-    width: auto;
-    height: 300px;
-    overflow: hidden;
-}*/
+#trendingimgs {
+    margin-left: -100px;
+}
 
 /*Tablet size*/
 @media only screen and (min-width: 768px) {
@@ -667,11 +650,6 @@ uses the squareimage class from the Contest Page Styles section for the nested i
     margin: 10px;
     font-size: 0.75em;
 }
-
-/*Deprecated*/
-/*.pad {
-    padding-left: 10px;
-}*/
 
 .tablepad td {
     padding-left: 10px;
