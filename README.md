@@ -121,6 +121,8 @@ Note: The reasons why and how all these code snippets were used are detailed in 
  - https://www.madeinbern.com/en/home-en
  - https://www.zuerich.com/en
 
+<!-- NOTE: Sorry for the commit after submission, I initialized my next project git in the wrong directory! -->
+
 <!-- 
 Ideas
     Use JSON to fill in details of stories on the page
@@ -134,6 +136,3 @@ Ideas
         - Check that the hover effect for the story and magazine links funtionally works ok on mobile
         - Edit the style of the carousel buttons, maybe a 1/3 red spot on either side?
  -->
- 
-
-# Milestone_2
