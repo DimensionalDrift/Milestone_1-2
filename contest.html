@@ -1,414 +1,407 @@
 <!DOCTYPE html>
 <html lang="en">
+    <!--
+    NOTE: The majority of comments here will be removed when the site goes live for the client.
+    They are:
+        - notes to myself in the future (denoted by an X )
+        - to explain my thinking and process to any examiners for the sake of the Code Institute project.
+    -->
 
-<!-- 
-NOTE: The majority of comments here will be removed when the site goes live for the client.
-They are:
-    - notes to myself in the future (denoted by an X )
-    - to explain my thinking and process to any examiners for the sake of the Code Institute project. 
--->
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <!-- Adding Bootstrap 4 styling, Font Awesome fonts -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" type="text/css" />
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" type="text/css" />
-    <!-- Adding Google font 
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        <!-- Adding Bootstrap 4 styling, Font Awesome fonts -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" type="text/css" />
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" type="text/css" />
+        <!-- Adding Google font
          X This is a close approx to a licensed font the client uses, should be replaced in live version -->
-    <link href="https://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet">
-    <!-- Favicon -->
-    <!-- X Add icons for mobile homescreen use -->
-    <link rel="shortcut icon" type="image/png" href="assets/logo/spot_magazine.png" />
-    <!-- My styles -->
-    <link rel="stylesheet" href="assets/css/style.css">
-    <title>Spot Magazine</title>
-</head>
+        <link href="https://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet" />
+        <!-- Favicon -->
+        <!-- X Add icons for mobile homescreen use -->
+        <link rel="shortcut icon" type="image/png" href="assets/logo/spot_magazine.png" />
+        <!-- My styles -->
+        <link rel="stylesheet" href="assets/css/style.css" />
+        <title>Spot Magazine</title>
+    </head>
 
-<body>
-    <!-- Navbar Header -->
-    <header>
-        <nav class="navbar fixed-top navbar-expand-lg navbar-light nav-fill shadow-sm py-1">
-            <div class='container maxcontainer'>
-                <div class='mr-auto'>
-                    <!-- Large Logo size -->
-                    <a class="navbar-brand d-none d-lg-block " href="index.html">
-                        <img src="assets/logo/spot_magazine.png" alt="Logo" class='logosize'>
-                    </a>
-                    <!-- Small Logo size -->
-                    <a class="navbar-brand d-lg-none p-0" href="index.html">
-                        <img src="assets/logo/spot_magazine.png" alt="Logo" class='logosize'>
-                    </a>
-                </div>
-                <!-- Button used as menu under 768px -->
-                <div class='d-flex flex-row order-lg-2'>
-                    <!-- Search button -->
-                    <!-- X Non functional as JavaScript would be needed for the animations -->
-                    <div class='pt-lg-2'>
-                        <div class="nav-item spoticon spotred fa fa-search"></div>
-                    </div>
-                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#topNavbar">
-                        <span class="navbar-toggler-icon"></span>
-                    </button>
-                </div>
-                <div class="collapse navbar-collapse order-lg-1" id='topNavbar'>
-                    <!-- Header links -->
-                    <a class='nav-item nav-link pt-lg-4' href="index.html">Home</a>
-                    <a class='nav-item nav-link pt-lg-4' href="gallery.html">Magazines</a>
-                    <a class='nav-item nav-link pt-lg-4' href="contest.html">Photo Contest</a>
-                    <a class='nav-item nav-link pt-lg-4' href="contact.html">Contact</a>
-                </div>
-            </div>
-        </nav>
-    </header>
-    <!-- Used to move content below the navbar -->
-    <div class='navpadding'></div>
-    <!-- Hero Image Section -->
-    <section>
-        <div class='container maxcontainer'>
-            <div class="card heroview">
-                <img class="card-img" src="assets/images/pizol/pizol_lr-13.jpg" alt="Card image">
-                <div class="card-img-overlay d-flex flex-column justify-content-end  herocaption">
-                    <h1 class="card-text fadein">Photo Competition</h1>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- Contest Theme Section -->
-    <section>
-        <div class='container maxcontainer mt-4'>
-            <div class='row'>
-                <div class='col'>
-                    <h2 class='cursivetxt text-left '>Theme: Snow</h2>
-                    <p>This issues theme is the great outdoors. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- Prizes Section Mobile -->
-    <!-- It is the same as the Trending Story Section on the first page, I could not find a way to dynamically go from a carousel on smaller screens to none on the larger screen so I resorted to hiding it on larger screens. It would require the same fix though, if the prize content could be automatically pulled in from an external source then it would remove the issue of duplicated text -->
-    <section class='d-lg-none'>
-        <div class='container'>
-            <div class='row'>
-                <div class='col'>
-                    <h2 class='cursivetxt text-left mb-3'>Prizes:</h2>
-                </div>
-            </div>
-            <div class='row'>
-                <!-- w-100 is used to fix the card width for differing amounts of content -->
-                <div class='card w-100'>
-                    <div id="prizeslides" class="carousel slide " data-ride="carousel" data-interval="false">
-                        <div class="carousel-inner">
-                            <!-- 1st Prize Slide -->
-                            <div class="carousel-item active align-items-center">
-                                <div class='circleview mx-auto my-3 m-md-3'>
-                                    <img src="assets/images/prizes/1st_prize.jpg" class='img-fluid circleimage' alt="1st Prize">
-                                </div>
-                                <div class='my-md-5 mx-md-3 mx-3'>
-                                    <h1 class='cursivetxt'>
-                                        1<sup>st</sup> Prize
-                                    </h1>
-                                    <p>
-                                        First prize is a weekend getaway for two. Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
-                                    </p>
-                                </div>
-                            </div>
-                            <!-- 2nd Prize Slide -->
-                            <div class="carousel-item">
-                                <div class='circleview mx-auto my-3 m-md-3'>
-                                    <img src="assets/images/prizes/2nd_prize.jpg" class='img-fluid circleimage' alt="2nd Prize">
-                                </div>
-                                <div class='my-md-5 mx-md-3 mx-3'>
-                                    <h1 class='cursivetxt'>
-                                        2<sup>nd</sup> Prize
-                                    </h1>
-                                    <p>
-                                        Second prize is a spa day for two. Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
-                                    </p>
-                                </div>
-                            </div>
-                            <!-- 3rd Prize Slide -->
-                            <div class="carousel-item">
-                                <div class='circleview mx-auto my-3 m-md-3'>
-                                    <img src="assets/images/prizes/3rd_prize.jpg" class='img-fluid circleimage' alt="3rd Prize">
-                                </div>
-                                <div class='my-md-5 mx-md-3 mx-3'>
-                                    <h1 class='cursivetxt'>
-                                        3<sup>rd</sup> Prize
-                                    </h1>
-                                    <p>
-                                        Third prize is a sport action camera. Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
-                                    </p>
-                                </div>
-                            </div>
-                            <!-- Sponsors Slide -->
-                            <div class="carousel-item">
-                                <div class='container'>
-                                    <div class='row'>
-                                        <div class='col-12 mt-5'>
-                                            <p>
-                                                This issues sponsors:
-                                            </p>
-                                        </div>
-                                    </div>
-                                    <div class='row'>
-                                        <div class='col-12 col-sm-6 col-md-4 mb-3 d-flex justify-content-center'>
-                                            <a href="http://www.profot.ch/" target="_blank">
-                                                <div class='squareview'>
-                                                    <img src="assets/images/sponsors/profotag.jpg" alt="Sponsor 1" class='img-fluid squareimage'>
-                                                </div>
-                                            </a>
-                                        </div>
-                                        <div class='col-12 col-sm-6 col-md-4 mb-3 d-flex justify-content-center'>
-                                            <a href="https://www.rigi.ch/" target="_blank">
-                                                <div class='squareview'>
-                                                    <img src="assets/images/sponsors/rigi.png" alt="Sponsor 2" class='img-fluid squareimage'>
-                                                </div>
-                                            </a>
-                                        </div>
-                                        <div class='col-12 col-sm-12 col-md-4 d-flex justify-content-center'>
-                                            <a href="https://www.myswitzerland.com/" target="_blank">
-                                                <div class='squareview'>
-                                                    <img src="assets/images/sponsors/switzerlandtourism.jpg" alt="Sponsor 3" class='img-fluid squareimage'>
-                                                </div>
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <a class="carousel-control-prev" href="#prizeslides" role="button" data-slide="prev" id='prizeprev'>
-                            <div class="spoticon spotred fa fa-arrow-left"></div>
+    <body>
+        <!-- Navbar Header -->
+        <header>
+            <nav class="navbar fixed-top navbar-expand-lg navbar-light nav-fill shadow-sm py-1">
+                <div class="container maxcontainer">
+                    <div class="mr-auto">
+                        <!-- Large Logo size -->
+                        <a class="navbar-brand d-none d-lg-block " href="index.html">
+                            <img src="assets/logo/spot_magazine.png" alt="Logo" class="logosize" />
                         </a>
-                        <a class="carousel-control-next" href="#prizeslides" role="button" data-slide="next" id='prizenext'>
-                            <div class="spoticon spotred fa fa-arrow-right"></div>
+                        <!-- Small Logo size -->
+                        <a class="navbar-brand d-lg-none p-0" href="index.html">
+                            <img src="assets/logo/spot_magazine.png" alt="Logo" class="logosize" />
                         </a>
                     </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- Prizes Section Desktop -->
-    <section class='d-none d-lg-block'>
-        <div class='container'>
-            <div class='row'>
-                <div class='col'>
-                    <h2 class='cursivetxt text-left'>Prizes:</h2>
-                    <hr>
-                </div>
-            </div>
-            <div class='row'>
-                <div class='col'>
-                    <div class='row'>
-                        <div class='col-4 d-flex justify-content-end'>
-                            <div class='circleview' id='circlep1'>
-                                <img src="assets/images/prizes/1st_prize.jpg" class='img-fluid circleimage' alt="1st Prize">
-                            </div>
+                    <!-- Button used as menu under 768px -->
+                    <div class="d-flex flex-row order-lg-2">
+                        <!-- Search button -->
+                        <!-- X Non functional as JavaScript would be needed for the animations -->
+                        <div class="pt-lg-2">
+                            <div class="nav-item spoticon spotred fa fa-search"></div>
                         </div>
-                        <div class='col-8 d-flex align-items-center'>
-                            <div>
-                                <h3 class='cursivetxt text-left'>
-                                    1<sup>st</sup> Prize
-                                </h3>
-                                <p>
-                                    First prize is a weekend getaway for two. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Sed mattis mi ac massa tempor, id accumsan leo auctor.
-                                </p>
-                            </div>
-                        </div>
+                        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#topNavbar">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
                     </div>
-                    <div class='row'>
-                        <div class='col-4 d-flex justify-content-start'>
-                            <div class='circleview' id='circlep2'>
-                                <img src="assets/images/prizes/2nd_prize.jpg" class='img-fluid circleimage' alt="2nd Prize">
-                            </div>
-                        </div>
-                        <div class='col-8 d-flex align-items-center'>
-                            <div>
-                                <h3 class='cursivetxt text-left'>
-                                    2<sup>nd</sup> Prize
-                                </h3>
-                                <p>
-                                    Second prize is a spa day for two. Phasellus iaculis massa quis ipsum tincidunt rutrum.Donec consequat dolor non porta finibus.
-                                </p>
-                            </div>
-                        </div>
+                    <div class="collapse navbar-collapse order-lg-1" id="topNavbar">
+                        <!-- Header links -->
+                        <a class="nav-item nav-link pt-lg-4" href="index.html">Home</a>
+                        <a class="nav-item nav-link pt-lg-4" href="gallery.html">Magazines</a>
+                        <a class="nav-item nav-link pt-lg-4 active" href="contest.html">Photo Contest</a>
+                        <a class="nav-item nav-link pt-lg-4" href="contact.html">Contact</a>
                     </div>
-                    <div class='row'>
-                        <div class='col-4 d-flex justify-content-end'>
-                            <div class='circleview' id='circlep3'>
-                                <img src="assets/images/prizes/3rd_prize.jpg" class='img-fluid circleimage' alt="3rd Prize">
-                            </div>
-                        </div>
-                        <div class='col-8 d-flex align-items-center'>
-                            <div>
-                                <h3 class='cursivetxt text-left'>
-                                    3<sup>rd</sup> Prize
-                                </h3>
-                                <p>
-                                    Third prize is a sport action camera. Nunc efficitur elit non augue vehicula consequat. Aenean gravida libero sit amet elementum vulputate.
-                                </p>
-                            </div>
-                        </div>
+                </div>
+            </nav>
+        </header>
+        <!-- Used to move content below the navbar -->
+        <div class="navpadding"></div>
+        <!-- Hero Image Section -->
+        <section>
+            <div class="container maxcontainer">
+                <div class="card heroview">
+                    <img class="card-img" src="assets/images/pizol/pizol_lr-13.jpg" alt="Card image" />
+                    <div class="card-img-overlay d-flex flex-column justify-content-end  herocaption">
+                        <h1 class="card-text fadein">Photo Competition</h1>
                     </div>
                 </div>
             </div>
-            <hr>
-            <div class='card'>
-                <div class='card-body p-2'>
-                    <div class='row'>
-                        <div class='col'>
-                            <p class='text-left'>
-                                This issues sponsors:
-                            </p>
-                        </div>
-                    </div>
-                    <div class='row'>
-                        <div class='col-2'>
-                            <a href="http://www.profot.ch/" target="_blank">
-                                <div class='squareview'>
-                                    <img src="assets/images/sponsors/profotag.jpg" alt="Sponsor 1" class='img-fluid squareimage '>
-                                </div>
-                            </a>
-                        </div>
-                        <div class='col-2'>
-                            <a href="https://www.rigi.ch/" target="_blank">
-                                <div class='squareview'>
-                                    <img src="assets/images/sponsors/rigi.png" alt="Sponsor 2" class='img-fluid squareimage'>
-                                </div>
-                            </a>
-                        </div>
-                        <div class='col-2'>
-                            <a href="https://www.myswitzerland.com/" target="_blank">
-                                <div class='squareview'>
-                                    <img src="assets/images/sponsors/switzerlandtourism.jpg" alt="Sponsor 3" class='img-fluid squareimage'>
-                                </div>
-                            </a>
-                        </div>
+        </section>
+        <!-- Contest Theme Section -->
+        <section>
+            <div class="container maxcontainer mt-4">
+                <div class="row">
+                    <div class="col">
+                        <h2 class="cursivetxt text-left ">Theme: Snow</h2>
+                        <p>
+                            This issues theme is the great outdoors. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis
+                            enim. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla
+                            consequat massa quis enim.
+                        </p>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
-    <!-- Entry Form and Rules Section -->
-    <!-- This section uses an accordion to display the entry form and rules at separate times -->
-    <section>
-        <div class='container'>
-            <!-- The two buttons use a card header as a link to the accordion containers -->
-            <div class='row my-3'>
-                <div class='col-12 col-md-6 my-1'>
-                    <a href="#entryform" data-toggle="collapse">
-                        <div class='card'>
-                            <h5 class="card-header">
-                                Entry Form:
-                            </h5>
-                        </div>
-                    </a>
+        </section>
+        <!-- Prizes Section Mobile -->
+        <!-- It is the same as the Trending Story Section on the first page, I could not find a way to dynamically go from a carousel on smaller screens to none on the larger screen so I resorted to hiding it on larger screens. It would require the same fix though, if the prize content could be automatically pulled in from an external source then it would remove the issue of duplicated text -->
+        <section class="d-lg-none">
+            <div class="container">
+                <div class="row">
+                    <div class="col">
+                        <h2 class="cursivetxt text-left mb-3">Prizes:</h2>
+                    </div>
                 </div>
-                <div class='col-12 col-md-6 my-1'>
-                    <a href="#rules" data-toggle='collapse'>
-                        <div class='card'>
-                            <h5 class="card-header">
-                                Rules:
-                            </h5>
-                        </div>
-                    </a>
-                </div>
-            </div>
-            <!-- The Accordion -->
-            <div class='row'>
-                <div class='col' id="accordion">
-                    <!-- The Form Slide -->
-                    <div id="entryform" class="collapse show" data-parent="#accordion">
-                        <!-- Containers and rows used to stylize the form -->
-                        <div class='container'>
-                            <form>
-                                <div class='row'>
-                                    <div class='col-12 col-lg-6'>
-                                        <div class="form-group">
-                                            <label for="pc_firstname">First Name:</label>
-                                            <input id="firstname" name="firstname" type="text" required="required" class="form-control">
-                                        </div>
-                                        <div class="form-group">
-                                            <label for="pc_lastname">Last Name:</label>
-                                            <input id="lastname" name="lastname" type="text" required="required" class="form-control">
-                                        </div>
-                                        <div class="form-group">
-                                            <label for="pc_email">Email - Winners will be notified by e-mail</label>
-                                            <input id="pc_email" name="pc_email" placeholder="example@spotmagazine.ch" type="email" class="form-control" required="required">
-                                        </div>
-                                        <div class="form-group">
-                                            <label for="pc_phone">Phone Number - If we cannot reach you by e-mail</label>
-                                            <input id="pc_phone" name="pc_phone" placeholder="045 678 91 23" type="tel" class="form-control" required="required">
-                                        </div>
+                <div class="row">
+                    <!-- w-100 is used to fix the card width for differing amounts of content -->
+                    <div class="card w-100">
+                        <div id="prizeslides" class="carousel slide " data-ride="carousel" data-interval="false">
+                            <div class="carousel-inner">
+                                <!-- 1st Prize Slide -->
+                                <div class="carousel-item active align-items-center">
+                                    <div class="circleview mx-auto my-3 m-md-3">
+                                        <img src="assets/images/prizes/1st_prize.jpg" class="img-fluid circleimage" alt="1st Prize" />
                                     </div>
-                                    <div class='col-12 col-lg-6'>
-                                        <div class="form-group">
-                                            <label for="pc_photoupload">Upload your photo here:</label>
-                                            <input type="file" class="form-control-file" id="pc_photoupload">
+                                    <div class="my-md-5 mx-md-3 mx-3">
+                                        <h1 class="cursivetxt">1<sup>st</sup> Prize</h1>
+                                        <p>
+                                            First prize is a weekend getaway for two. Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
+                                        </p>
+                                    </div>
+                                </div>
+                                <!-- 2nd Prize Slide -->
+                                <div class="carousel-item">
+                                    <div class="circleview mx-auto my-3 m-md-3">
+                                        <img src="assets/images/prizes/2nd_prize.jpg" class="img-fluid circleimage" alt="2nd Prize" />
+                                    </div>
+                                    <div class="my-md-5 mx-md-3 mx-3">
+                                        <h1 class="cursivetxt">2<sup>nd</sup> Prize</h1>
+                                        <p>
+                                            Second prize is a spa day for two. Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
+                                        </p>
+                                    </div>
+                                </div>
+                                <!-- 3rd Prize Slide -->
+                                <div class="carousel-item">
+                                    <div class="circleview mx-auto my-3 m-md-3">
+                                        <img src="assets/images/prizes/3rd_prize.jpg" class="img-fluid circleimage" alt="3rd Prize" />
+                                    </div>
+                                    <div class="my-md-5 mx-md-3 mx-3">
+                                        <h1 class="cursivetxt">3<sup>rd</sup> Prize</h1>
+                                        <p>
+                                            Third prize is a sport action camera. Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
+                                        </p>
+                                    </div>
+                                </div>
+                                <!-- Sponsors Slide -->
+                                <div class="carousel-item">
+                                    <div class="container">
+                                        <div class="row">
+                                            <div class="col-12 mt-5">
+                                                <p>
+                                                    This issues sponsors:
+                                                </p>
+                                            </div>
                                         </div>
-                                        <div class="form-group">
-                                            <label for="pc_title">Photo title:</label>
-                                            <input id="pc_title" name="pc_title" type="text" class="form-control" required="required">
-                                        </div>
-                                        <div class="form-group">
-                                            <label for="pc_reason">Tell us about your photo:</label>
-                                            <textarea id="pc_reason" name="pc_reason" cols="40" rows="5" class="form-control" required="required" placeholder="Tell us the story of your photo and why it relates to the theme"></textarea>
-                                        </div>
-                                        <div class="d-flex justify-content-center">
-                                            <button name="submit" type="submit" class="btn btnspot">Submit</button>
+                                        <div class="row">
+                                            <div class="col-12 col-sm-6 col-md-4 mb-3 d-flex justify-content-center">
+                                                <a href="http://www.profot.ch/" target="_blank">
+                                                    <div class="squareview">
+                                                        <img src="assets/images/sponsors/profotag.jpg" alt="Sponsor 1" class="img-fluid squareimage" />
+                                                    </div>
+                                                </a>
+                                            </div>
+                                            <div class="col-12 col-sm-6 col-md-4 mb-3 d-flex justify-content-center">
+                                                <a href="https://www.rigi.ch/" target="_blank">
+                                                    <div class="squareview">
+                                                        <img src="assets/images/sponsors/rigi.png" alt="Sponsor 2" class="img-fluid squareimage" />
+                                                    </div>
+                                                </a>
+                                            </div>
+                                            <div class="col-12 col-sm-12 col-md-4 d-flex justify-content-center">
+                                                <a href="https://www.myswitzerland.com/" target="_blank">
+                                                    <div class="squareview">
+                                                        <img src="assets/images/sponsors/switzerlandtourism.jpg" alt="Sponsor 3" class="img-fluid squareimage" />
+                                                    </div>
+                                                </a>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
-                            </form>
-                        </div>
-                    </div>
-                    <!-- The Rules Slide -->
-                    <div id="rules" class="collapse" data-parent="#accordion">
-                        <div class='container'>
-                            <ul>
-                                <li>Morbi in sem quis dui placerat ornare. Pellentesque odio nisi, euismod in, pharetra a, ultricies in, diam. Sed arcu. Cras consequat.</li>
-                                <li>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</li>
-                                <li>Praesent dapibus, neque id cursus faucibus, tortor neque egestas augue, eu vulputate magna eros eu erat. Aliquam erat volutpat. Nam dui mi, tincidunt quis, accumsan porttitor, facilisis luctus, metus.</li>
-                                <li>Phasellus ultrices nulla quis nibh. Quisque a lectus. Donec consectetuer ligula vulputate sem tristique cursus. Nam nulla quam, gravida non, commodo a, sodales sit amet, nisi.</li>
-                                <li>Pellentesque fermentum dolor. Aliquam quam lectus, facilisis auctor, ultrices ut, elementum vulputate, nunc.</li>
-                                <li>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium.</li>
-                                <li>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</li>
-                            </ul>
+                            </div>
+                            <a class="carousel-control-prev" href="#prizeslides" role="button" data-slide="prev" id="prizeprev">
+                                <div class="spoticon spotred fa fa-arrow-left"></div>
+                            </a>
+                            <a class="carousel-control-next" href="#prizeslides" role="button" data-slide="next" id="prizenext">
+                                <div class="spoticon spotred fa fa-arrow-right"></div>
+                            </a>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
-    <!-- Footer -->
-    <footer class='footer d-flex align-items-center'>
-        <div class='container'>
-            <div class='row'>
-                <!-- ordered mobile first, .order-* for desktop -->
-                <div class='col-lg-4 my-1 order-lg-2 d-flex justify-content-center'>
-                    <a href="https://www.facebook.com/SpotMagazineCH/" target="_blank" class='sociallink spoticon fa fa-facebook'></a>
-                    <a href="https://twitter.com/spotmagazinech" target="_blank" class='sociallink spoticon fa fa-twitter'></a>
-                    <a href="https://www.instagram.com/spotmagazinech/" target="_blank" class='sociallink spoticon fa fa-instagram'></a>
-                    <a href="https://www.pinterest.ie/swissspots/" target="_blank" class='sociallink spoticon fa fa-pinterest'></a>
+        </section>
+        <!-- Prizes Section Desktop -->
+        <section class="d-none d-lg-block">
+            <div class="container">
+                <div class="row">
+                    <div class="col">
+                        <h2 class="cursivetxt text-left">Prizes:</h2>
+                        <hr />
+                    </div>
                 </div>
-                <div class='col-lg-4 my-1 order-lg-1 footerleft'>
-                    SPOT MEDIA GmbH <br>
-                    PO Box 448 <br>
-                    8810 Horgen <br>
+                <div class="row">
+                    <div class="col">
+                        <div class="row">
+                            <div class="col-4 d-flex justify-content-end">
+                                <div class="circleview" id="circlep1">
+                                    <img src="assets/images/prizes/1st_prize.jpg" class="img-fluid circleimage" alt="1st Prize" />
+                                </div>
+                            </div>
+                            <div class="col-8 d-flex align-items-center">
+                                <div>
+                                    <h3 class="cursivetxt text-left">1<sup>st</sup> Prize</h3>
+                                    <p>
+                                        First prize is a weekend getaway for two. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Sed mattis mi ac massa tempor, id accumsan leo auctor.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-4 d-flex justify-content-start">
+                                <div class="circleview" id="circlep2">
+                                    <img src="assets/images/prizes/2nd_prize.jpg" class="img-fluid circleimage" alt="2nd Prize" />
+                                </div>
+                            </div>
+                            <div class="col-8 d-flex align-items-center">
+                                <div>
+                                    <h3 class="cursivetxt text-left">2<sup>nd</sup> Prize</h3>
+                                    <p>
+                                        Second prize is a spa day for two. Phasellus iaculis massa quis ipsum tincidunt rutrum.Donec consequat dolor non porta finibus.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-4 d-flex justify-content-end">
+                                <div class="circleview" id="circlep3">
+                                    <img src="assets/images/prizes/3rd_prize.jpg" class="img-fluid circleimage" alt="3rd Prize" />
+                                </div>
+                            </div>
+                            <div class="col-8 d-flex align-items-center">
+                                <div>
+                                    <h3 class="cursivetxt text-left">3<sup>rd</sup> Prize</h3>
+                                    <p>
+                                        Third prize is a sport action camera. Nunc efficitur elit non augue vehicula consequat. Aenean gravida libero sit amet elementum vulputate.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div class='col-lg-4 my-1 order-lg-3 footerright'>
-                    Spot Media GmbH <br>
-                    &copy; 2018 <br>
-                    All rights reserved <br>
+                <hr />
+                <div class="card">
+                    <div class="card-body p-2">
+                        <div class="row">
+                            <div class="col">
+                                <p class="text-left">
+                                    This issues sponsors:
+                                </p>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-2">
+                                <a href="http://www.profot.ch/" target="_blank">
+                                    <div class="squareview">
+                                        <img src="assets/images/sponsors/profotag.jpg" alt="Sponsor 1" class="img-fluid squareimage " />
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="col-2">
+                                <a href="https://www.rigi.ch/" target="_blank">
+                                    <div class="squareview">
+                                        <img src="assets/images/sponsors/rigi.png" alt="Sponsor 2" class="img-fluid squareimage" />
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="col-2">
+                                <a href="https://www.myswitzerland.com/" target="_blank">
+                                    <div class="squareview">
+                                        <img src="assets/images/sponsors/switzerlandtourism.jpg" alt="Sponsor 3" class="img-fluid squareimage" />
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
-        </div>
-    </footer>
-</body>
-<!-- Bootstrap JavaScript -->
-<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-
+        </section>
+        <!-- Entry Form and Rules Section -->
+        <!-- This section uses an accordion to display the entry form and rules at separate times -->
+        <section>
+            <div class="container">
+                <!-- The two buttons use a card header as a link to the accordion containers -->
+                <div class="row my-3">
+                    <div class="col-12 col-md-6 my-1">
+                        <a href="#entryform" data-toggle="collapse">
+                            <div class="card">
+                                <h5 class="card-header">
+                                    Entry Form:
+                                </h5>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-12 col-md-6 my-1">
+                        <a href="#rules" data-toggle="collapse">
+                            <div class="card">
+                                <h5 class="card-header">
+                                    Rules:
+                                </h5>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <!-- The Accordion -->
+                <div class="row">
+                    <div class="col" id="accordion">
+                        <!-- The Form Slide -->
+                        <div id="entryform" class="collapse show" data-parent="#accordion">
+                            <!-- Containers and rows used to stylize the form -->
+                            <div class="container">
+                                <form>
+                                    <div class="row">
+                                        <div class="col-12 col-lg-6">
+                                            <div class="form-group">
+                                                <label for="pc_firstname">First Name:</label>
+                                                <input id="firstname" name="firstname" type="text" required="required" class="form-control" />
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="pc_lastname">Last Name:</label>
+                                                <input id="lastname" name="lastname" type="text" required="required" class="form-control" />
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="pc_email">Email - Winners will be notified by e-mail</label>
+                                                <input id="pc_email" name="pc_email" placeholder="example@spotmagazine.ch" type="email" class="form-control" required="required" />
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="pc_phone">Phone Number - If we cannot reach you by e-mail</label>
+                                                <input id="pc_phone" name="pc_phone" placeholder="045 678 91 23" type="tel" class="form-control" required="required" />
+                                            </div>
+                                        </div>
+                                        <div class="col-12 col-lg-6">
+                                            <div class="form-group">
+                                                <label for="pc_photoupload">Upload your photo here:</label>
+                                                <input type="file" class="form-control-file" id="pc_photoupload" />
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="pc_title">Photo title:</label>
+                                                <input id="pc_title" name="pc_title" type="text" class="form-control" required="required" />
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="pc_reason">Tell us about your photo:</label>
+                                                <textarea id="pc_reason" name="pc_reason" cols="40" rows="5" class="form-control" required="required" placeholder="Tell us the story of your photo and why it relates to the theme"></textarea>
+                                            </div>
+                                            <div class="d-flex justify-content-center">
+                                                <button name="submit" type="submit" class="btn btnspot">Submit</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                        <!-- The Rules Slide -->
+                        <div id="rules" class="collapse" data-parent="#accordion">
+                            <div class="container">
+                                <ul>
+                                    <li>Morbi in sem quis dui placerat ornare. Pellentesque odio nisi, euismod in, pharetra a, ultricies in, diam. Sed arcu. Cras consequat.</li>
+                                    <li>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</li>
+                                    <li>Praesent dapibus, neque id cursus faucibus, tortor neque egestas augue, eu vulputate magna eros eu erat. Aliquam erat volutpat. Nam dui mi, tincidunt quis, accumsan porttitor, facilisis luctus, metus.</li>
+                                    <li>Phasellus ultrices nulla quis nibh. Quisque a lectus. Donec consectetuer ligula vulputate sem tristique cursus. Nam nulla quam, gravida non, commodo a, sodales sit amet, nisi.</li>
+                                    <li>Pellentesque fermentum dolor. Aliquam quam lectus, facilisis auctor, ultrices ut, elementum vulputate, nunc.</li>
+                                    <li>
+                                        Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem.
+                                        Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium.
+                                    </li>
+                                    <li>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Footer -->
+        <footer class="footer d-flex align-items-center">
+            <div class="container">
+                <div class="row">
+                    <!-- ordered mobile first, .order-* for desktop -->
+                    <div class="col-lg-4 my-1 order-lg-2 d-flex justify-content-center">
+                        <a href="https://www.facebook.com/SpotMagazineCH/" target="_blank" class="sociallink spoticon fa fa-facebook"></a>
+                        <a href="https://twitter.com/spotmagazinech" target="_blank" class="sociallink spoticon fa fa-twitter"></a>
+                        <a href="https://www.instagram.com/spotmagazinech/" target="_blank" class="sociallink spoticon fa fa-instagram"></a>
+                        <a href="https://www.pinterest.ie/swissspots/" target="_blank" class="sociallink spoticon fa fa-pinterest"></a>
+                    </div>
+                    <div class="col-lg-4 my-1 order-lg-1 footerleft">
+                        SPOT MEDIA GmbH <br />
+                        PO Box 448 <br />
+                        8810 Horgen <br />
+                    </div>
+                    <div class="col-lg-4 my-1 order-lg-3 footerright">
+                        Spot Media GmbH <br />
+                        &copy; 2018 <br />
+                        All rights reserved <br />
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <!-- Bootstrap JavaScript -->
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    </body>
 </html>

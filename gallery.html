@@ -1,202 +1,201 @@
 <!DOCTYPE html>
 <html lang="en">
+    <!--
+    NOTE: The majority of comments here will be removed when the site goes live for the client.
+    They are:
+        - notes to myself in the future (denoted by an X )
+        - to explain my thinking and process to any examiners for the sake of the Code Institute project.
+    -->
 
-<!-- 
-NOTE: The majority of comments here will be removed when the site goes live for the client.
-They are:
-    - notes to myself in the future (denoted by an X )
-    - to explain my thinking and process to any examiners for the sake of the Code Institute project. 
--->
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <!-- Adding Bootstrap 4 styling, Font Awesome fonts -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" type="text/css" />
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" type="text/css" />
-    <!-- Adding Google font 
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        <!-- Adding Bootstrap 4 styling, Font Awesome fonts -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" type="text/css" />
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" type="text/css" />
+        <!-- Adding Google font
          X This is a close approx to a licensed font the client uses, should be replaced in live version -->
-    <link href="https://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet">
-    <!-- Favicon -->
-    <!-- X Add icons for mobile home screen use -->
-    <link rel="shortcut icon" type="image/png" href="assets/logo/spot_magazine.png" />
-    <!-- My styles -->
-    <link rel="stylesheet" href="assets/css/style.css">
-    <title>Spot Magazine</title>
-</head>
+        <link href="https://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet" />
+        <!-- Favicon -->
+        <!-- X Add icons for mobile home screen use -->
+        <link rel="shortcut icon" type="image/png" href="assets/logo/spot_magazine.png" />
+        <!-- My styles -->
+        <link rel="stylesheet" href="assets/css/style.css" />
+        <title>Spot Magazine</title>
+    </head>
 
-<body>
-    <!-- Navbar Header -->
-    <header>
-        <nav class="navbar fixed-top navbar-expand-lg navbar-light nav-fill shadow-sm py-1">
-            <div class='container maxcontainer'>
-                <div class='mr-auto'>
-                    <!-- Large Logo size -->
-                    <a class="navbar-brand d-none d-lg-block " href="index.html">
-                        <img src="assets/logo/spot_magazine.png" alt="Logo" class='logosize'>
-                    </a>
-                    <!-- Small Logo size -->
-                    <a class="navbar-brand d-lg-none p-0" href="index.html">
-                        <img src="assets/logo/spot_magazine.png" alt="Logo" class='logosize'>
-                    </a>
-                </div>
-                <!-- Button used as menu under 768px -->
-                <div class='d-flex flex-row order-lg-2'>
-                    <!-- Search button -->
-                    <!-- X Non functional as JavaScript would be needed for the animations -->
-                    <div class='pt-lg-2'>
-                        <div class="nav-item spoticon spotred fa fa-search"></div>
+    <body>
+        <!-- Navbar Header -->
+        <header>
+            <nav class="navbar fixed-top navbar-expand-lg navbar-light nav-fill shadow-sm py-1">
+                <div class="container maxcontainer">
+                    <div class="mr-auto">
+                        <!-- Large Logo size -->
+                        <a class="navbar-brand d-none d-lg-block " href="index.html">
+                            <img src="assets/logo/spot_magazine.png" alt="Logo" class="logosize" />
+                        </a>
+                        <!-- Small Logo size -->
+                        <a class="navbar-brand d-lg-none p-0" href="index.html">
+                            <img src="assets/logo/spot_magazine.png" alt="Logo" class="logosize" />
+                        </a>
                     </div>
-                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#topNavbar">
-                        <span class="navbar-toggler-icon"></span>
-                    </button>
+                    <!-- Button used as menu under 768px -->
+                    <div class="d-flex flex-row order-lg-2">
+                        <!-- Search button -->
+                        <!-- X Non functional as JavaScript would be needed for the animations -->
+                        <div class="pt-lg-2">
+                            <div class="nav-item spoticon spotred fa fa-search"></div>
+                        </div>
+                        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#topNavbar">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                    </div>
+                    <div class="collapse navbar-collapse order-lg-1" id="topNavbar">
+                        <!-- Header links -->
+                        <a class="nav-item nav-link pt-lg-4" href="index.html">Home</a>
+                        <a class="nav-item nav-link pt-lg-4 active" href="gallery.html">Magazines</a>
+                        <a class="nav-item nav-link pt-lg-4" href="contest.html">Photo Contest</a>
+                        <a class="nav-item nav-link pt-lg-4" href="contact.html">Contact</a>
+                    </div>
                 </div>
-                <div class="collapse navbar-collapse order-lg-1" id='topNavbar'>
-                    <!-- Header links -->
-                    <a class='nav-item nav-link pt-lg-4' href="index.html">Home</a>
-                    <a class='nav-item nav-link pt-lg-4' href="gallery.html">Magazines</a>
-                    <a class='nav-item nav-link pt-lg-4' href="contest.html">Photo Contest</a>
-                    <a class='nav-item nav-link pt-lg-4' href="contact.html">Contact</a>
+            </nav>
+        </header>
+        <!-- Used to move content below the navbar -->
+        <div class="navpadding"></div>
+        <!-- Magazine Gallery Section -->
+        <section>
+            <div class="container maxcontainer">
+                <div class="row">
+                    <div class="col-xs-12 col-sm-6 col-lg-4 my-2">
+                        <div class="card border-0">
+                            <a href="https://en.calameo.com/read/002969344fea1dbf87173?" target="_blank" class="imlink">
+                                <img src="assets/images/covers/spring2019.jpg" alt="Spring 2019" class="card-img-top border rounded-0" />
+                                <p class="card-title text-center">
+                                    Spring 2019
+                                </p>
+                            </a>
+                            <a href="https://en.calameo.com/read/002969344fea1dbf87173?" target="_blank" class="linkspot spoticon spotred fa fa-arrow-right"></a>
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-sm-6 col-lg-4 my-2">
+                        <div class="card border-0">
+                            <a href="https://en.calameo.com/read/0029693446a508059e0ea" target="_blank" class="imlink">
+                                <img src="assets/images/covers/winter2018.jpg" alt="Winter 2018" class="card-img-top border rounded-0" />
+                                <p class="card-title text-center">
+                                    Winter 2018
+                                </p>
+                            </a>
+                            <a href="https://en.calameo.com/read/0029693446a508059e0ea" target="_blank" class="linkspot spoticon spotred fa fa-arrow-right"></a>
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-sm-6 col-lg-4 my-2">
+                        <div class="card border-0">
+                            <a href="https://en.calameo.com/read/00296934466831d3d1253" target="_blank" class="imlink">
+                                <img src="assets/images/covers/autumn2018.jpg" alt="Autumn 2018" class="card-img-top border rounded-0" />
+                                <p class="card-title text-center">
+                                    Autumn 2018
+                                </p>
+                            </a>
+                            <a href="https://en.calameo.com/read/00296934466831d3d1253" target="_blank" class="linkspot spoticon spotred fa fa-arrow-right"></a>
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-sm-6 col-lg-4 my-2">
+                        <div class="card border-0">
+                            <a href="https://en.calameo.com/read/002969344ae847d092e8f" target="_blank" class="imlink">
+                                <img src="assets/images/covers/sommer2018.jpg" alt="Summer 2018" class="card-img-top border rounded-0" />
+                                <p class="card-title text-center">
+                                    Summer 2018
+                                </p>
+                            </a>
+                            <a href="https://en.calameo.com/read/002969344ae847d092e8f" target="_blank" class="linkspot spoticon spotred fa fa-arrow-right"></a>
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-sm-6 col-lg-4 my-2">
+                        <div class="card border-0">
+                            <a href="https://en.calameo.com/read/0029693442e4671a7e086" target="_blank" class="imlink">
+                                <img src="assets/images/covers/spring2018.jpg" alt="Spring 2018" class="card-img-top border rounded-0" />
+                                <p class="card-title text-center">
+                                    Spring 2018
+                                </p>
+                            </a>
+                            <a href="https://en.calameo.com/read/0029693442e4671a7e086" target="_blank" class="linkspot spoticon spotred fa fa-arrow-right"></a>
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-sm-6 col-lg-4 my-2">
+                        <div class="card border-0">
+                            <a href="https://en.calameo.com/read/00296934486730d3bb019" target="_blank" class="imlink">
+                                <img src="assets/images/covers/winter2017.jpg" alt="Winter 2017" class="card-img-top border rounded-0" />
+                                <p class="card-title text-center">
+                                    Winter 2017
+                                </p>
+                            </a>
+                            <a href="https://en.calameo.com/read/00296934486730d3bb019" target="_blank" class="linkspot spoticon spotred fa fa-arrow-right"></a>
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-sm-6 col-lg-4 my-2">
+                        <div class="card border-0">
+                            <a href="https://en.calameo.com/read/0029693445c44bbac15c8" target="_blank" class="imlink">
+                                <img src="assets/images/covers/autumn2017.jpg" alt="Autumn 2017" class="card-img-top border rounded-0" />
+                                <p class="card-title text-center">
+                                    Autumn 2017
+                                </p>
+                            </a>
+                            <a href="https://en.calameo.com/read/0029693445c44bbac15c8" target="_blank" class="linkspot spoticon spotred fa fa-arrow-right"></a>
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-sm-6 col-lg-4 my-2">
+                        <div class="card border-0">
+                            <a href="https://en.calameo.com/read/00296934459fea5408557" target="_blank" class="imlink">
+                                <img src="assets/images/covers/sommer2017.jpg" alt="Summer 2017" class="card-img-top border rounded-0" />
+                                <p class="card-title text-center">
+                                    Summer 2017
+                                </p>
+                            </a>
+                            <a href="https://en.calameo.com/read/00296934459fea5408557" target="_blank" class="linkspot spoticon spotred fa fa-arrow-right"></a>
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-sm-6 col-lg-4 my-2">
+                        <div class="card border-0">
+                            <a href="https://en.calameo.com/read/00296934435ad5bc45c21" target="_blank" class="imlink">
+                                <img src="assets/images/covers/spring2017.jpg" alt="Spring 2017" class="card-img-top border rounded-0" />
+                                <p class="card-title text-center">
+                                    Spring 2017
+                                </p>
+                            </a>
+                            <a href="https://en.calameo.com/read/00296934435ad5bc45c21" target="_blank" class="linkspot spoticon spotred fa fa-arrow-right"></a>
+                        </div>
+                    </div>
                 </div>
             </div>
-        </nav>
-    </header>
-    <!-- Used to move content below the navbar -->
-    <div class='navpadding'></div>
-    <!-- Magazine Gallery Section -->
-    <section>
-        <div class="container maxcontainer">
-            <div class="row">
-                <div class="col-xs-12 col-sm-6 col-lg-4 my-2">
-                    <div class='card border-0'>
-                        <a href="https://en.calameo.com/read/002969344fea1dbf87173?" target="_blank" class='imlink'>
-                            <img src="assets/images/covers/spring2019.jpg" alt="Spring 2019" class='card-img-top border rounded-0'>
-                            <p class='card-title text-center'>
-                                Spring 2019
-                            </p>
-                        </a>
-                        <a href='https://en.calameo.com/read/002969344fea1dbf87173?' target="_blank" class='linkspot spoticon spotred fa fa-arrow-right'></a>
+        </section>
+        <!-- Footer -->
+        <footer class="footer d-flex align-items-center">
+            <div class="container">
+                <div class="row">
+                    <!-- ordered mobile first, .order-* for desktop -->
+                    <div class="col-lg-4 my-1 order-lg-2 d-flex justify-content-center">
+                        <a href="https://www.facebook.com/SpotMagazineCH/" target="_blank" class="sociallink spoticon fa fa-facebook"></a>
+                        <a href="https://twitter.com/spotmagazinech" target="_blank" class="sociallink spoticon fa fa-twitter"></a>
+                        <a href="https://www.instagram.com/spotmagazinech/" target="_blank" class="sociallink spoticon fa fa-instagram"></a>
+                        <a href="https://www.pinterest.ie/swissspots/" target="_blank" class="sociallink spoticon fa fa-pinterest"></a>
                     </div>
-                </div>
-                <div class="col-xs-12 col-sm-6 col-lg-4 my-2">
-                    <div class='card border-0'>
-                        <a href="https://en.calameo.com/read/0029693446a508059e0ea" target="_blank" class='imlink'>
-                            <img src="assets/images/covers/winter2018.jpg" alt="Winter 2018" class='card-img-top border rounded-0'>
-                            <p class='card-title text-center'>
-                                Winter 2018</p>
-                        </a>
-                        <a href="https://en.calameo.com/read/0029693446a508059e0ea" target="_blank" class='linkspot spoticon spotred fa fa-arrow-right'></a>
+                    <div class="col-lg-4 my-1 order-lg-1 footerleft">
+                        SPOT MEDIA GmbH <br />
+                        PO Box 448 <br />
+                        8810 Horgen <br />
                     </div>
-                </div>
-                <div class="col-xs-12 col-sm-6 col-lg-4 my-2">
-                    <div class='card border-0'>
-                        <a href="https://en.calameo.com/read/00296934466831d3d1253" target="_blank" class='imlink'>
-                            <img src="assets/images/covers/autumn2018.jpg" alt="Autumn 2018" class='card-img-top border rounded-0'>
-                            <p class='card-title text-center'>
-                                Autumn 2018
-                            </p>
-                        </a>
-                        <a href="https://en.calameo.com/read/00296934466831d3d1253" target="_blank" class='linkspot spoticon spotred fa fa-arrow-right'></a>
-                    </div>
-                </div>
-                <div class="col-xs-12 col-sm-6 col-lg-4 my-2">
-                    <div class='card border-0'>
-                        <a href="https://en.calameo.com/read/002969344ae847d092e8f" target="_blank" class='imlink'>
-                            <img src="assets/images/covers/sommer2018.jpg" alt="Summer 2018" class='card-img-top border rounded-0'>
-                            <p class='card-title text-center'>
-                                Summer 2018
-                            </p>
-                        </a>
-                        <a href="https://en.calameo.com/read/002969344ae847d092e8f" target="_blank" class='linkspot spoticon spotred fa fa-arrow-right'></a>
-                    </div>
-                </div>
-                <div class="col-xs-12 col-sm-6 col-lg-4 my-2">
-                    <div class='card border-0'>
-                        <a href="https://en.calameo.com/read/0029693442e4671a7e086" target="_blank" class='imlink'>
-                            <img src="assets/images/covers/spring2018.jpg" alt="Spring 2018" class='card-img-top border rounded-0'>
-                            <p class='card-title text-center'>
-                                Spring 2018
-                            </p>
-                        </a>
-                        <a href="https://en.calameo.com/read/0029693442e4671a7e086" target="_blank" class='linkspot spoticon spotred fa fa-arrow-right'></a>
-                    </div>
-                </div>
-                <div class="col-xs-12 col-sm-6 col-lg-4 my-2">
-                    <div class='card border-0'>
-                        <a href="https://en.calameo.com/read/00296934486730d3bb019" target="_blank" class='imlink'>
-                            <img src="assets/images/covers/winter2017.jpg" alt="Winter 2017" class='card-img-top border rounded-0'>
-                            <p class='card-title text-center'>
-                                Winter 2017
-                            </p>
-                        </a>
-                        <a href="https://en.calameo.com/read/00296934486730d3bb019" target="_blank" class='linkspot spoticon spotred fa fa-arrow-right'></a>
-                    </div>
-                </div>
-                <div class="col-xs-12 col-sm-6 col-lg-4 my-2">
-                    <div class='card border-0'>
-                        <a href="https://en.calameo.com/read/0029693445c44bbac15c8" target="_blank" class='imlink'>
-                            <img src="assets/images/covers/autumn2017.jpg" alt="Autumn 2017" class='card-img-top border rounded-0'>
-                            <p class='card-title text-center'>
-                                Autumn 2017
-                            </p>
-                        </a>
-                        <a href="https://en.calameo.com/read/0029693445c44bbac15c8" target="_blank" class='linkspot spoticon spotred fa fa-arrow-right'></a>
-                    </div>
-                </div>
-                <div class="col-xs-12 col-sm-6 col-lg-4 my-2">
-                    <div class='card border-0'>
-                        <a href="https://en.calameo.com/read/00296934459fea5408557" target="_blank" class='imlink'>
-                            <img src="assets/images/covers/sommer2017.jpg" alt="Summer 2017" class='card-img-top border rounded-0'>
-                            <p class='card-title text-center'>
-                                Summer 2017
-                            </p>
-                        </a>
-                        <a href="https://en.calameo.com/read/00296934459fea5408557" target="_blank" class='linkspot spoticon spotred fa fa-arrow-right'></a>
-                    </div>
-                </div>
-                <div class="col-xs-12 col-sm-6 col-lg-4 my-2">
-                    <div class='card border-0'>
-                        <a href="https://en.calameo.com/read/00296934435ad5bc45c21" target="_blank" class='imlink'>
-                            <img src="assets/images/covers/spring2017.jpg" alt="Spring 2017" class='card-img-top border rounded-0'>
-                            <p class='card-title text-center'>
-                                Spring 2017
-                            </p>
-                        </a>
-                        <a href="https://en.calameo.com/read/00296934435ad5bc45c21" target="_blank" class='linkspot spoticon spotred fa fa-arrow-right'></a>
+                    <div class="col-lg-4 my-1 order-lg-3 footerright">
+                        Spot Media GmbH <br />
+                        &copy; 2018 <br />
+                        All rights reserved <br />
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
-    <!-- Footer -->
-    <footer class='footer d-flex align-items-center'>
-        <div class='container'>
-            <div class='row'>
-                <!-- ordered mobile first, .order-* for desktop -->
-                <div class='col-lg-4 my-1 order-lg-2 d-flex justify-content-center'>
-                    <a href="https://www.facebook.com/SpotMagazineCH/" target="_blank" class='sociallink spoticon fa fa-facebook'></a>
-                    <a href="https://twitter.com/spotmagazinech" target="_blank" class='sociallink spoticon fa fa-twitter'></a>
-                    <a href="https://www.instagram.com/spotmagazinech/" target="_blank" class='sociallink spoticon fa fa-instagram'></a>
-                    <a href="https://www.pinterest.ie/swissspots/" target="_blank" class='sociallink spoticon fa fa-pinterest'></a>
-                </div>
-                <div class='col-lg-4 my-1 order-lg-1 footerleft'>
-                    SPOT MEDIA GmbH <br>
-                    PO Box 448 <br>
-                    8810 Horgen <br>
-                </div>
-                <div class='col-lg-4 my-1 order-lg-3 footerright'>
-                    Spot Media GmbH <br>
-                    &copy; 2018 <br>
-                    All rights reserved <br>
-                </div>
-            </div>
-        </div>
-    </footer>
-</body>
-<!-- Bootstrap JavaScript -->
-<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-
+        </footer>
+        <!-- Bootstrap JavaScript -->
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    </body>
 </html>

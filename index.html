@@ -1,426 +1,425 @@
 <!DOCTYPE html>
 <html lang="en">
-<!-- 
-NOTE: The majority of comments here will be removed when the site goes live for the client.
-They are:
-    - notes to myself in the future (denoted by an X )
-    - to explain my thinking and process to any examiners for the sake of the Code Institute project. 
--->
+    <!--
+    NOTE: The majority of comments here will be removed when the site goes live for the client.
+    They are:
+        - notes to myself in the future (denoted by an X )
+        - to explain my thinking and process to any examiners for the sake of the Code Institute project.
+    -->
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <!-- Adding Bootstrap 4 styling, Font Awesome fonts -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" type="text/css" />
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" type="text/css" />
-    <!-- Adding Google font 
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        <!-- Adding Bootstrap 4 styling, Font Awesome fonts -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" type="text/css" />
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" type="text/css" />
+        <!-- Adding Google font
          X This is a close approx to a licensed font the client uses, should be replaced in live version -->
-    <link href="https://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet">
-    <!-- Favicon -->
-    <!-- X Add icons for mobile homescreen use -->
-    <link rel="shortcut icon" type="image/png" href="assets/logo/spot_magazine.png" />
-    <!-- My styles -->
-    <link rel="stylesheet" href="assets/css/style.css">
-    <title>Spot Magazine</title>
-</head>
+        <link href="https://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet" />
+        <!-- Favicon -->
+        <!-- X Add icons for mobile homescreen use -->
+        <link rel="shortcut icon" type="image/png" href="assets/logo/spot_magazine.png" />
+        <!-- My styles -->
+        <link rel="stylesheet" href="assets/css/style.css" />
+        <title>Spot Magazine</title>
+    </head>
 
-<body>
-    <!-- Navbar Header -->
-    <!-- X I would love for it to be transparent then fade into white after scrolling down but from what I could see it would require custom JavaScript -->
-    <header>
-        <nav class="navbar fixed-top navbar-expand-lg navbar-light nav-fill shadow-sm py-1">
-            <div class='container maxcontainer'>
-                <div class='mr-auto'>
-                    <!-- Large Logo size -->
-                    <a class="navbar-brand d-none d-lg-block " href="index.html">
-                        <img src="assets/logo/spot_magazine.png" alt="Logo" class='logosize'>
-                    </a>
-                    <!-- Small Logo size -->
-                    <a class="navbar-brand d-lg-none p-0" href="index.html">
-                        <img src="assets/logo/spot_magazine.png" alt="Logo" class='logosize'>
-                    </a>
-                </div>
-                <!-- Button used as menu under 768px -->
-                <div class='d-flex flex-row order-lg-2'>
-                    <!-- Search button -->
-                    <!-- X Non functional as JavaScript would be needed for the animations -->
-                    <div class='pt-lg-2'>
-                        <div class="nav-item spoticon spotred fa fa-search"></div>
+    <body>
+        <!-- Navbar Header -->
+        <!-- X I would love for it to be transparent then fade into white after scrolling down but from what I could see it would require custom JavaScript -->
+        <header>
+            <nav class="navbar fixed-top navbar-expand-lg navbar-light nav-fill shadow-sm py-1">
+                <div class="container maxcontainer">
+                    <div class="mr-auto">
+                        <!-- Large Logo size -->
+                        <a class="navbar-brand d-none d-lg-block " href="index.html">
+                            <img src="assets/logo/spot_magazine.png" alt="Logo" class="logosize" />
+                        </a>
+                        <!-- Small Logo size -->
+                        <a class="navbar-brand d-lg-none p-0" href="index.html">
+                            <img src="assets/logo/spot_magazine.png" alt="Logo" class="logosize" />
+                        </a>
                     </div>
-                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#topNavbar">
-                        <span class="navbar-toggler-icon"></span>
-                    </button>
+                    <!-- Button used as menu under 768px -->
+                    <div class="d-flex flex-row order-lg-2">
+                        <!-- Search button -->
+                        <!-- X Non functional as JavaScript would be needed for the animations -->
+                        <div class="pt-lg-2">
+                            <div class="nav-item spoticon spotred fa fa-search"></div>
+                        </div>
+                        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#topNavbar">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                    </div>
+                    <div class="collapse navbar-collapse order-lg-1" id="topNavbar">
+                        <!-- Header links -->
+                        <a class="nav-item nav-link pt-lg-4 active" href="index.html">Home</a>
+                        <a class="nav-item nav-link pt-lg-4" href="gallery.html">Magazines</a>
+                        <a class="nav-item nav-link pt-lg-4" href="contest.html">Photo Contest</a>
+                        <a class="nav-item nav-link pt-lg-4" href="contact.html">Contact</a>
+                    </div>
                 </div>
-                <div class="collapse navbar-collapse order-lg-1" id='topNavbar'>
-                    <!-- Header links -->
-                    <a class='nav-item nav-link pt-lg-4' href="index.html">Home</a>
-                    <a class='nav-item nav-link pt-lg-4' href="gallery.html">Magazines</a>
-                    <a class='nav-item nav-link pt-lg-4' href="contest.html">Photo Contest</a>
-                    <a class='nav-item nav-link pt-lg-4' href="contact.html">Contact</a>
+            </nav>
+        </header>
+        <!-- Superhero Image Section -->
+        <!-- This superhero image uses a carousel to cycle through images -->
+        <section>
+            <div class="">
+                <div id="Superhero" class="carousel slide" data-ride="carousel">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active superheroview align-items-center">
+                            <a href="story.html">
+                                <img class="w-100 heroimg" src="assets/images/aletsch/aletsch_lr-5.jpg" alt="First slide" />
+                            </a>
+                            <div class="carousel-caption  herocaption">
+                                <h1>
+                                    Spot Magazine
+                                </h1>
+                                <h4 class="d-none d-md-block">
+                                    Switzerland's Premier Travel and Lifestyle Magazine
+                                </h4>
+                                <div class="w-100 d-flex justify-content-center">
+                                    <a href="#trendingstory" class="spoticon spotred bounce fa fa-arrow-down"></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="carousel-item superheroview">
+                            <a href="gallery.html">
+                                <img class="w-100 heroimg" src="assets/images/jura/jura_kayak_camp_disc2-82.jpg" alt="Second slide" />
+                            </a>
+                            <div class="carousel-caption  herocaption">
+                                <h1>
+                                    Spring Issue
+                                </h1>
+                                <h4 class="d-none d-md-block">
+                                    Check out the latest issue for great stories this spring season
+                                </h4>
+                                <div class="w-100 d-flex justify-content-center">
+                                    <a href="#trendingstory" class="spoticon spotred bounce fa fa-arrow-down"></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="carousel-item superheroview">
+                            <a href="contest.html">
+                                <img class="w-100 heroimg" src="assets/images/fribourg/fribourg_lr-31.jpg" alt="Third slide" />
+                            </a>
+                            <div class="carousel-caption  herocaption">
+                                <h1>
+                                    Photo Competition
+                                </h1>
+                                <h4 class="d-none d-md-block">
+                                    Enter our photo competition for a chance to be featured in the Magazine
+                                </h4>
+                                <div class="w-100 d-flex justify-content-center">
+                                    <a href="#trendingstory" class="spoticon spotred bounce fa fa-arrow-down"></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <a class="carousel-control-prev" href="#Superhero" role="button" data-slide="prev">
+                        <span class="carousel-control-prev-icon"></span>
+                        <span class="sr-only">Previous</span>
+                    </a>
+                    <a class="carousel-control-next" href="#Superhero" role="button" data-slide="next">
+                        <span class="carousel-control-next-icon"></span>
+                        <span class="sr-only">Next</span>
+                    </a>
                 </div>
             </div>
-        </nav>
-    </header>
-    <!-- Superhero Image Section -->
-    <!-- This superhero image uses a carousel to cycle through images -->
-    <section>
-        <div class=''>
-            <div id="Superhero" class="carousel slide" data-ride="carousel">
-                <div class="carousel-inner">
-                    <div class="carousel-item active superheroview align-items-center">
-                        <a href="story.html">
-                            <img class="w-100 heroimg" src="assets/images/aletsch/aletsch_lr-5.jpg" alt="First slide">
-                        </a>
-                        <div class='carousel-caption  herocaption'>
-                            <h1>
-                                Spot Magazine
-                            </h1>
-                            <h4 class='d-none d-md-block'>
-                                Switzerland's Premier Travel and Lifestyle Magazine
-                            </h4>
-                            <div class='w-100 d-flex justify-content-center'>
-                                <a href='#trendingstory' class='spoticon spotred bounce fa fa-arrow-down'></a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="carousel-item superheroview">
-                        <a href="gallery.html">
-                            <img class="w-100 heroimg" src="assets/images/jura/jura_kayak_camp_disc2-82.jpg" alt="Second slide">
-                        </a>
-                        <div class='carousel-caption  herocaption'>
-                            <h1>
-                                Spring Issue
-                            </h1>
-                            <h4 class='d-none d-md-block'>
-                                Check out the latest issue for great stories this spring season
-                            </h4>
-                            <div class='w-100 d-flex justify-content-center'>
-                                <a href='#trendingstory' class='spoticon spotred bounce fa fa-arrow-down'></a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="carousel-item superheroview">
-                        <a href="contest.html">
-                            <img class="w-100 heroimg" src="assets/images/fribourg/fribourg_lr-31.jpg" alt="Third slide">
-                        </a>
-                        <div class='carousel-caption  herocaption'>
-                            <h1>
-                                Photo Competition
-                            </h1>
-                            <h4 class='d-none d-md-block'>
-                                Enter our photo competition for a chance to be featured in the Magazine
-                            </h4>
-                            <div class='w-100 d-flex justify-content-center'>
-                                <a href='#trendingstory' class='spoticon spotred bounce fa fa-arrow-down'></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <a class="carousel-control-prev" href="#Superhero" role="button" data-slide="prev">
-                    <span class="carousel-control-prev-icon"></span>
-                    <span class="sr-only">Previous</span>
-                </a>
-                <a class="carousel-control-next" href="#Superhero" role="button" data-slide="next">
-                    <span class="carousel-control-next-icon"></span>
-                    <span class="sr-only">Next</span>
-                </a>
-            </div>
-        </div>
-    </section>
-    <!-- This section is used to link to the trending story -->
-    <!-- If you link directly to the section it will overscroll by the width of the navbar, linking to this div means the padding between the superhero image and the story is enough to prevent the overscroll 
+        </section>
+        <!-- This section is used to link to the trending story -->
+        <!-- If you link directly to the section it will overscroll by the width of the navbar, linking to this div means the padding between the superhero image and the story is enough to prevent the overscroll
         X This can be fixed using a JavaScript package such as 'Animate on Scroll' -->
-    <section id='trendingstory'>
-    </section>
-    <!-- Trending Story Section -->
-    <!-- I am aware that it isn't the best practice to hide a section at different screen sizes to have multiple designs as it leads to duplicate code and text. Unfortunately in order to have text wrap around the circular image I couldn't have the text and the image in bootstrap columns so it made implementing a responsive design very difficult.In the end this was the best way I could come up with having the text wrap on desktop then have the design responsive on smaller screens. In the future if I had to do something like this I would import the text that displays on the site from a database so it doesn't need to be changed twice every time.
+        <section id="trendingstory"></section>
+        <!-- Trending Story Section -->
+        <!-- I am aware that it isn't the best practice to hide a section at different screen sizes to have multiple designs as it leads to duplicate code and text. Unfortunately in order to have text wrap around the circular image I couldn't have the text and the image in bootstrap columns so it made implementing a responsive design very difficult.In the end this was the best way I could come up with having the text wrap on desktop then have the design responsive on smaller screens. In the future if I had to do something like this I would import the text that displays on the site from a database so it doesn't need to be changed twice every time.
       -->
-    <section class='my-5'>
-        <!-- Mobile screen -->
-        <div class='container d-md-none'>
-            <div class='row'>
-                <div class='col-12'>
-                    <h2 class='cursivetxt my-4'>
-                        Story of the Week
-                    </h2>
-                    <div class='circleview mx-auto'>
-                        <img src="assets/images/bad_ragaz/badragaz_lr-008.jpg" id='trendingimgs' alt="Story of the Week" class='circleimage'>
-                    </div>
-                </div>
-                <div class='col-12 my-3'>
-                    <h4>
-                        This is the story of the week on mobile
-                    </h4>
-                    <p>In this design the text is below the spot. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
-                    </p>
-                </div>
-            </div>
-        </div>
-        <!-- Larger Screen -->
-        <div class='container maxcontainer d-none d-md-block'>
-            <div class='row align-items-center'>
-                <div class='col-12'>
-                    <div class='circleview m-3'>
-                        <img src="assets/images/bad_ragaz/badragaz_lr-008.jpg" id='trendingimgl' alt="Story of the Week" class='circleimage'>
-                    </div>
-                    <div class='my-md-3 my-lg-5'>
-                        <h2 class='cursivetxt text-left'>
+        <section class="my-5">
+            <!-- Mobile screen -->
+            <div class="container d-md-none">
+                <div class="row">
+                    <div class="col-12">
+                        <h2 class="cursivetxt my-4">
                             Story of the Week
                         </h2>
-                        <h4 class='text-left my-3'>
-                            This is the story of the week on desktop
+                        <div class="circleview mx-auto">
+                            <img src="assets/images/bad_ragaz/badragaz_lr-008.jpg" id="trendingimgs" alt="Story of the Week" class="circleimage" />
+                        </div>
+                    </div>
+                    <div class="col-12 my-3">
+                        <h4>
+                            This is the story of the week on mobile
                         </h4>
-                        <p>In this design the text is meant to wrap around the edge of the spot. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
-                            <a href="story.html"><u>Read more...</u></a>
-                        </p>
+                        <p>In this design the text is below the spot. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
-    <!-- Shorter Story Section -->
-    <!-- I this will need JavaScript to generate links when the button is pressed. Also in the future it would make sense to maybe use JavaScript and JSON to populate these items. For the moment this is just the layout of what the default 1/2/3 stories will look like 
-        -->
-    <section>
-        <div class="container maxcontainer">
-            <div class='row'>
-                <div class='col-12'>
-                    <h2 class='cursivetxt text-left'>More Stories</h2>
-                    <hr>
-                </div>
-            </div>
-            <div class="row">
-                <!-- X The masonry layout for these cards unfortunately are ordered vertically rather than horizontally as the client wants, the fix would require JavaScript so will be saved for the future -->
-                <div class='col-12 card-columns'>
-                    <div class='card'>
-                        <a href="story.html" class='imlink'>
-                            <img src="assets/images/jura/jura_kayak_camp_disc2-19.jpg" alt="Card Image" class='card-img-top'>
-                            <h4 class='card-title'>
-                                Title of the story will go here
+            <!-- Larger Screen -->
+            <div class="container maxcontainer d-none d-md-block">
+                <div class="row align-items-center">
+                    <div class="col-12">
+                        <div class="circleview m-3">
+                            <img src="assets/images/bad_ragaz/badragaz_lr-008.jpg" id="trendingimgl" alt="Story of the Week" class="circleimage" />
+                        </div>
+                        <div class="my-md-3 my-lg-5">
+                            <h2 class="cursivetxt text-left">
+                                Story of the Week
+                            </h2>
+                            <h4 class="text-left my-3">
+                                This is the story of the week on desktop
                             </h4>
-                            <div class='card-text'>
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean et rutrum lorem. Ut non sagittis elit. Fusce quis pharetra felis. Integer dignissim enim sapien, eu accumsan sem porta sit amet.
-                            </div>
-                            <div class='card-footer sstoryfooter'>
-                                <div class='row'>
-                                    <div class='col-sm-12 col-4 my-1 d-flex align-items-center justify-content-center'>
-                                        <div class='text-left text-sm-center'>Read time 3 mins</div>
-                                    </div>
-                                    <div class='col-sm-4 col-4 d-flex justify-content-sm-start justify-content-center align-items-center'>
-                                        <div class='flagview'>
-                                            <img src="assets/images/flags/flag_of_canton_of_zürich.png" alt="Zürich" class='img-fluid squareimage'>
-                                        </div>
-                                    </div>
-                                    <div class='col-sm-8 col-4 d-flex justify-content-end align-items-center'>
-                                        <div class="spoticonsmall spotred fa fa-car"></div>
-                                        <div class="spoticonsmall spotred fa fa-bed"></div>
-                                        <div class="spoticonsmall spotred fa fa-map-signs"></div>
-                                    </div>
-                                </div>
-                            </div>
-                        </a>
-                        <a href='story.html' class='linkspot spoticon spotred fa fa-arrow-right'></a>
-                    </div>
-                    <div class='card'>
-                        <a href="story.html" class='imlink'>
-                            <img src="assets/images/fribourg/fribourg_lr-16.jpg" alt="Card Image" class='card-img-top'>
-                            <h4 class='card-title'>
-                                A different title will go here
-                            </h4>
-                            <div class='card-text'>
-                                Donec consequat vehicula tortor dapibus efficitur. Aenean dolor ante, efficitur non odio nec, cursus suscipit lectus. Quisque feugiat ac mauris non pellentesque. Quisque nibh dui, placerat ac blandit nec, pharetra a neque.
-                            </div>
-                            <div class='card-footer sstoryfooter'>
-                                <div class='row'>
-                                    <div class='col-sm-12 col-4 my-1 d-flex align-items-center justify-content-center'>
-                                        <div class='text-left text-sm-center'>Read time 3 mins</div>
-                                    </div>
-                                    <div class='col-sm-4 col-4 d-flex justify-content-sm-start justify-content-center align-items-center '>
-                                        <div class='flagview'>
-                                            <img src="assets/images/flags/flag_of_canton_of_bern.png" alt="Bern" class='img-fluid squareimage'>
-                                        </div>
-                                    </div>
-                                    <div class='col-sm-8 col-4 d-flex justify-content-end align-items-center'>
-                                        <div class="spoticonsmall spotred fa fa-car"></div>
-                                        <div class="spoticonsmall spotred fa fa-cutlery"></div>
-                                        <div class="spoticonsmall spotred fa fa-snowflake-o"></div>
-                                    </div>
-                                </div>
-                            </div>
-                        </a>
-                        <a href='story.html' class='linkspot spoticon spotred fa fa-arrow-right'></a>
-                    </div>
-                    <div class='card'>
-                        <a href="story.html" class='imlink'>
-                            <img src="assets/images/flumserberg/flumserberge_lr-39.jpg" alt="Card Image" class='card-img-top'>
-                            <h4 class='card-title'>
-                                Here's another story title
-                            </h4>
-                            <div class='card-text'>
-                                Morbi quis massa non ipsum eleifend suscipit a in arcu. Vestibulum ut sem quam. In lectus justo, blandit eu commodo vitae, pretium sed massa. Proin sagittis aliquet vulputate. Donec et ipsum laoreet, blandit sapien maximus, hendrerit eros.
-                            </div>
-                            <div class='card-footer sstoryfooter'>
-                                <div class='row'>
-                                    <div class='col-sm-12 col-4 my-1 d-flex align-items-center justify-content-center'>
-                                        <div class='text-left text-sm-center'>Read time 3 mins</div>
-                                    </div>
-                                    <div class='col-sm-4 col-4 d-flex justify-content-sm-start justify-content-center align-items-center '>
-                                        <div class='flagview'>
-                                            <img src="assets/images/flags/flag_of_canton_of_uri.png" alt="Uri" class='img-fluid squareimage'>
-                                        </div>
-                                    </div>
-                                    <div class='col-sm-8 col-4 d-flex justify-content-end align-items-center'>
-                                        <div class="spoticonsmall spotred fa fa-bicycle"></div>
-                                        <div class="spoticonsmall spotred fa fa-heart"></div>
-                                        <div class="spoticonsmall spotred fa fa-map-signs"></div>
-                                    </div>
-                                </div>
-                            </div>
-                        </a>
-                        <a href='story.html' class='linkspot spoticon spotred fa fa-arrow-right'></a>
-                    </div>
-                    <div class='card'>
-                        <a href="story.html" class='imlink'>
-                            <img src="assets/images/chaeserrugg/chaeserrugg_lr-28.jpg" alt="Card Image" class='card-img-top'>
-                            <h4 class='card-title'>
-                                This one is short
-                            </h4>
-                            <div class='card-text'>
-                                Cras in molestie arcu, non porttitor orci. Quisque facilisis lectus quis scelerisque interdum. Maecenas dictum congue mauris nec feugiat. Nam faucibus quis ipsum eget porttitor. Curabitur vestibulum lacus diam, sit amet vestibulum nisi aliquam vitae.
-                            </div>
-                            <div class='card-footer sstoryfooter'>
-                                <div class='row'>
-                                    <div class='col-sm-12 col-4 my-1 d-flex align-items-center justify-content-center'>
-                                        <div class='text-left text-sm-center'>Read time 3 mins</div>
-                                    </div>
-                                    <div class='col-sm-4 col-4 d-flex justify-content-sm-start justify-content-center align-items-center '>
-                                        <div class='flagview'>
-                                            <img src="assets/images/flags/flag_of_canton_of_lucerne.png" alt="Lucerne" class='img-fluid squareimage'>
-                                        </div>
-                                    </div>
-                                    <div class='col-sm-8 col-4 d-flex justify-content-end align-items-center'>
-                                        <div class="spoticonsmall spotred fa fa-bicycle"></div>
-                                        <div class="spoticonsmall spotred fa fa-cutlery"></div>
-                                        <div class="spoticonsmall spotred fa fa-map-signs"></div>
-                                    </div>
-                                </div>
-                            </div>
-                        </a>
-                        <a href='story.html' class='linkspot spoticon spotred fa fa-arrow-right'></a>
-                    </div>
-                    <div class='card'>
-                        <a href="story.html" class='imlink'>
-                            <img src="assets/images/chaeserrugg/chaeserrugg_lr-3.jpg" alt="Card Image" class='card-img-top'>
-                            <h4 class='card-title'>
-                                This one is really really really long
-                            </h4>
-                            <div class='card-text'>
-                                Suspendisse in commodo enim. Morbi euismod sapien eget scelerisque tempus. Praesent egestas tincidunt odio id facilisis. Maecenas a tristique augue, a facilisis dui. Donec ac lacus lacinia ipsum ornare auctor. Nullam ultricies eros mi, vitae elementum felis efficitur quis.
-                            </div>
-                            <div class='card-footer sstoryfooter'>
-                                <div class='row'>
-                                    <div class='col-sm-12 col-4 my-1 d-flex align-items-center justify-content-center'>
-                                        <div class='text-left text-sm-center'>Read time 3 mins</div>
-                                    </div>
-                                    <div class='col-sm-4 col-4 d-flex justify-content-sm-start justify-content-center align-items-center '>
-                                        <div class='flagview'>
-                                            <img src="assets/images/flags/flag_of_canton_of_valais.png" alt="Valais" class='img-fluid squareimage'>
-                                        </div>
-                                    </div>
-                                    <div class='col-sm-8 col-4 d-flex justify-content-end align-items-center'>
-                                        <div class="spoticonsmall spotred fa fa-car"></div>
-                                        <div class="spoticonsmall spotred fa fa-bed"></div>
-                                        <div class="spoticonsmall spotred fa fa-cutlery"></div>
-                                    </div>
-                                </div>
-                            </div>
-                        </a>
-                        <a href='story.html' class='linkspot spoticon spotred fa fa-arrow-right'></a>
-                    </div>
-                    <div class='card'>
-                        <a href="story.html" class='imlink'>
-                            <img src="assets/images/bad_ragaz/badragaz_lr-125.jpg" alt="Card Image" class='card-img-top'>
-                            <h4 class='card-title'>
-                                This is the last story title
-                            </h4>
-                            <div class='card-text'>
-                                Morbi quis massa non ipsum eleifend suscipit a in arcu. Vestibulum ut sem quam. In lectus justo, blandit eu commodo vitae, pretium sed massa. Proin sagittis aliquet vulputate. Donec et ipsum laoreet, blandit sapien maximus, hendrerit eros.
-                            </div>
-                            <div class='card-footer sstoryfooter'>
-                                <div class='row'>
-                                    <div class='col-sm-12 col-4 my-1 d-flex align-items-center justify-content-center'>
-                                        <div class='text-left text-sm-center'>Read time 3 mins</div>
-                                    </div>
-                                    <div class='col-sm-4 col-4 d-flex justify-content-sm-start justify-content-center align-items-center '>
-                                        <div class='flagview'>
-                                            <img src="assets/images/flags/flag_of_canton_of_schaffhausen.png" alt="Schaffhausen" class='img-fluid squareimage'>
-                                        </div>
-                                    </div>
-                                    <div class='col-sm-8 col-4 d-flex justify-content-end align-items-center'>
-                                        <div class="spoticonsmall spotred fa fa-ship"></div>
-                                        <div class="spoticonsmall spotred fa fa-binoculars"></div>
-                                        <div class="spoticonsmall spotred fa fa-map-signs"></div>
-                                    </div>
-                                </div>
-                            </div>
-                        </a>
-                        <a href='story.html' class='linkspot spoticon spotred fa fa-arrow-right'></a>
-                    </div>
-                </div>
-            </div>
-            <div class="row ">
-                <div class="col-12 text-center my-4">
-                    <button type="button" class="btn btnspot">More</button>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- Instagram Placeholder -->
-    <section>
-        <div class='container'>
-            <div class='row'>
-                <div class='col-12'>
-                    <div class="m-5 text-center">
-                        <h2 class='cursivetxt'>
-                            Instagram Feed Placeholder
-                        </h2>
-                        <div class='heroview'>
-                            <img src="assets/images/instagram_eg.jpg" alt='Instagram Example' class='heroimg w-100 m-3'>
+                            <p>
+                                In this design the text is meant to wrap around the edge of the spot. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
+                                <a href="story.html"><u>Read more...</u></a>
+                            </p>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
-    <!-- Footer -->
-    <footer class='footer d-flex align-items-center'>
-        <div class='container'>
-            <div class='row'>
-                <!-- ordered mobile first, .order-* for desktop -->
-                <div class='col-lg-4 my-1 order-lg-2 d-flex justify-content-center'>
-                    <a href="https://www.facebook.com/SpotMagazineCH/" target="_blank" class='sociallink spoticon fa fa-facebook'></a>
-                    <a href="https://twitter.com/spotmagazinech" target="_blank" class='sociallink spoticon fa fa-twitter'></a>
-                    <a href="https://www.instagram.com/spotmagazinech/" target="_blank" class='sociallink spoticon fa fa-instagram'></a>
-                    <a href="https://www.pinterest.ie/swissspots/" target="_blank" class='sociallink spoticon fa fa-pinterest'></a>
+        </section>
+        <!-- Shorter Story Section -->
+        <!-- I this will need JavaScript to generate links when the button is pressed. Also in the future it would make sense to maybe use JavaScript and JSON to populate these items. For the moment this is just the layout of what the default 1/2/3 stories will look like
+        -->
+        <section>
+            <div class="container maxcontainer">
+                <div class="row">
+                    <div class="col-12">
+                        <h2 class="cursivetxt text-left">More Stories</h2>
+                        <hr />
+                    </div>
                 </div>
-                <div class='col-lg-4 my-1 order-lg-1 footerleft'>
-                    SPOT MEDIA GmbH <br>
-                    PO Box 448 <br>
-                    8810 Horgen <br>
+                <div class="row">
+                    <!-- X The masonry layout for these cards unfortunately are ordered vertically rather than horizontally as the client wants, the fix would require JavaScript so will be saved for the future -->
+                    <div class="col-12 card-columns">
+                        <div class="card">
+                            <a href="story.html" class="imlink">
+                                <img src="assets/images/jura/jura_kayak_camp_disc2-19.jpg" alt="Card Image" class="card-img-top" />
+                                <h4 class="card-title">
+                                    Title of the story will go here
+                                </h4>
+                                <div class="card-text">
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean et rutrum lorem. Ut non sagittis elit. Fusce quis pharetra felis. Integer dignissim enim sapien, eu accumsan sem porta sit amet.
+                                </div>
+                                <div class="card-footer sstoryfooter">
+                                    <div class="row">
+                                        <div class="col-sm-12 col-4 my-1 d-flex align-items-center justify-content-center">
+                                            <div class="text-left text-sm-center">Read time 3 mins</div>
+                                        </div>
+                                        <div class="col-sm-4 col-4 d-flex justify-content-sm-start justify-content-center align-items-center">
+                                            <div class="flagview">
+                                                <img src="assets/images/flags/flag_of_canton_of_zürich.png" alt="Zürich" class="img-fluid squareimage" />
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-8 col-4 d-flex justify-content-end align-items-center">
+                                            <div class="spoticonsmall spotred fa fa-car"></div>
+                                            <div class="spoticonsmall spotred fa fa-bed"></div>
+                                            <div class="spoticonsmall spotred fa fa-map-signs"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                            <a href="story.html" class="linkspot spoticon spotred fa fa-arrow-right"></a>
+                        </div>
+                        <div class="card">
+                            <a href="story.html" class="imlink">
+                                <img src="assets/images/fribourg/fribourg_lr-16.jpg" alt="Card Image" class="card-img-top" />
+                                <h4 class="card-title">
+                                    A different title will go here
+                                </h4>
+                                <div class="card-text">
+                                    Donec consequat vehicula tortor dapibus efficitur. Aenean dolor ante, efficitur non odio nec, cursus suscipit lectus. Quisque feugiat ac mauris non pellentesque. Quisque nibh dui, placerat ac blandit nec, pharetra a neque.
+                                </div>
+                                <div class="card-footer sstoryfooter">
+                                    <div class="row">
+                                        <div class="col-sm-12 col-4 my-1 d-flex align-items-center justify-content-center">
+                                            <div class="text-left text-sm-center">Read time 3 mins</div>
+                                        </div>
+                                        <div class="col-sm-4 col-4 d-flex justify-content-sm-start justify-content-center align-items-center ">
+                                            <div class="flagview">
+                                                <img src="assets/images/flags/flag_of_canton_of_bern.png" alt="Bern" class="img-fluid squareimage" />
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-8 col-4 d-flex justify-content-end align-items-center">
+                                            <div class="spoticonsmall spotred fa fa-car"></div>
+                                            <div class="spoticonsmall spotred fa fa-cutlery"></div>
+                                            <div class="spoticonsmall spotred fa fa-snowflake-o"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                            <a href="story.html" class="linkspot spoticon spotred fa fa-arrow-right"></a>
+                        </div>
+                        <div class="card">
+                            <a href="story.html" class="imlink">
+                                <img src="assets/images/flumserberg/flumserberge_lr-39.jpg" alt="Card Image" class="card-img-top" />
+                                <h4 class="card-title">
+                                    Here's another story title
+                                </h4>
+                                <div class="card-text">
+                                    Morbi quis massa non ipsum eleifend suscipit a in arcu. Vestibulum ut sem quam. In lectus justo, blandit eu commodo vitae, pretium sed massa. Proin sagittis aliquet vulputate. Donec et ipsum laoreet, blandit sapien maximus, hendrerit eros.
+                                </div>
+                                <div class="card-footer sstoryfooter">
+                                    <div class="row">
+                                        <div class="col-sm-12 col-4 my-1 d-flex align-items-center justify-content-center">
+                                            <div class="text-left text-sm-center">Read time 3 mins</div>
+                                        </div>
+                                        <div class="col-sm-4 col-4 d-flex justify-content-sm-start justify-content-center align-items-center ">
+                                            <div class="flagview">
+                                                <img src="assets/images/flags/flag_of_canton_of_uri.png" alt="Uri" class="img-fluid squareimage" />
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-8 col-4 d-flex justify-content-end align-items-center">
+                                            <div class="spoticonsmall spotred fa fa-bicycle"></div>
+                                            <div class="spoticonsmall spotred fa fa-heart"></div>
+                                            <div class="spoticonsmall spotred fa fa-map-signs"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                            <a href="story.html" class="linkspot spoticon spotred fa fa-arrow-right"></a>
+                        </div>
+                        <div class="card">
+                            <a href="story.html" class="imlink">
+                                <img src="assets/images/chaeserrugg/chaeserrugg_lr-28.jpg" alt="Card Image" class="card-img-top" />
+                                <h4 class="card-title">
+                                    This one is short
+                                </h4>
+                                <div class="card-text">
+                                    Cras in molestie arcu, non porttitor orci. Quisque facilisis lectus quis scelerisque interdum. Maecenas dictum congue mauris nec feugiat. Nam faucibus quis ipsum eget porttitor. Curabitur vestibulum lacus diam, sit amet vestibulum nisi aliquam vitae.
+                                </div>
+                                <div class="card-footer sstoryfooter">
+                                    <div class="row">
+                                        <div class="col-sm-12 col-4 my-1 d-flex align-items-center justify-content-center">
+                                            <div class="text-left text-sm-center">Read time 3 mins</div>
+                                        </div>
+                                        <div class="col-sm-4 col-4 d-flex justify-content-sm-start justify-content-center align-items-center ">
+                                            <div class="flagview">
+                                                <img src="assets/images/flags/flag_of_canton_of_lucerne.png" alt="Lucerne" class="img-fluid squareimage" />
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-8 col-4 d-flex justify-content-end align-items-center">
+                                            <div class="spoticonsmall spotred fa fa-bicycle"></div>
+                                            <div class="spoticonsmall spotred fa fa-cutlery"></div>
+                                            <div class="spoticonsmall spotred fa fa-map-signs"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                            <a href="story.html" class="linkspot spoticon spotred fa fa-arrow-right"></a>
+                        </div>
+                        <div class="card">
+                            <a href="story.html" class="imlink">
+                                <img src="assets/images/chaeserrugg/chaeserrugg_lr-3.jpg" alt="Card Image" class="card-img-top" />
+                                <h4 class="card-title">
+                                    This one is really really really long
+                                </h4>
+                                <div class="card-text">
+                                    Suspendisse in commodo enim. Morbi euismod sapien eget scelerisque tempus. Praesent egestas tincidunt odio id facilisis. Maecenas a tristique augue, a facilisis dui. Donec ac lacus lacinia ipsum ornare auctor. Nullam ultricies eros mi, vitae elementum felis
+                                    efficitur quis.
+                                </div>
+                                <div class="card-footer sstoryfooter">
+                                    <div class="row">
+                                        <div class="col-sm-12 col-4 my-1 d-flex align-items-center justify-content-center">
+                                            <div class="text-left text-sm-center">Read time 3 mins</div>
+                                        </div>
+                                        <div class="col-sm-4 col-4 d-flex justify-content-sm-start justify-content-center align-items-center ">
+                                            <div class="flagview">
+                                                <img src="assets/images/flags/flag_of_canton_of_valais.png" alt="Valais" class="img-fluid squareimage" />
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-8 col-4 d-flex justify-content-end align-items-center">
+                                            <div class="spoticonsmall spotred fa fa-car"></div>
+                                            <div class="spoticonsmall spotred fa fa-bed"></div>
+                                            <div class="spoticonsmall spotred fa fa-cutlery"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                            <a href="story.html" class="linkspot spoticon spotred fa fa-arrow-right"></a>
+                        </div>
+                        <div class="card">
+                            <a href="story.html" class="imlink">
+                                <img src="assets/images/bad_ragaz/badragaz_lr-125.jpg" alt="Card Image" class="card-img-top" />
+                                <h4 class="card-title">
+                                    This is the last story title
+                                </h4>
+                                <div class="card-text">
+                                    Morbi quis massa non ipsum eleifend suscipit a in arcu. Vestibulum ut sem quam. In lectus justo, blandit eu commodo vitae, pretium sed massa. Proin sagittis aliquet vulputate. Donec et ipsum laoreet, blandit sapien maximus, hendrerit eros.
+                                </div>
+                                <div class="card-footer sstoryfooter">
+                                    <div class="row">
+                                        <div class="col-sm-12 col-4 my-1 d-flex align-items-center justify-content-center">
+                                            <div class="text-left text-sm-center">Read time 3 mins</div>
+                                        </div>
+                                        <div class="col-sm-4 col-4 d-flex justify-content-sm-start justify-content-center align-items-center ">
+                                            <div class="flagview">
+                                                <img src="assets/images/flags/flag_of_canton_of_schaffhausen.png" alt="Schaffhausen" class="img-fluid squareimage" />
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-8 col-4 d-flex justify-content-end align-items-center">
+                                            <div class="spoticonsmall spotred fa fa-ship"></div>
+                                            <div class="spoticonsmall spotred fa fa-binoculars"></div>
+                                            <div class="spoticonsmall spotred fa fa-map-signs"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                            <a href="story.html" class="linkspot spoticon spotred fa fa-arrow-right"></a>
+                        </div>
+                    </div>
                 </div>
-                <div class='col-lg-4 my-1 order-lg-3 footerright'>
-                    Spot Media GmbH <br>
-                    &copy;2018 <br>
-                    All rights reserved <br>
+                <div class="row ">
+                    <div class="col-12 text-center my-4">
+                        <button type="button" class="btn btnspot">More</button>
+                    </div>
                 </div>
             </div>
-        </div>
-    </footer>
-</body>
-<!-- Bootstrap JavaScript -->
-<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-
+        </section>
+        <!-- Instagram Placeholder -->
+        <section>
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="m-5 text-center">
+                            <h2 class="cursivetxt">
+                                Instagram Feed Placeholder
+                            </h2>
+                            <div class="heroview">
+                                <img src="assets/images/instagram_eg.jpg" alt="Instagram Example" class="heroimg w-100 m-3" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Footer -->
+        <footer class="footer d-flex align-items-center">
+            <div class="container">
+                <div class="row">
+                    <!-- ordered mobile first, .order-* for desktop -->
+                    <div class="col-lg-4 my-1 order-lg-2 d-flex justify-content-center">
+                        <a href="https://www.facebook.com/SpotMagazineCH/" target="_blank" class="sociallink spoticon fa fa-facebook"></a>
+                        <a href="https://twitter.com/spotmagazinech" target="_blank" class="sociallink spoticon fa fa-twitter"></a>
+                        <a href="https://www.instagram.com/spotmagazinech/" target="_blank" class="sociallink spoticon fa fa-instagram"></a>
+                        <a href="https://www.pinterest.ie/swissspots/" target="_blank" class="sociallink spoticon fa fa-pinterest"></a>
+                    </div>
+                    <div class="col-lg-4 my-1 order-lg-1 footerleft">
+                        SPOT MEDIA GmbH <br />
+                        PO Box 448 <br />
+                        8810 Horgen <br />
+                    </div>
+                    <div class="col-lg-4 my-1 order-lg-3 footerright">
+                        Spot Media GmbH <br />
+                        &copy;2018 <br />
+                        All rights reserved <br />
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <!-- Bootstrap JavaScript -->
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    </body>
 </html>

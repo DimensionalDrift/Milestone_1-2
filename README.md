@@ -1,6 +1,8 @@
 # Milestone 1 - Spot Magazine Website Redesign
 
-This is my redesign of the website of a client who owns a travel magazine in Switzerland. It features the design of five sample pages as requested by the client, a live demo of which can be found [here](https://dimensionaldrift.github.io/Milestone_1/index.html).
+<img src="assets/images/spot.gif" alt="Spot Gif" class="center">
+
+This is my redesign of the website of a client who owns a travel magazine in Switzerland. It features the design of five sample pages as requested by the client, a live demo of which can be found [here](https://dimensionaldrift.github.io/Milestone_1-2/index.html).
 
 ## UX
 
@@ -12,13 +14,13 @@ In our initial design brief the client outlined the requirements of the website 
  - a page with details and a form to enter a photo competition
  - a contact/about page for the magazine staff
 
-My initial design was based on multiple sources including her website, the design featured in the magazine and some sample websites for inspiration (all of which can be found [below](#design-references-supplied-by-the-client)). My initial mockups can be found [here](https://github.com/DimensionalDrift/Milestone_1/tree/master/assets/mockups). 
+My initial design was based on multiple sources including her website, the design featured in the magazine and some sample websites for inspiration (all of which can be found [below](#design-references-supplied-by-the-client)). My initial mockups can be found [here](https://github.com/DimensionalDrift/Milestone_1-2/tree/master/assets/mockups).
 
 Here are user stories that came up during our design meetings or during development:
  - As the customer I would like some of the design elements featured in the magazine to feature on the website.
  - As the customer I would like my photographs to be a main feature on the site.
  - As the customer I would like a gallery of the previous issues of the magazine.
- - As the customer I would like an easy way for potential customers or clients to contact my business. 
+ - As the customer I would like an easy way for potential customers or clients to contact my business.
  - As the user I would like to enter the photo competition using an online form.
  - As a user I would like to know that a link is clickable.
 
@@ -34,7 +36,7 @@ Detail into how I addressed these user stories can be found below in the Feature
 
 ## Features
 
-I felt the current design of the website lacked some of the design elements from the magazine so I tried to include some where I could. For example I featured important images inside circular frames and used a handwritten font similar to one in the magazine. I also featured circular 'Spot' icons for interactive elements like social media links, further emulating the circular theme of the logo. 
+I felt the current design of the website lacked some of the design elements from the magazine so I tried to include some where I could. For example I featured important images inside circular frames and used a handwritten font similar to one in the magazine. I also featured circular 'Spot' icons for interactive elements like social media links, further emulating the circular theme of the logo.
 
 The color pallet for the website is quite simple by request of the client. It features 'Spot' red from the logo, white and an off grey color. Since that is the case I tried to use colored accents sparingly, Only using 'Spot' red for icons, buttons and interactive elements and the grey for secondary content like the footer and the info card on the story page.
 
@@ -42,7 +44,7 @@ Photography is an important part of the magazine so I also tried to feature imag
 
 While building the website it became clear that it is important to give visual feedback to the user. For example it is important to show that some elements are clickable or that there is more content to scroll down to on the front page. From this thought, a few subtle visual cues have been included on the site. Examples include a light hover effect over story summaries or the magazines in the gallery, or the bouncing downward arrow that either invites the user to scroll or can be clicked to automatically scroll the user to the featured story.
 
-It is also important to the client, as it is for almost all modern businesses, that the website was responsive and mobile friendly. It is particularly important to design for tablet sized displays as she uses one when speaking to potential advertisers to showcase her brand. With that in mind the website is designed mobile first with different layouts for incrementally larger screens. This can be seen when looking at the prizes section of the contest page, each screen size utilizes a different layout. 
+It is also important to the client, as it is for almost all modern businesses, that the website was responsive and mobile friendly. It is particularly important to design for tablet sized displays as she uses one when speaking to potential advertisers to showcase her brand. With that in mind the website is designed mobile first with different layouts for incrementally larger screens. This can be seen when looking at the prizes section of the contest page, each screen size utilizes a different layout.
 
 
 ## Future Features
@@ -59,7 +61,7 @@ There are some features that the client requested that are unfortunately outside
 
  - The client would like an interactive map of Switzerland, where users can explore certain areas of the country to read stories and features from that region. This will require the use of API's which I know will be covered in the next section of the course.
 
- - The developer that designed and built her current website also created a custom tool in the backend to make publishing to the website as easy as possible. In the future, this current design will need to include features to make it compatible with that tool. 
+ - The developer that designed and built her current website also created a custom tool in the backend to make publishing to the website as easy as possible. In the future, this current design will need to include features to make it compatible with that tool.
 
  - The client would also like to have an interactive Instagram feed featured on the front page. Again this will require a JavaScript library such as Instafeed.js or juicer.io and will also require custom JavaScript to design.
 
@@ -71,15 +73,21 @@ There are some features that the client requested that are unfortunately outside
 
 ## Testing
 
-The website was tested extensively during development in Chrome Beta on Kubuntu Linux. The page was tested for layout arrangements in different form factors and that interactive elements were responsive. The site was also tested on Chrome Beta for Android to make sure the layout made sense when actually viewed on a mobile screen rather than the responsive screen of a desktop browser. 
+The website was tested extensively during development in Chrome Beta on Kubuntu Linux. The page was tested for layout arrangements in different form factors and that interactive elements were responsive. The site was also tested on Chrome Beta for Android to make sure the layout made sense when actually viewed on a mobile screen rather than the responsive screen of a desktop browser.
 
-Checking the browser market share for Switzerland [here](http://gs.statcounter.com/browser-market-share/all/switzerland) it is a near tie between Safari and Chrome and between mobile and desktop so it was most important to check that the website worked on those browsers in those form factors. 
+All code was written using Sublime and linted using the Sublimelinter package. Using the plugins, CSSlint and HTML Tidy all code was made sure to be valid with few acceptable warnings. The Prettier package jsPrettier was also used to make sure the code is correctly formated.
+
+Using [gtmetrix.com](https://gtmetrix.com) to test the site when hosted on GitHub Pages, all of the pages load in under 1s and range in size from 7MB to 0.8MB with the average being \~3.5MB. As mentioned above, there is going to have to be a balance between using uncompressed images and keeping page sizes small. Using lazy loading could help with load times but that is outside the scope of this project.
+
+Checking the browser market share for Switzerland [here](http://gs.statcounter.com/browser-market-share/all/switzerland) it is a near tie between Safari and Chrome and between mobile and desktop so it was most important to check that the website worked on those browsers in those form factors.
 
 Once the site was nearing completion it was tested on multiple devices including multiple Android phones, a Chromebook, Chrome and Firefox in Windows 10, Firefox in Linux and both mobile and desktop Safari. During that testing phase it was found there was a major bug with the websites scrolling when viewed using iOS Safari. It was caused by another bug fix used early on in development which has since been removed as it does not appear to be an issue any more.
 
-## Deployment
+## Deployment and Development Notes
 
-Since this is only a static design preview the website only needs to be deployed using GitHub Pages. This was done by enabling the option in the GitHub repository and ensuring that the repository was structured correctly. There has been no significant changes between the development version and the hosted version on GitHub Pages. GitHub Pages has been used to host all versions of the website during development as it was the easiest way to lease with the client and showcase multiple designs. There is an example of a period where multiple designs were being considered for the layout of the front page that can be found [here](https://dimensionaldrift.github.io/Milestone_1/old/index_designtest.html).
+Since this is only a static design preview the website only needs to be deployed using GitHub Pages. This was done by enabling the option in the GitHub repository and ensuring that the repository was structured correctly. There has been no significant changes between the development version and the hosted version on GitHub Pages. GitHub Pages has been used to host all versions of the website during development as it was the easiest way to lease with the client and showcase multiple designs.
+
+While developing the CSS it was decided that to help differentiate between custom classes and classes from Bootstrap that custom classes would not use hyphens where all external classes do. This can help at a glance see which classes are being defined and which are defined elsewhere but have attributes being changed.
 
 ## Credits
 
@@ -87,19 +95,19 @@ Since this is only a static design preview the website only needs to be deployed
 All text content was either written by me, supplied by Sublime Texts built in lorem ipsum or generated using https://www.blindtextgenerator.com/lorem-ipsum.
 
 ### Media
- - All images were supplied by © Spot Media GmbH. 
+ - All images were supplied by © Spot Media GmbH.
  - Dummy images were found at http://dummy-image-generator.com/
  - Switzerland Canton Flags were found at https://en.wikipedia.org/wiki/Flags_and_arms_of_cantons_of_Switzerland
 
-### Resources 
-The bulk of learning and referencing for this project used either Code Institute lessons, the Bootstrap documentation or W3schools examples and lessons. 
+### Resources
+The bulk of learning and referencing for this project used either Code Institute lessons, the Bootstrap documentation or W3schools examples and lessons.
 Beyond that any issues that could not be solved using the above resources were mostly found on Stack Overflow. A list of links to any code snippets that were used in the projects can either be found commented throughout the code or in a list [below](#code-snippets-used).
 
 ### Acknowledgments
 I would like to thank Carina Scheuringer and Spot Magazine for being the inspiration for the project. I would also like to thank her for the use of her photos and materials for this project.
 I would like to thank my friends and family for being bug testers and giving their valuable feedback.
 
-#### Code snippets used 
+#### Code snippets used
 
 Note: The reasons why and how all these code snippets were used are detailed in comments inline in the code itself.
 - https://stackoverflow.com/questions/4617872/white-space-showing-up-on-right-side-of-page-when-background-image-should-extend
@@ -122,17 +130,3 @@ Note: The reasons why and how all these code snippets were used are detailed in 
  - https://www.zuerich.com/en
 
 <!-- NOTE: Sorry for the commit after submission, I initialized my next project git in the wrong directory! -->
-
-<!-- 
-Ideas
-    Use JSON to fill in details of stories on the page
-
-    Implement Jasmine testing 
-    Use Jasmine to check that stories are not too long for the page
- 
- -->
-
- <!-- X Greater to do list:
-        - Check that the hover effect for the story and magazine links funtionally works ok on mobile
-        - Edit the style of the carousel buttons, maybe a 1/3 red spot on either side?
- -->

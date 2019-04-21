@@ -1,281 +1,294 @@
 <!DOCTYPE html>
 <html lang="en">
+    <!--
+    NOTE: The majority of comments here will be removed when the site goes live for the client.
+    They are:
+        - notes to myself in the future (denoted by an X )
+        - to explain my thinking and process to any examiners for the sake of the Code Institute project.
+    -->
 
-<!-- 
-NOTE: The majority of comments here will be removed when the site goes live for the client.
-They are:
-    - notes to myself in the future (denoted by an X )
-    - to explain my thinking and process to any examiners for the sake of the Code Institute project. 
--->
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <!-- Adding Bootstrap 4 styling, Font Awesome fonts -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" type="text/css" />
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" type="text/css" />
-    <!-- Adding Google font 
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        <!-- Adding Bootstrap 4 styling, Font Awesome fonts -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" type="text/css" />
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" type="text/css" />
+        <!-- Adding Google font
          X This is a close approx to a licensed font the client uses, should be replaced in live version -->
-    <link href="https://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet">
-    <!-- Favicon -->
-    <!-- X Add icons for mobile homescreen use -->
-    <link rel="shortcut icon" type="image/png" href="assets/logo/spot_magazine.png" />
-    <!-- My styles -->
-    <link rel="stylesheet" href="assets/css/style.css">
-    <title>Spot Magazine</title>
-</head>
+        <link href="https://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet" />
+        <!-- Favicon -->
+        <!-- X Add icons for mobile homescreen use -->
+        <link rel="shortcut icon" type="image/png" href="assets/logo/spot_magazine.png" />
+        <!-- My styles -->
+        <link rel="stylesheet" href="assets/css/style.css" />
+        <title>Spot Magazine</title>
+    </head>
 
-<body>
-    <!-- Navbar Header -->
-    <header>
-        <nav class="navbar fixed-top navbar-expand-lg navbar-light nav-fill shadow-sm py-1">
-            <div class='container maxcontainer'>
-                <div class='mr-auto'>
-                    <!-- Large Logo size -->
-                    <a class="navbar-brand d-none d-lg-block " href="index.html">
-                        <img src="assets/logo/spot_magazine.png" alt="Logo" class='logosize'>
-                    </a>
-                    <!-- Small Logo size -->
-                    <a class="navbar-brand d-lg-none p-0" href="index.html">
-                        <img src="assets/logo/spot_magazine.png" alt="Logo" class='logosize'>
-                    </a>
-                </div>
-                <!-- Button used as menu under 768px -->
-                <div class='d-flex flex-row order-lg-2'>
-                    <!-- Search button -->
-                    <!-- X Non functional as JavaScript would be needed for the animations -->
-                    <div class='pt-lg-2'>
-                        <div class="nav-item spoticon spotred fa fa-search"></div>
+    <body>
+        <!-- Navbar Header -->
+        <header>
+            <nav class="navbar fixed-top navbar-expand-lg navbar-light nav-fill shadow-sm py-1">
+                <div class="container maxcontainer">
+                    <div class="mr-auto">
+                        <!-- Large Logo size -->
+                        <a class="navbar-brand d-none d-lg-block " href="index.html">
+                            <img src="assets/logo/spot_magazine.png" alt="Logo" class="logosize" />
+                        </a>
+                        <!-- Small Logo size -->
+                        <a class="navbar-brand d-lg-none p-0" href="index.html">
+                            <img src="assets/logo/spot_magazine.png" alt="Logo" class="logosize" />
+                        </a>
                     </div>
-                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#topNavbar">
-                        <span class="navbar-toggler-icon"></span>
-                    </button>
+                    <!-- Button used as menu under 768px -->
+                    <div class="d-flex flex-row order-lg-2">
+                        <!-- Search button -->
+                        <!-- X Non functional as JavaScript would be needed for the animations -->
+                        <div class="pt-lg-2">
+                            <div class="nav-item spoticon spotred fa fa-search"></div>
+                        </div>
+                        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#topNavbar">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                    </div>
+                    <div class="collapse navbar-collapse order-lg-1" id="topNavbar">
+                        <!-- Header links -->
+                        <a class="nav-item nav-link pt-lg-4" href="index.html">Home</a>
+                        <a class="nav-item nav-link pt-lg-4" href="gallery.html">Magazines</a>
+                        <a class="nav-item nav-link pt-lg-4" href="contest.html">Photo Contest</a>
+                        <a class="nav-item nav-link pt-lg-4" href="contact.html">Contact</a>
+                    </div>
                 </div>
-                <div class="collapse navbar-collapse order-lg-1" id='topNavbar'>
-                    <!-- Header links -->
-                    <a class='nav-item nav-link pt-lg-4' href="index.html">Home</a>
-                    <a class='nav-item nav-link pt-lg-4' href="gallery.html">Magazines</a>
-                    <a class='nav-item nav-link pt-lg-4' href="contest.html">Photo Contest</a>
-                    <a class='nav-item nav-link pt-lg-4' href="contact.html">Contact</a>
+            </nav>
+        </header>
+        <!-- Used to move content below the navbar -->
+        <div class="navpadding"></div>
+        <!-- Hero Image Section -->
+        <section>
+            <div class="container">
+                <div class="card heroview">
+                    <img class="card-img" src="assets/images/flumserberg/flumserberge_lr-1.jpg" alt="Hero image" />
+                    <div class="card-img-overlay d-flex flex-column justify-content-end  herocaption">
+                        <h1 class="card-text fadein">The Article Title</h1>
+                    </div>
                 </div>
             </div>
-        </nav>
-    </header>
-    <!-- Used to move content below the navbar -->
-    <div class='navpadding'></div>
-    <!-- Hero Image Section -->
-    <section>
-        <div class='container'>
-            <div class="card heroview">
-                <img class="card-img" src="assets/images/flumserberg/flumserberge_lr-1.jpg" alt="Hero image">
-                <div class="card-img-overlay d-flex flex-column justify-content-end  herocaption">
-                    <h1 class="card-text fadein">The Article Title</h1>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- Article Card and Subtitle Section -->
-    <section>
-        <div class='container'>
-            <div class="row">
-                <!-- X This card might be colored depending on story type -->
-                <div class='col-lg-4 '>
-                    <div class="card mx-0" id='storyinfocard'>
-                        <div class='row'>
-                            <div class='col-12 col-sm-6 col-md-6 col-lg-12 tablepad'>
-                                <table>
-                                    <tr>
-                                        <td>Text:</td>
-                                        <td>Carina</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Photos:</td>
-                                        <td>Probably Also Carina</td>
-                                    </tr>
-                                    <tr>
-                                        <td></td>
-                                        <td>Maybe someone else</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Info:</td>
-                                        <td><a href="#" class='linkhover'>www.swissalps.ch</a></td>
-                                    </tr>
-                                </table>
-                            </div>
-                            <div class='col-12 col-sm-6 col-md-6 col-lg-12 d-flex align-items-end tablepad justify-content-start justify-content-sm-end justify-content-md-end justify-content-lg-start'>
-                                <table>
-                                    <tr>
-                                        <td>
-                                            Share:
-                                        </td>
-                                        <td>
-                                            <div class='d-flex justify-content-lg-center justify-content-start'>
-                                                <a href="https://www.facebook.com/SpotMagazineCH/" target="_blank" class='sociallink spoticonsmall fa fa-facebook'></a>
-                                                <a href="https://twitter.com/spotmagazinech" target="_blank" class='sociallink spoticonsmall fa fa-twitter'></a>
-                                                <a href="https://www.instagram.com/spotmagazinech/" target="_blank" class='sociallink spoticonsmall fa fa-instagram'></a>
-                                                <a href="https://www.pinterest.ie/swissspots/" target="_blank" class='sociallink spoticonsmall fa fa-pinterest'></a>
-                                            </div>
-                                        </td>
-                                    </tr>
-                                </table>
+        </section>
+        <!-- Article Card and Subtitle Section -->
+        <section>
+            <div class="container">
+                <div class="row">
+                    <!-- X This card might be colored depending on story type -->
+                    <div class="col-lg-4 ">
+                        <div class="card mx-0" id="storyinfocard">
+                            <div class="row">
+                                <div class="col-12 col-sm-6 col-md-6 col-lg-12 tablepad">
+                                    <table>
+                                        <tr>
+                                            <td>Text:</td>
+                                            <td>Carina</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Photos:</td>
+                                            <td>Probably Also Carina</td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td>Maybe someone else</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Info:</td>
+                                            <td><a href="#" class="linkhover">www.swissalps.ch</a></td>
+                                        </tr>
+                                    </table>
+                                </div>
+                                <div class="col-12 col-sm-6 col-md-6 col-lg-12 d-flex align-items-end tablepad justify-content-start justify-content-sm-end justify-content-md-end justify-content-lg-start">
+                                    <table>
+                                        <tr>
+                                            <td>
+                                                Share:
+                                            </td>
+                                            <td>
+                                                <div class="d-flex justify-content-lg-center justify-content-start">
+                                                    <a href="https://www.facebook.com/SpotMagazineCH/" target="_blank" class="sociallink spoticonsmall fa fa-facebook"></a>
+                                                    <a href="https://twitter.com/spotmagazinech" target="_blank" class="sociallink spoticonsmall fa fa-twitter"></a>
+                                                    <a href="https://www.instagram.com/spotmagazinech/" target="_blank" class="sociallink spoticonsmall fa fa-instagram"></a>
+                                                    <a href="https://www.pinterest.ie/swissspots/" target="_blank" class="sociallink spoticonsmall fa fa-pinterest"></a>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
-                <div class="col-lg-8 align-self-center">
-                    <h4 id='storysubtitle'>
-                        This is the story subtitle that can go on for maybe a few lines. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim.
-                    </h4>
+                    <div class="col-lg-8 align-self-center">
+                        <h4 id="storysubtitle">
+                            This is the story subtitle that can go on for maybe a few lines. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim.
+                        </h4>
+                    </div>
                 </div>
             </div>
-        </div>
-    </section>
-    <!-- Article Body Section -->
-    <section>
-        <div class='container'>
-            <div class='row'>
-                <div class='col'>
-                    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium.</p>
-                    <!-- Pic 1 only on mobile -->
-                    <figure class='figure d-lg-none'>
-                        <img src="assets/images/flumserberg/flumserberge_lr-24.jpg" alt="Picture1" class='img-fluid figure-img'>
-                        <figcaption class="figure-caption">A caption for image 1.</figcaption>
-                    </figure>
-                    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium.</p>
-                    <!-- Pic 2 only on mobile -->
-                    <figure class='figure d-lg-none'>
-                        <img src="assets/images/flumserberg/flumserberge_lr-31.jpg" alt="Picture3" class='img-fluid figure-img'>
-                        <figcaption class="figure-caption">A caption for image 3.</figcaption>
-                    </figure>
-                </div>
-                <!-- Collage of pics on desktop -->
-                <!-- Future features - display image in a lightbox when clicked
-                                     - Fade in on scroll - AOS? 
+        </section>
+        <!-- Article Body Section -->
+        <section>
+            <div class="container">
+                <div class="row">
+                    <div class="col">
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla
+                            consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium.
+                        </p>
+                        <!-- Pic 1 only on mobile -->
+                        <figure class="figure d-lg-none">
+                            <img src="assets/images/flumserberg/flumserberge_lr-24.jpg" alt="Picture1" class="img-fluid figure-img" />
+                            <figcaption class="figure-caption">A caption for image 1.</figcaption>
+                        </figure>
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla
+                            consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium.
+                        </p>
+                        <!-- Pic 2 only on mobile -->
+                        <figure class="figure d-lg-none">
+                            <img src="assets/images/flumserberg/flumserberge_lr-31.jpg" alt="Picture3" class="img-fluid figure-img" />
+                            <figcaption class="figure-caption">A caption for image 3.</figcaption>
+                        </figure>
+                    </div>
+                    <!-- Collage of pics on desktop -->
+                    <!-- Future features - display image in a lightbox when clicked
+                                     - Fade in on scroll - AOS?
                                      - Include circular images in the collage
                 -->
-                <div class='col-12 d-none d-lg-block'>
-                    <div class='row'>
-                        <div class='col-lg-5'>
-                            <figure class='figure'>
-                                <img src="assets/images/flumserberg/flumserberge_lr-24.jpg" alt="Picture1" class='img-fluid figure-img'>
-                                <figcaption class="figure-caption">A caption for image 1.</figcaption>
-                            </figure>
-                        </div>
-                        <div class='col-lg-3'>
-                            <figure class='figure'>
-                                <img src="assets/images/flumserberg/flumserberge_lr-2.jpg" alt="Picture2" class='img-fluid figure-img'>
-                                <figcaption class="figure-caption">A caption for image 2.</figcaption>
-                            </figure>
-                        </div>
-                        <div class='col-lg-4'>
-                            <figure class='figure'>
-                                <img src="assets/images/flumserberg/flumserberge_lr-31.jpg" alt="Picture3" class='img-fluid figure-img'>
-                                <figcaption class="figure-caption">A caption for image 3.</figcaption>
-                            </figure>
+                    <div class="col-12 d-none d-lg-block">
+                        <div class="row">
+                            <div class="col-lg-5">
+                                <figure class="figure">
+                                    <img src="assets/images/flumserberg/flumserberge_lr-24.jpg" alt="Picture1" class="img-fluid figure-img" />
+                                    <figcaption class="figure-caption">A caption for image 1.</figcaption>
+                                </figure>
+                            </div>
+                            <div class="col-lg-3">
+                                <figure class="figure">
+                                    <img src="assets/images/flumserberg/flumserberge_lr-2.jpg" alt="Picture2" class="img-fluid figure-img" />
+                                    <figcaption class="figure-caption">A caption for image 2.</figcaption>
+                                </figure>
+                            </div>
+                            <div class="col-lg-4">
+                                <figure class="figure">
+                                    <img src="assets/images/flumserberg/flumserberge_lr-31.jpg" alt="Picture3" class="img-fluid figure-img" />
+                                    <figcaption class="figure-caption">A caption for image 3.</figcaption>
+                                </figure>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class='col-12'>
-                    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium.</p>
-                    <!-- Pic 3 only on mobile -->
-                    <figure class='figure d-lg-none'>
-                        <img src="assets/images/flumserberg/flumserberge_lr-2.jpg" alt="Picture2" class='img-fluid figure-img'>
-                        <figcaption class="figure-caption">A caption for image 2.</figcaption>
-                    </figure>
-                    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium.</p>
-                </div>
-                <div class='col-12'>
-                    <figure class='figure'>
-                        <figcaption class="figure-caption">
-                            Ad Example.
-                        </figcaption>
-                        <img src="assets/images/banner/muba19_banner_900x300_de.jpg" alt="Advertisement" class='img-fluid figure-img'>
-                    </figure>
+                    <div class="col-12">
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla
+                            consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium.
+                        </p>
+                        <!-- Pic 3 only on mobile -->
+                        <figure class="figure d-lg-none">
+                            <img src="assets/images/flumserberg/flumserberge_lr-2.jpg" alt="Picture2" class="img-fluid figure-img" />
+                            <figcaption class="figure-caption">A caption for image 2.</figcaption>
+                        </figure>
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla
+                            consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium.
+                        </p>
+                    </div>
+                    <div class="col-12">
+                        <figure class="figure">
+                            <figcaption class="figure-caption">
+                                Ad Example.
+                            </figcaption>
+                            <img src="assets/images/banner/muba19_banner_900x300_de.jpg" alt="Advertisement" class="img-fluid figure-img" />
+                        </figure>
+                    </div>
                 </div>
             </div>
-        </div>
-    </section>
-    <!-- Article Footer Info Section -->
-    <!-- Uses a tabbed/pilled interface to display related information -->
-    <section>
-        <div class='container'>
-            <div class='row'>
-                <div class='col-12'>
-                    <div class='card' id='storyinfotab'>
-                        <!-- Tab header for larger screen -->
-                        <div class='card-header d-none d-sm-block'>
-                            <div class="nav nav-tabs card-header-tabs">
-                                <a class="nav-item nav-link active" data-toggle="tab" href="#nav-tip">
-                                    Spot Tip
-                                </a>
-                                <a class="nav-item nav-link" data-toggle="tab" href="#nav-practicle">
-                                    Practical
-                                </a>
-                                <a class="nav-item nav-link" data-toggle="tab" href="#nav-contact">
-                                    Contact
-                                </a>
+        </section>
+        <!-- Article Footer Info Section -->
+        <!-- Uses a tabbed/pilled interface to display related information -->
+        <section>
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="card" id="storyinfotab">
+                            <!-- Tab header for larger screen -->
+                            <div class="card-header d-none d-sm-block">
+                                <div class="nav nav-tabs card-header-tabs">
+                                    <a class="nav-item nav-link active" data-toggle="tab" href="#nav-tip">
+                                        Spot Tip
+                                    </a>
+                                    <a class="nav-item nav-link" data-toggle="tab" href="#nav-practicle">
+                                        Practical
+                                    </a>
+                                    <a class="nav-item nav-link" data-toggle="tab" href="#nav-contact">
+                                        Contact
+                                    </a>
+                                </div>
                             </div>
-                        </div>
-                        <!-- Pill header for smaller screen -->
-                        <div class='card-header d-sm-none'>
-                            <div class="nav nav-pills card-header-pills flex-column align-content-start">
-                                <a class="nav-item nav-link active" data-toggle="pill" href="#nav-tip">
-                                    Spot Tip
-                                </a>
-                                <a class="nav-item nav-link" data-toggle="pill" href="#nav-practicle">
-                                    Practical
-                                </a>
-                                <a class="nav-item nav-link" data-toggle="pill" href="#nav-contact">
-                                    Contact
-                                </a>
+                            <!-- Pill header for smaller screen -->
+                            <div class="card-header d-sm-none">
+                                <div class="nav nav-pills card-header-pills flex-column align-content-start">
+                                    <a class="nav-item nav-link active" data-toggle="pill" href="#nav-tip">
+                                        Spot Tip
+                                    </a>
+                                    <a class="nav-item nav-link" data-toggle="pill" href="#nav-practicle">
+                                        Practical
+                                    </a>
+                                    <a class="nav-item nav-link" data-toggle="pill" href="#nav-contact">
+                                        Contact
+                                    </a>
+                                </div>
                             </div>
-                        </div>
-                        <!-- Content on all screens -->
-                        <div class="tab-content card-body">
-                            <div class="tab-pane fade show active" id="nav-tip">
-                                Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium.
-                            </div>
-                            <div class="tab-pane fade" id="nav-practicle">
-                                <ol>
-                                    <li>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</li>
-                                    <li>Aliquam tincidunt mauris eu risus.</li>
-                                    <li>Vestibulum auctor dapibus neque.</li>
-                                </ol>
-                            </div>
-                            <div class="tab-pane fade" id="nav-contact">
-                                <div class='row'>
-                                    <div class='col-12 col-md-6 pad'>
-                                        <table>
-                                            <tr>
-                                                <td class='faicon'></td>
-                                                <td>
-                                                    <p>
-                                                        <u>Address:</u> <br>
-                                                        Edelweiss AG <br>
-                                                        Heidi Schmid <br>
-                                                        Gemeindestraße 123<br>
-                                                        1234 Swiss <br>
-                                                    </p>
-                                                </td>
-                                            </tr>
-                                        </table>
-                                    </div>
-                                    <div class='col-12 col-md-6'>
-                                        <table>
-                                            <tr>
-                                                <td class='fa faicon fa-phone'></td>
-                                                <td>045 678 91 23</td>
-                                            </tr>
-                                            <tr>
-                                                <td class='fa faicon fa-envelope'></td>
-                                                <td><a href="#" class='linkhover'>heidi@swissalps.ch</a></td>
-                                            </tr>
-                                            <tr>
-                                                <td class="fa faicon fa-cloud"></td>
-                                                <td><a href="#" class='linkhover'>www.swissalps.ch</a></td>
-                                            </tr>
-                                        </table>
+                            <!-- Content on all screens -->
+                            <div class="tab-content card-body">
+                                <div class="tab-pane fade show active" id="nav-tip">
+                                    Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem.
+                                    Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium.
+                                </div>
+                                <div class="tab-pane fade" id="nav-practicle">
+                                    <ol>
+                                        <li>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</li>
+                                        <li>Aliquam tincidunt mauris eu risus.</li>
+                                        <li>Vestibulum auctor dapibus neque.</li>
+                                    </ol>
+                                </div>
+                                <div class="tab-pane fade" id="nav-contact">
+                                    <div class="row">
+                                        <div class="col-12 col-md-6 pad">
+                                            <table>
+                                                <tr>
+                                                    <td class="faicon"></td>
+                                                    <td>
+                                                        <p>
+                                                            <u>Address:</u> <br />
+                                                            Edelweiss AG <br />
+                                                            Heidi Schmid <br />
+                                                            Gemeindestraße 123<br />
+                                                            1234 Swiss <br />
+                                                        </p>
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                        </div>
+                                        <div class="col-12 col-md-6">
+                                            <table>
+                                                <tr>
+                                                    <td class="fa faicon fa-phone"></td>
+                                                    <td>045 678 91 23</td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="fa faicon fa-envelope"></td>
+                                                    <td><a href="#" class="linkhover">heidi@swissalps.ch</a></td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="fa faicon fa-cloud"></td>
+                                                    <td><a href="#" class="linkhover">www.swissalps.ch</a></td>
+                                                </tr>
+                                            </table>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -283,36 +296,34 @@ They are:
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
-    <!-- Footer -->
-    <footer class='footer d-flex align-items-center'>
-        <div class='container'>
-            <div class='row'>
-                <!-- ordered mobile first, .order-* for desktop -->
-                <div class='col-lg-4 my-1 order-lg-2 d-flex justify-content-center'>
-                    <a href="https://www.facebook.com/SpotMagazineCH/" target="_blank" class='sociallink spoticon fa fa-facebook'></a>
-                    <a href="https://twitter.com/spotmagazinech" target="_blank" class='sociallink spoticon fa fa-twitter'></a>
-                    <a href="https://www.instagram.com/spotmagazinech/" target="_blank" class='sociallink spoticon fa fa-instagram'></a>
-                    <a href="https://www.pinterest.ie/swissspots/" target="_blank" class='sociallink spoticon fa fa-pinterest'></a>
-                </div>
-                <div class='col-lg-4 my-1 order-lg-1 footerleft'>
-                    SPOT MEDIA GmbH <br>
-                    PO Box 448 <br>
-                    8810 Horgen <br>
-                </div>
-                <div class='col-lg-4 my-1 order-lg-3 footerright'>
-                    Spot Media GmbH <br>
-                    &copy; 2018 <br>
-                    All rights reserved <br>
+        </section>
+        <!-- Footer -->
+        <footer class="footer d-flex align-items-center">
+            <div class="container">
+                <div class="row">
+                    <!-- ordered mobile first, .order-* for desktop -->
+                    <div class="col-lg-4 my-1 order-lg-2 d-flex justify-content-center">
+                        <a href="https://www.facebook.com/SpotMagazineCH/" target="_blank" class="sociallink spoticon fa fa-facebook"></a>
+                        <a href="https://twitter.com/spotmagazinech" target="_blank" class="sociallink spoticon fa fa-twitter"></a>
+                        <a href="https://www.instagram.com/spotmagazinech/" target="_blank" class="sociallink spoticon fa fa-instagram"></a>
+                        <a href="https://www.pinterest.ie/swissspots/" target="_blank" class="sociallink spoticon fa fa-pinterest"></a>
+                    </div>
+                    <div class="col-lg-4 my-1 order-lg-1 footerleft">
+                        SPOT MEDIA GmbH <br />
+                        PO Box 448 <br />
+                        8810 Horgen <br />
+                    </div>
+                    <div class="col-lg-4 my-1 order-lg-3 footerright">
+                        Spot Media GmbH <br />
+                        &copy; 2018 <br />
+                        All rights reserved <br />
+                    </div>
                 </div>
             </div>
-        </div>
-    </footer>
-</body>
-<!-- Bootstrap JavaScript -->
-<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-
+        </footer>
+        <!-- Bootstrap JavaScript -->
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    </body>
 </html>
